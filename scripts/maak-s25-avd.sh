@@ -98,6 +98,7 @@ CONFIG="$DOEL/config.ini"
 # skin.path=_no_skin met skin.name=<WxH> is de manier om een eigen resolutie af
 # te dwingen; zonder dat blijft de resolutie van het gekozen toestel staan.
 sed -i '/^hw\.lcd\./d;/^skin\./d;/^hw\.ramSize/d' "$CONFIG"
+sed -i '/^hw\.camera\./d' "$CONFIG"
 cat >> "$CONFIG" <<'EOF'
 hw.lcd.width=1080
 hw.lcd.height=2340
@@ -107,9 +108,11 @@ skin.path=_no_skin
 hw.ramSize=3072
 vm.heapSize=256
 hw.keyboard=yes
+hw.camera.back=emulated
+hw.camera.front=none
 EOF
 
 echo "--- AVD $AVD ingesteld (Android $API) ---"
-grep -E "^hw\.lcd|^skin\.|^hw\.ramSize" "$CONFIG"
+grep -E "^hw\.lcd|^skin\.|^hw\.ramSize|^hw\.camera" "$CONFIG"
 echo "--- wat er in $ANDROID_AVD_HOME staat ---"
 ls -la "$ANDROID_AVD_HOME"

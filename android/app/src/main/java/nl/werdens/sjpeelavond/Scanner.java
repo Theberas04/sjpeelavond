@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.graphics.ImageFormat;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.util.Log;
@@ -45,6 +46,9 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
     private Camera camera;
     private boolean klaar;
     private long laatstePoging;
+    /** De maat van het camerabeeld; hier bewaard zodat er per beeld geen navraag nodig is. */
+    private int beeldBreedte;
+    private int beeldHoogte;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +57,7 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
         setResult(RESULT_CANCELED);
 
         if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            Log.i(TAG, "SJPEELAVOND_SCANNER toestemming vragen");
             requestPermissions(new String[] { Manifest.permission.CAMERA }, PERMISSIE_CAMERA);
         }
     }
@@ -100,7 +105,7 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
         if (uitslagen.length > 0 && uitslagen[0] == PackageManager.PERMISSION_GRANTED) {
             openCamera();
         } else {
-            meld("Zonder cameratoestemming kan de app geen kaartje scannen.");
+            meld("Zonder cameratoegang kan de app geen kaartje scannen. Zet dat aan bij Instellingen → Apps → Sjpeelavond → Toestemmingen → Camera.");
         }
     }
 
@@ -116,25 +121,54 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
         try {
             camera = Camera.open();
         } catch (Exception fout) {
-            meld("Dit toestel heeft geen camera die de app kan gebruiken.");
+            Log.i(TAG, "SJPEELAVOND_SCANNER camera openen mislukt: " + fout.getMessage());
+            meld("De app kon de camera niet openen. Controleer of de app cameratoegang heeft.");
             return;
         }
         if (camera == null) {
             meld("Dit toestel heeft geen camera die de app kan gebruiken.");
             return;
         }
-        Camera.Parameters instellingen = camera.getParameters();
-        Camera.Size maat = kiesMaat(instellingen.getSupportedPreviewSizes());
-        if (maat != null) instellingen.setPreviewSize(maat.width, maat.height);
-        instellingen.setPreviewFormat(android.graphics.ImageFormat.NV21);
-        camera.setParameters(instellingen);
+        // De instellingen van de camera worden op sommige toestellen geweigerd. Dat mag de app
+        // niet laten afsluiten: dan gaat het zonder eigen instellingen verder en melden we het.
+        Camera.Size maat = null;
+        try {
+            Camera.Parameters instellingen = camera.getParameters();
+            maat = kiesMaat(instellingen.getSupportedPreviewSizes());
+            if (maat != null) instellingen.setPreviewSize(maat.width, maat.height);
+            instellingen.setPreviewFormat(ImageFormat.NV21);
+            camera.setParameters(instellingen);
+        } catch (Exception fout) {
+            Log.i(TAG, "SJPEELAVOND_SCANNER instellingen geweigerd: " + fout.getMessage());
+            maat = null;
+            try {
+                camera.setParameters(camera.getParameters());
+            } catch (Exception nog) {
+                Log.i(TAG, "SJPEELAVOND_SCANNER ook de standaardinstellingen niet: " + nog.getMessage());
+            }
+        }
+        if (maat == null) {
+            try {
+                maat = camera.getParameters().getPreviewSize();
+            } catch (Exception fout) {
+                maat = null;
+            }
+        }
+        beeldBreedte = maat == null ? 0 : maat.width;
+        beeldHoogte = maat == null ? 0 : maat.height;
         try {
             camera.setPreviewDisplay(oppervlak.getHolder());
         } catch (Exception fout) {
             Log.i(TAG, "SJPEELAVOND_SCANNER geen beeld: " + fout.getMessage());
         }
-        camera.setPreviewCallback(this);
-        camera.startPreview();
+        try {
+            camera.setPreviewCallback(this);
+            camera.startPreview();
+        } catch (Exception fout) {
+            Log.i(TAG, "SJPEELAVOND_SCANNER starten mislukt: " + fout.getMessage());
+            meld("De camera kon niet starten op dit toestel.");
+            return;
+        }
         Log.i(TAG, "SJPEELAVOND_SCANNER camera open " + (maat == null ? "" : maat.width + "x" + maat.height));
     }
 
@@ -184,8 +218,8 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
         if (nu - laatstePoging < MIN_TIJD_TUSSEN_POGINGEN_MS) return;
         laatstePoging = nu;
 
-        Camera.Size maat = camera.getParameters().getPreviewSize();
-        String tekst = QrLezer.lees(beeld, maat.width, maat.height);
+        if (beeldBreedte <= 0 || beeldHoogte <= 0) return;
+        String tekst = QrLezer.lees(beeld, beeldBreedte, beeldHoogte);
         if (tekst == null) return;
 
         klaar = true;

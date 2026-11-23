@@ -99,6 +99,9 @@ public class MainActivity extends Activity {
         if (savedInstanceState == null) {
             webView.loadUrl(startAdres(getIntent()));
             proefKaart = proefKaartUit(getIntent());
+            // Alleen in een debugversie: de rooktest laat zo de camerakant van de app lopen
+            // (dezelfde weg als de knop Kaart scannen), zonder dat er iemand op hoeft te tikken.
+            if (proefCameraUit(getIntent())) webView.postDelayed(this::openScanner, 800);
         } else {
             webView.restoreState(savedInstanceState);
         }
@@ -166,6 +169,19 @@ public class MainActivity extends Activity {
         }
         Log.i(TAG, "SJPEELAVOND_SCAN code=" + code);
         webView.evaluateJavascript(JS_WACHT + "30, " + alsJsTekst(code) + ")", null);
+    }
+
+    /** De camera openen om een kaartje te scannen; het antwoord komt via window.SJPEEL_SCAN. */
+    private void openScanner() {
+        if (isFinishing()) return;
+        Log.i(TAG, "SJPEELAVOND_SCANNER openen");
+        startActivityForResult(new Intent(this, Scanner.class), VERZOEK_SCAN);
+    }
+
+    /** Staat het camerascherm in het opstartcommando? Alleen een debugversie doet dat. */
+    private boolean proefCameraUit(Intent intent) {
+        boolean debugbaar = (getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0;
+        return debugbaar && intent != null && intent.getBooleanExtra("camera", false);
     }
 
     /**
@@ -255,7 +271,7 @@ public class MainActivity extends Activity {
         /** De camera openen om een kaartje te scannen; het antwoord komt via window.SJPEEL_SCAN. */
         @JavascriptInterface
         public void scanKaart() {
-            runOnUiThread(() -> startActivityForResult(new Intent(MainActivity.this, Scanner.class), VERZOEK_SCAN));
+            runOnUiThread(MainActivity.this::openScanner);
         }
     }
 

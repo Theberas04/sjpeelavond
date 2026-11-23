@@ -163,6 +163,35 @@ sleep 2
 schiet "apk-scannen-raojs"
 logcat_naar "$UIT/logcat-scannen-raojs.txt"
 
+# De camera zelf. De emulator heeft een namaakcamera (hw.camera.back=emulated), dus de app
+# kan hem echt openen. Eerst zonder toestemming: dan moet de app erom vragen. Daarna met
+# toestemming: dan moet de camera opengaan. Zo wordt de camerakant nagegaan zonder dat er
+# iemand op een knop tikt — dit is precies het stuk dat op een echt toestel fout ging.
+echo "--- de camera van de app ---"
+adb shell pm revoke "$PKG" android.permission.CAMERA >/dev/null 2>&1 || true
+adb shell am force-stop "$PKG" >/dev/null 2>&1 || true
+adb logcat -c || true
+adb shell am start -W -n "$PKG/.MainActivity" --ez camera true >/dev/null
+if ! wacht_op_marker "SJPEELAVOND_SCANNER toestemming vragen" 45; then
+  echo "de app vroeg niet om de cameratoestemming; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+adb shell pm grant "$PKG" android.permission.CAMERA >/dev/null 2>&1 || true
+adb shell am force-stop "$PKG" >/dev/null 2>&1 || true
+adb logcat -c || true
+adb shell am start -W -n "$PKG/.MainActivity" --ez camera true >/dev/null
+if ! wacht_op_marker "SJPEELAVOND_SCANNER camera open" 60; then
+  echo "de camera ging niet open; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+sleep 2
+schiet "apk-camera"
+logcat_naar "$UIT/logcat-camera.txt"
+adb shell input keyevent KEYCODE_BACK >/dev/null 2>&1 || true
+sleep 1
+
 echo "--- de schermafdrukken zijn geen lege vlakken ---"
 for beeld in "$UIT"/apk-*.png; do
   python3 scripts/check-screenshot.py "$beeld" >/dev/null
