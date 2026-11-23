@@ -104,7 +104,8 @@ jobs:
           java-version: '17'
       - uses: android-actions/setup-android@v3
         with:
-          packages: platform-tools platforms;android-35 build-tools;35.0.0 emulator system-images;android-35;google_apis;x86_64
+          # android-36 = Android 16, de versie onder One UI 8 op een Galaxy S25.
+          packages: platform-tools platforms;android-36 build-tools;35.0.0 emulator system-images;android-36;google_apis;x86_64
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'

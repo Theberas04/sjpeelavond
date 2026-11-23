@@ -35,9 +35,25 @@ if [ ! -x "$SDK/cmdline-tools/latest/bin/avdmanager" ]; then
 fi
 
 IMAGE="system-images;android-$API;google_apis;$ABI"
-if ! "$SDK/cmdline-tools/latest/bin/sdkmanager" --list 2>/dev/null | grep -q "$IMAGE"; then
-  echo "let op: $IMAGE is niet beschikbaar; ik gebruik android-35"
-  API=35
+# Alleen een *geinstalleerd* systeemimage werkt voor avdmanager. `sdkmanager --list`
+# noemt ook wat er te downloaden is, en daar ging het mis: op de bouwmachine stond
+# alleen android-35 terwijl android-36 beschikbaar (maar niet geinstalleerd) was, en
+# dan zakt avdmanager met "Package path is not valid". Dus in de map kijken.
+if [ ! -d "$SDK/system-images/android-$API/google_apis/$ABI" ]; then
+  GEVONDEN=
+  for kandidaat in 36 35 34 33; do
+    if [ -d "$SDK/system-images/android-$kandidaat/google_apis/$ABI" ]; then
+      GEVONDEN=$kandidaat
+      break
+    fi
+  done
+  if [ -z "$GEVONDEN" ]; then
+    echo "geen geinstalleerd systeemimage voor $ABI in $SDK/system-images" >&2
+    echo "installeer er een, bijvoorbeeld: sdkmanager 'system-images;android-35;google_apis;$ABI'" >&2
+    exit 1
+  fi
+  echo "let op: android-$API is niet geinstalleerd; ik gebruik android-$GEVONDEN"
+  API=$GEVONDEN
   IMAGE="system-images;android-$API;google_apis;$ABI"
 fi
 echo "systeemimage: $IMAGE"
