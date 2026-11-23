@@ -27,14 +27,21 @@ const ALLEEN_KAART = /^(\d{2,6})$/;
 
 /**
  * De kaartjes van de twee Limburgse spellen. Van Hittepetit is de vorm van de QR-code
- * nagegaan op foto's van echte kaartjes: https://hittepetit.radiononnevot.nl/q/HP0132
- * (kaartnummers HP0001 tot HP0222). Van Raoj 's bouwt hun web-app de code als
- * https://app.raojs.nl?id=<nummer>. Wat er in beide gevallen nog niet is, is de
- * koppeling van kaartnummer naar liedje: die is niet openbaar (zie
- * docs/onderzoek-kaartscanners.md), dus herkennen kan wel en naspelen nog niet.
+ * bekend uit hun eigen spel: https://hittepetit.radiononnevot.nl/q/HP0132 (kaartnummers
+ * HP0001 tot HP0222). Van Raoj 's bouwt hun web-app de code als
+ * https://app.raojs.nl?id=<nummer>. Van beide is de koppeling naar het liedje inmiddels
+ * gevonden (zie docs/onderzoek-hittepetit-app.md), dus beide zijn te herkennen én na te
+ * spelen. Alleen het nummer intypen werkt ook: HP0077 en NPRP worden herkend.
  */
 const HITTEPETIT_ADRES = /^https?:\/\/(?:www\.)?hittepetit\.radiononnevot\.nl\/q\/(hp\d{3,5})\/?$/i;
 const RAOJS_ADRES = /^https?:\/\/(?:www\.)?app\.raojs\.nl\/?\?(?:[^#]*&)?id=([^&#]+)/i;
+
+/**
+ * Het kaartnummer van Hittepetit ergens in de tekst. Een kaartje kan ook een ander adres
+ * hebben (een korte link, een andere schrijfwijze); `HP` met drie tot vijf cijfers is
+ * specifiek genoeg om het aan dit spel toe te schrijven.
+ */
+const HITTEPETIT_IN_TEKST = /(?:^|[^a-z0-9])hp[\s_-]*(\d{3,5})(?![0-9])/i;
 
 /**
  * Raoj 's: de web-app van het spel vertelt zelf welk fragment bij een kaartje hoort.
@@ -87,11 +94,27 @@ export function leesKaart(tekst) {
   const alleen = ALLEEN_KAART.exec(schoon);
   if (alleen) return { spel: 'hitster', taal: null, editie: null, kaart: alleen[1], ruw };
 
-  // De andere twee spellen: wel herkennen (met het kaartnummer erbij), nog niet naspelen.
+  // Alleen het kaartnummer van Hittepetit overgetypt: HP0077, hp 77 of HP-0077.
+  const alleenHp = /^hp[\s_-]*(\d{3,5})$/i.exec(schoon);
+  if (alleenHp) return { spel: 'hittepetit', kaart: `HP${alleenHp[1]}`, ruw };
+
+  // Alleen de code van Raoj 's overgetypt: precies vier letters, zoals NPRP. Ruimer dan dat
+  // maakt van elk willekeurig woord een kaartje van Raoj 's.
+  const alleenRaojs = /^([a-z]{4})$/i.exec(schoon);
+  if (alleenRaojs) return { spel: 'raojs', kaart: alleenRaojs[1].toUpperCase(), ruw };
+
+  // De andere twee spellen: herkennen met het kaartnummer erbij, zodat de app het liedje
+  // erbij kan zoeken.
   const hittepetit = HITTEPETIT_ADRES.exec(schoon);
   if (hittepetit) return { spel: 'hittepetit', kaart: hittepetit[1].toUpperCase(), ruw };
   const raojs = RAOJS_ADRES.exec(schoon);
   if (raojs) return { spel: 'raojs', kaart: decodeURIComponent(raojs[1]), ruw };
+
+  // Een adres van een andere vorm waar het kaartnummer van Hittepetit in staat: een korte
+  // link of een andere schrijfwijze. `HP` met cijfers komt bij de andere twee spellen niet
+  // voor, dus dit is veilig toe te schrijven.
+  const hpErgens = HITTEPETIT_IN_TEKST.exec(schoon);
+  if (hpErgens) return { spel: 'hittepetit', kaart: `HP${hpErgens[1]}`, ruw };
 
   const laag = schoon.toLowerCase();
   if (laag.includes('raojs')) return { spel: 'raojs', kaart: null, ruw };
@@ -312,7 +335,12 @@ export async function losOp(tekst, { tabel, haalTekst, maakSocket, variant } = {
       lied: { titel: null, artiest: null, jaar: null, fragment, hoes: null, speelbaar: true, antwoordOpKaartje: true },
     };
   }
-  if (lees.spel !== 'hitster') throw new Error('Deze code hoort niet bij een van de spellen.');
+  if (lees.spel !== 'hitster') {
+    // De code zelf erbij zetten: dan is te zien wat er op het kaartje stond in plaats van
+    // alleen dat de app er niets mee kan. Zonder dat is een verkeerd gelezen kaartje niet
+    // van een onbekend kaartje te onderscheiden.
+    throw new Error(`Deze code hoort niet bij een van de spellen: "${lees.ruw}"`);
+  }
 
   const gevonden = zoekLied(lees, tabel);
   if (!gevonden) {

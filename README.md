@@ -219,6 +219,28 @@ niet vrij: die staan op het kaartje zelf.
 Het hele onderzoek staat in [docs/onderzoek-kaartscanners.md](docs/onderzoek-kaartscanners.md) en
 [docs/onderzoek-hittepetit-app.md](docs/onderzoek-hittepetit-app.md).
 
+De kaartjes van Hittepetit zijn **roze op wit** in plaats van zwart op wit, en dat vroeg meer van de
+lezer dan de andere twee spellen: met de gewone drempel viel zo'n code weg zodra hij klein in beeld
+stond of licht van kleur was, waardoor de app het kaartje niet las terwijl de camera het wel zag.
+`QrLezer.java` probeert hetzelfde beeld daarom vier keer: gewoon, met het contrast opgerekt, met
+donker en licht omgedraaid, en met een andere drempel over het hele beeld. `QrLezerTest` laat met een
+nagemaakte foto (roze code, donkere tafel) zien dat de oude lezer het laat vallen en de nieuwe niet.
+En omdat een kaartje ook weleens niet te lezen is, kun je het nummer ook gewoon overtypen — `HP0077`
+werkt net zo goed als de gescande code.
+
+### Pauzeren
+
+Het fragment speelt dertig seconden, maar je hoeft niet te wachten: de knop **Pauze** zet het stil en
+**Verder** gaat verder waar het gebleven was — het liedje begint niet opnieuw. De balk staat stil
+zolang het op pauze staat, en het einde schuift mee. Staat het fragment helemaal afgelopen, dan biedt
+dezelfde knop **Opnieuw** aan. Dat geldt voor het bord én voor een gescand kaartje.
+
+De klok die dit bijhoudt staat in `public/js/fragment.js`, apart van de pagina, zodat
+`test/fragment.test.js` hem kan natrekken zonder te wachten (pauzeren, verdergaan, het einde, en dat
+de tijd op pauze niet meetelt voor het biedspel *Stop 's*). In een echte browser gaat
+`scripts/proef-zonder-server.mjs` de hele beweging langs: de knop zegt *Pauze*, de balk loopt, op
+pauze staat hij stil, en bij *Verder* loopt hij vanaf die stand door.
+
 Zo ziet dat eruit — eerst alleen het fragment, dan pas het antwoord:
 
 ![Een gescand kaartje: alleen het fragment](docs/img/apk-scannen-verborgen.png)

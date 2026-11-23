@@ -55,6 +55,17 @@ Heb je een fysiek muziekspel in huis — **Hitster** — dan hoef je de app van 
 4. Draai de kaart om zoals je gewend bent. Wil je het antwoord ook in de app zien, druk dan op **Onthul**.
 5. Druk op **Volgende kaartje scannen** voor de volgende speler.
 
+**Op pauze zetten.** Naast de balk staat de knop waarmee het fragment speelt. Druk op **Pauze** en het
+stil valt; de balk staat dan stil en het einde schuift mee. Druk op **Verder** en het gaat verder waar
+het gebleven was — het liedje begint niet opnieuw. Is het fragment helemaal afgelopen, dan heet de knop
+**Opnieuw**. Op het spelbord werkt het precies zo.
+
+**Leest de camera het kaartje niet?** Houd het kaartje plat, met de code het beeld in gevuld, en let op
+dat er licht op valt. De kaartjes van Hittepetit zijn roze op wit en dat leest lastiger dan zwart op
+wit; de app doet daar extra moeite voor, maar een scherpe foto helpt altijd. Lukt het toch niet, typ
+dan het nummer van het kaartje over in het vak onder de knop — `HP0077` bijvoorbeeld, of `00308` bij
+Hitster. Dat werkt hetzelfde.
+
 Onderaan staat welke kaartjes je deze ronde al gehad hebt, met het jaartal zodra je ze onthuld hebt — handig als er discussie is over een tijdlijn.
 
 **Welke dozen werken?** Alle edities van Hitster: de kaartjestabel met 176 edities zit in de app, dus ook een Duitse, Franse of Spaanse doos werkt. Je hebt internet nodig, want het fragment komt van buiten.

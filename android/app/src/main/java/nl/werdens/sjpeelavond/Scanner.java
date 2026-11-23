@@ -41,6 +41,8 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
     private static final String TAG = "Sjpeelavond";
     private static final int PERMISSIE_CAMERA = 4711;
     private static final int GEWENSTE_BREEDTE = 1280;
+    /** Groter dan dit hoeft niet: dat kost alleen maar rekenwerk per beeld. */
+    private static final int GEWENSTE_BREEDTE_MAX = 1920;
     private static final long MIN_TIJD_TUSSEN_POGINGEN_MS = 250;
 
     private SurfaceView oppervlak;
@@ -230,9 +232,26 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
         Log.i(TAG, "SJPEELAVOND_SCANNER beeld aan het vlak " + beeldBreedte + "x" + beeldHoogte);
     }
 
-    /** De maat die het dichtst bij 1280 breed zit; te klein leest geen code. */
+    /**
+     * De maat die het beste leest.
+     *
+     * Een code die klein in beeld staat (een kaartje dat verder weg gehouden wordt) heeft
+     * meer beeldpunten per blokje nodig, dus liever een grotere maat dan 1280 breed — maar
+     * niet groter dan nodig, want elk beeld moet ook gelezen worden. Een maat van 4:3 past
+     * bovendien beter bij een rechtopstaand scherm dan een breedbeeldmaat.
+     */
     private Camera.Size kiesMaat(List<Camera.Size> maten) {
         if (maten == null || maten.isEmpty()) return null;
+        Camera.Size groot = null;
+        for (Camera.Size maat : maten) {
+            if (maat.width > GEWENSTE_BREEDTE_MAX || maat.height <= 0) continue;
+            double verhouding = (double) maat.width / maat.height;
+            if (verhouding < 1.2) continue; // geen 4:3 of breder: past niet bij een rechtopstaand scherm
+            if (groot == null || maat.width > groot.width) groot = maat;
+        }
+        if (groot != null) return groot;
+
+        // Geen 4:3-maat: dan de maat die het dichtst bij 1280 breed zit.
         Camera.Size beste = maten.get(0);
         for (Camera.Size maat : maten) {
             if (Math.abs(maat.width - GEWENSTE_BREEDTE) < Math.abs(beste.width - GEWENSTE_BREEDTE)) beste = maat;

@@ -4,6 +4,7 @@
  */
 import * as S from './spel.js';
 import { kijkVoorUpdate } from './update.js';
+import { maakKlok } from './fragment.js';
 
 /* ── hulpjes ───────────────────────────────────────────────────────────── */
 
@@ -58,7 +59,7 @@ const staat = {
   dekken: [],
   spel: null,
   keuzes: { soort: 'tijdlijn', variant: null, namen: [], dekken: [], doel: 10, fragment: 30 },
-  audio: { bezig: false, start: 0, timer: null, stopTimer: null },
+  audio: { bezig: false, kaartId: null, klok: null },
   stop: null, // {speler, seconden} bij Stop 's
   gekozenPlek: null,
   steel: null, // {dief}
@@ -516,25 +517,46 @@ async function trekKaart() {
   await speelFragment();
 }
 
+function tekenFragmentbalk(verstreken, totaal) {
+  const balk = $('#balkvulling');
+  if (balk) balk.style.width = `${Math.min(100, (verstreken / totaal) * 100)}%`;
+}
+
 async function speelFragment() {
   const spel = staat.spel;
   const kaart = spel?.huidig;
   if (!kaart) return;
   const speler = $('#speler');
 
-  if (!speler.paused && speler.src) {
+  // Nog een keer drukken terwijl het speelt: pauzeren. Bij Verder gaat het verder waar het
+  // gebleven was; het fragment begint niet opnieuw.
+  if (staat.audio.bezig) {
     speler.pause();
     staat.audio.bezig = false;
+    staat.audio.klok?.pauzeer();
     renderBord();
     return;
   }
 
-  if (!speler.src || staat.audio.kaartId !== kaart.id) {
+  const nieuweKaart = !speler.src || staat.audio.kaartId !== kaart.id;
+  if (nieuweKaart) {
     const { url } = await api(`/api/fragment?id=${kaart.id}`);
     speler.src = url;
     staat.audio.kaartId = kaart.id;
+    staat.audio.klok = maakKlok(spel.fragment, { bijTeken: tekenFragmentbalk, bijEinde: () => {
+      staat.audio.bezig = false;
+      renderBord();
+    } });
   }
-  speler.currentTime = 0;
+  if (!staat.audio.klok) staat.audio.klok = maakKlok(spel.fragment, { bijTeken: tekenFragmentbalk, bijEinde: () => {
+    staat.audio.bezig = false;
+    renderBord();
+  } });
+  if (staat.audio.klok.rest() <= 0) {
+    staat.audio.klok.opnieuw();
+    speler.currentTime = 0;
+  }
+  if (nieuweKaart) speler.currentTime = 0;
   try {
     await speler.play();
   } catch {
@@ -542,20 +564,7 @@ async function speelFragment() {
     return;
   }
   staat.audio.bezig = true;
-  staat.audio.start = performance.now();
-  clearTimeout(staat.audio.stopTimer);
-  staat.audio.stopTimer = setTimeout(() => {
-    speler.pause();
-    staat.audio.bezig = false;
-    renderBord();
-  }, spel.fragment * 1000);
-  clearInterval(staat.audio.timer);
-  staat.audio.timer = setInterval(() => {
-    const balk = $('#balkvulling');
-    if (!balk) return clearInterval(staat.audio.timer);
-    const deel = Math.min(1, (performance.now() - staat.audio.start) / (spel.fragment * 1000));
-    balk.style.width = `${deel * 100}%`;
-  }, 120);
+  staat.audio.klok.start();
   renderBord();
 }
 
@@ -664,10 +673,11 @@ function geefPuntenAanAangevinkten() {
 function buzz(i) {
   const spel = staat.spel;
   if (spel.variant !== 'stops' || staat.stop || spel.fase !== 'plaatsen') return;
-  const seconden = Math.max(0.4, (performance.now() - staat.audio.start) / 1000);
+  // De klok houdt bij hoeveel er echt gespeeld is; pauzemomenten tellen dus niet mee.
+  const seconden = Math.max(0.4, (staat.audio.klok?.verstreken() ?? 0) / 1000);
   $('#speler').pause();
   staat.audio.bezig = false;
-  clearTimeout(staat.audio.stopTimer);
+  staat.audio.klok?.pauzeer();
   staat.stop = { speler: i, seconden };
   renderBord();
 }
@@ -773,13 +783,17 @@ function spelersHtml(spel) {
 }
 
 function fragmentbalkHtml(spel, { knop = true } = {}) {
+  const klok = staat.audio.klok;
+  const klaar = klok ? klok.rest() <= 0 : false;
+  const woord = staat.audio.bezig ? 'Pauze' : klaar ? 'Opnieuw' : klok?.verstreken() > 500 ? 'Verder' : 'Speel';
   return `
   <div class="fragmentbalk">
-    ${knop ? `<button class="speelknop" data-act="${staat.audio.bezig ? 'pauze' : 'speel'}" title="Fragment afspelen">
+    ${knop ? `<button class="speelknop" data-act="${staat.audio.bezig ? 'pauze' : 'speel'}" title="${staat.audio.bezig ? 'Fragment op pauze zetten' : 'Fragment afspelen'}">
       <svg viewBox="0 0 24 24" fill="currentColor">${staat.audio.bezig ? '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>' : '<path d="M8 5.5v13l11-6.5z"/>'}</svg>
+      <span>${woord}</span>
     </button>` : ''}
     <div class="balk"><i id="balkvulling"></i></div>
-    <span class="chip">${spel.fragment}s fragment</span>
+    <span class="chip">${spel.fragment}s fragment${staat.audio.bezig ? ' · speelt' : klok && !klaar ? ' · gepauzeerd' : ''}</span>
   </div>`;
 }
 
@@ -863,6 +877,9 @@ function renderBord() {
 
   bord.innerHTML = blokken.join('');
   renderLog();
+  // De balk is net opnieuw opgebouwd en staat weer op nul; meteen de stand van de klok erin
+  // zetten, anders knippert hij bij elke keer dat het bord opnieuw getekend wordt.
+  staat.audio.klok?.teken();
 }
 
 function hintHtml(spel) {
@@ -1204,7 +1221,10 @@ async function laadVersie() {
  * door aan {@link verwerkScan}; het opzoeken gaat via /api/kaart, zodat de app en de
  * serverversie precies hetzelfde doen (zie public/js/kaart.js).
  */
-const scan = { kaart: null, ronde: [], timer: null, stopTimer: null, onthuld: false };
+const scan = { kaart: null, ronde: [], klok: null, speelt: false, onthuld: false };
+
+/** Het fragment bij een gescand kaartje duurt even lang als in een potje: dertig seconden. */
+const FRAGMENT_SECONDEN = 30;
 
 function scanMelding(tekst) {
   const vak = $('#scan-melding');
@@ -1241,6 +1261,10 @@ async function verwerkScan(tekst) {
       );
     }
     renderScan();
+    // Een nieuw kaartje begint met een nieuw fragment, ook als het vorige nog speelde of
+    // op pauze stond.
+    scan.klok?.pauzeer();
+    scan.speelt = false;
     await speelScanFragment();
     scanMelding(`Kaartje ${uitkomst.kaart} van ${uitkomst.editie?.naam || uitkomst.editieId}.`);
   } catch (fout) {
@@ -1259,31 +1283,51 @@ async function speelScanFragment() {
     scanMelding('Voor dit nummer is geen fragment beschikbaar.');
     return;
   }
-  speler.pause();
-  speler.src = lied.fragment;
-  speler.currentTime = 0;
+
+  // Zoals op het bord: nog een keer drukken pauzeert, en Verder gaat verder waar het was.
+  if (scan.speelt) {
+    speler.pause();
+    scan.speelt = false;
+    scan.klok?.pauzeer();
+    renderScan();
+    return;
+  }
+
+  const nieuwFragment = speler.src !== lied.fragment;
+  if (nieuwFragment) {
+    speler.pause();
+    speler.src = lied.fragment;
+    speler.currentTime = 0;
+    scan.klok = maakKlok(FRAGMENT_SECONDEN, { bijTeken: tekenScanBalk, bijEinde: () => {
+      scan.speelt = false;
+      scanMelding('Fragment afgelopen. Onthul of scan het volgende kaartje.');
+      renderScan();
+    } });
+  }
+  if (!scan.klok) {
+    scan.klok = maakKlok(FRAGMENT_SECONDEN, { bijTeken: tekenScanBalk, bijEinde: () => {
+      scan.speelt = false;
+      renderScan();
+    } });
+  }
+  if (scan.klok.rest() <= 0) {
+    scan.klok.opnieuw();
+    speler.currentTime = 0;
+  }
   try {
     await speler.play();
   } catch (fout) {
     scanMelding(`Het fragment kon niet starten: ${fout.message}`);
     return;
   }
-  scan.start = performance.now();
-  clearTimeout(scan.stopTimer);
-  scan.stopTimer = setTimeout(() => {
-    speler.pause();
-    scanMelding('Fragment afgelopen. Onthul of scan het volgende kaartje.');
-  }, 30000);
-  clearInterval(scan.timer);
-  scan.timer = setInterval(tekenScanBalk, 120);
+  scan.speelt = true;
+  scan.klok.start();
   renderScan();
 }
 
-function tekenScanBalk() {
+function tekenScanBalk(verstreken, totaal) {
   const balk = $('#scan-balk');
-  if (!balk) return clearInterval(scan.timer);
-  const deel = Math.min(1, (performance.now() - (scan.start || 0)) / 30000);
-  balk.style.width = `${deel * 100}%`;
+  if (balk) balk.style.width = `${Math.min(100, (verstreken / totaal) * 100)}%`;
 }
 
 function renderScan() {
@@ -1298,11 +1342,12 @@ function renderScan() {
   vak.innerHTML = `
     <p class="klein" style="margin:0 0 10px">Kaartje <strong>${esc(kaart.kaart)}</strong> · ${esc(editie)}</p>
     <div class="fragmentbalk">
-      <button class="speelknop" data-act="scan-speel" title="Fragment afspelen">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
+      <button class="speelknop" data-act="scan-speel" title="${scan.speelt ? 'Fragment op pauze zetten' : 'Fragment afspelen'}">
+        <svg viewBox="0 0 24 24" fill="currentColor">${scan.speelt ? '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>' : '<path d="M8 5.5v13l11-6.5z"/>'}</svg>
+        <span>${scan.speelt ? 'Pauze' : scan.klok && scan.klok.rest() <= 0 ? 'Opnieuw' : scan.klok?.verstreken() > 500 ? 'Verder' : 'Speel'}</span>
       </button>
       <div class="balk"><i id="scan-balk"></i></div>
-      <span class="chip">30 seconden</span>
+      <span class="chip">30 seconden${scan.speelt ? ' · speelt' : scan.klok && scan.klok.rest() > 0 ? ' · gepauzeerd' : ''}</span>
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
       <button class="knop" data-act="scan-onthul">Onthul</button>

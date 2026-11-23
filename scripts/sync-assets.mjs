@@ -59,6 +59,7 @@ function controleer() {
     'js/spel.js',
     'js/lokaal.js',
     'js/kaart.js',
+    'js/fragment.js',
     'js/update.js',
     'data/index.json',
     'data/nummers-hits.json',
@@ -67,6 +68,24 @@ function controleer() {
   ];
   for (const bestand of verplicht) {
     if (!existsSync(path.join(DOEL, bestand))) fouten.push(`${bestand} ontbreekt in de bundel`);
+  }
+
+  // En de modules die de scripts zelf inladen. De pagina vraagt alleen app.js en lokaal.js
+  // (dat zijn de <script type="module">-regels), maar die halen op hun beurt spel.js,
+  // kaart.js, fragment.js en update.js op. Staat zo'n bestand niet in de bundel, dan werkt
+  // de app in de browser en niet in de app — precies het verschil dat je niet ziet.
+  const ingeladen = new Set();
+  for (const bestand of verplicht.filter((b) => b.endsWith('.js'))) {
+    const heel = path.join(DOEL, bestand);
+    if (!existsSync(heel)) continue;
+    for (const m of readFileSync(heel, 'utf8').matchAll(/from\s+['"]\.\/([\w.-]+\.js)['"]/g)) {
+      ingeladen.add(`js/${m[1]}`);
+    }
+  }
+  for (const module of ingeladen) {
+    if (!existsSync(path.join(DOEL, module))) {
+      fouten.push(`een script laadt ${module} in en dat zit niet in de bundel`);
+    }
   }
 
   // En de inhoud: een lege of halfgeschreven database mag niet groen door.

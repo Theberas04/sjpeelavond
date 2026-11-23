@@ -81,6 +81,13 @@ try {
 }
 
 const BRUG = `
+// Het geluid zelf is in deze proef niet na te spelen: het fragmentadres van de nagemaakte
+// brug bestaat niet echt. Daarom doet de speler alsof hij speelt, zodat de knoppen, de balk
+// en de klok — dat is wat hier bewezen moet worden — gewoon hun werk doen.
+HTMLMediaElement.prototype.play = function () { this.paused = false; return Promise.resolve(); };
+HTMLMediaElement.prototype.pause = function () { this.paused = true; };
+HTMLMediaElement.prototype.load = function () {};
+
 window.Sjpeelavond = {
   lokaal: function () { return 'ja'; },
   versie: function () { return '1.0.0-proef'; },
@@ -154,6 +161,34 @@ eis(/beurt 1/.test(ronde), `de beurt staat op het bord (${ronde})`);
 // Tegen het spieken: een getrokken kaart levert alleen een nummer op, geen jaartal.
 const velden = await js(`window.SJPEEL_LOKAAL('/api/trek', { dekken: ['hits'], gebruikt: [], aantal: 1 }).then((k) => Object.keys(k.kaarten[0]).join(','))`);
 eis(velden === 'id', `een getrokken kaart geeft alleen een nummer (${velden})`);
+
+/* ── op pauze zetten ──────────────────────────────────────────────────── */
+
+const knopWoord = () => js('document.querySelector(".speelknop span")?.textContent || ""');
+const balkStand = () => js('parseFloat(document.querySelector("#balkvulling").style.width) || 0');
+
+console.log('--- het fragment op pauze zetten en weer verdergaan ---');
+eis((await knopWoord()) === 'Pauze', `de knop biedt pauzeren aan (${await knopWoord()})`);
+await wacht(700);
+const voorPauze = await balkStand();
+eis(voorPauze > 0, `de balk loopt terwijl het speelt (${voorPauze.toFixed(1)}%)`);
+
+await js('document.querySelector(".speelknop").click()');
+await wacht(350);
+const opPauze = await balkStand();
+eis((await knopWoord()) === 'Verder', `op pauze biedt de knop Verder aan (${await knopWoord()})`);
+await wacht(900);
+const nogSteeds = await balkStand();
+eis(
+  Math.abs(nogSteeds - opPauze) < 0.5,
+  `de balk staat stil zolang het op pauze staat (${opPauze.toFixed(1)}% -> ${nogSteeds.toFixed(1)}%)`,
+);
+
+await js('document.querySelector(".speelknop").click()');
+await wacht(900);
+const naVerder = await balkStand();
+eis(naVerder > opPauze + 1, `Verder gaat verder waar het gebleven was (${opPauze.toFixed(1)}% -> ${naVerder.toFixed(1)}%)`);
+eis((await knopWoord()) === 'Pauze', 'de knop biedt weer pauzeren aan');
 
 if (Object.keys(EMBEDS).length) {
   console.log('--- een kaartje van de fysieke doos scannen ---');

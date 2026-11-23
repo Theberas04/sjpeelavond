@@ -114,12 +114,41 @@ test('de codes van een kaartje worden gelezen', () => {
   assert.equal(leesKaart('"https://www.hitstergame.com/nl/aaaa0001/00308"').editie, 'aaaa0001');
 });
 
-test('de andere twee spellen worden herkend maar niet nagespeeld', () => {
+test('een kaartje van de andere spellen wordt aan het spel toegewezen', () => {
   assert.equal(leesKaart('https://raojs.nl/kaart/12').spel, 'raojs');
   assert.equal(leesKaart('https://www.marotte.nl/hittepetit/kaart-4').spel, 'hittepetit');
   assert.equal(leesKaart('zomaar wat tekst').spel, 'onbekend');
   assert.equal(leesKaart('').spel, 'onbekend');
   assert.equal(leesKaart(null).spel, 'onbekend');
+});
+
+test('een kaartnummer dat iemand overtikt wordt ook herkend', () => {
+  // Wie het nummer van het kaartje overtypt in plaats van scant, moet ook verder kunnen.
+  const hp = leesKaart('HP0077');
+  assert.equal(hp.spel, 'hittepetit');
+  assert.equal(hp.kaart, 'HP0077');
+  assert.equal(leesKaart('hp 077').kaart, 'HP077');
+  assert.equal(leesKaart('HP-0132').kaart, 'HP0132');
+  assert.equal(leesKaart('hp0132').spel, 'hittepetit');
+
+  // De code van Raoj 's bestaat uit letters.
+  const raojs = leesKaart('NPRP');
+  assert.equal(raojs.spel, 'raojs');
+  assert.equal(raojs.kaart, 'NPRP');
+  assert.equal(leesKaart('nprp').kaart, 'NPRP');
+
+  // Alleen cijfers blijft een Hitster-kaartnummer.
+  assert.equal(leesKaart('00308').spel, 'hitster');
+});
+
+test('een kaartnummer van Hittepetit in een ander adres wordt ook herkend', () => {
+  // De kaartjes kunnen een korte link of een andere schrijfwijze hebben; het nummer zelf is
+  // wat de app nodig heeft. `HP` met cijfers komt bij de andere spellen niet voor.
+  const kort = leesKaart('https://hittepetit.nl/HP0099');
+  assert.equal(kort.spel, 'hittepetit');
+  assert.equal(kort.kaart, 'HP0099');
+  assert.equal(leesKaart('https://radiononnevot.nl/q/hp0222').kaart, 'HP0222');
+  assert.equal(leesKaart('Kaartje HP0123 van Hittepetit').kaart, 'HP0123');
 });
 
 test('de echte kaartjes van Raoj \'s en Hittepetit worden met hun nummer gelezen', () => {
@@ -271,4 +300,19 @@ test('het fragment wordt op het kaartnummer opgezocht, niet op iets anders', () 
   assert.throws(() => haalHittepetitFragment('HP'), /geen nummer/);
   assert.throws(() => haalHittepetitFragment(''), /geen nummer/);
   assert.throws(() => haalHittepetitFragment('../../etc/passwd'), /geen nummer/);
+});
+
+test('een overtikt Hittepetit-nummer speelt hetzelfde fragment als een gescand kaartje', async () => {
+  const getypt = await losOp('HP0077', {});
+  assert.equal(getypt.spel, 'hittepetit');
+  assert.equal(
+    getypt.lied.fragment,
+    'https://firebasestorage.googleapis.com/v0/b/nonnevot-9cea7.appspot.com/o/hittepetit%2FHP0077.mp3?alt=media',
+  );
+});
+
+test('een onbekende code wordt met de code zelf gemeld, niet alleen als onbekend', async () => {
+  // Zonder de code erbij is een verkeerd gelezen kaartje niet van een onbekend kaartje te
+  // onderscheiden; met de code erbij is meteen te zien wat er op het kaartje stond.
+  await assert.rejects(() => losOp('https://voorbeeld.nl/q/XX42', {}), /XX42/);
 });
