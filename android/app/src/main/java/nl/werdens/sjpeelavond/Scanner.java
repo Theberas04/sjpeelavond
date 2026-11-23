@@ -2,6 +2,7 @@ package nl.werdens.sjpeelavond;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -10,6 +11,7 @@ import android.hardware.Camera;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.ViewGroup;
@@ -42,6 +44,7 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
     private static final long MIN_TIJD_TUSSEN_POGINGEN_MS = 250;
 
     private SurfaceView oppervlak;
+    private Beeldvlak beeldvlak;
     private TextView uitleg;
     private Camera camera;
     private boolean klaar;
@@ -72,10 +75,18 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
         FrameLayout houder = new FrameLayout(this);
         houder.setBackgroundColor(Color.BLACK);
 
+        // Het camerabeeld zit in een eigen vlak dat de verhouding van de camera aanhoudt.
+        // Zonder dat wordt een breed beeld (bijvoorbeeld 1280 bij 720) uitgerekt over het
+        // hele rechtopstaande scherm en klopt de verhouding niet meer.
+        beeldvlak = new Beeldvlak(this);
         oppervlak = new SurfaceView(this);
         oppervlak.getHolder().addCallback(this);
-        houder.addView(oppervlak, new FrameLayout.LayoutParams(
+        beeldvlak.addView(oppervlak, new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        FrameLayout.LayoutParams beeldMaat = new FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        beeldMaat.gravity = Gravity.CENTER;
+        houder.addView(beeldvlak, beeldMaat);
 
         LinearLayout tekstvak = new LinearLayout(this);
         tekstvak.setOrientation(LinearLayout.VERTICAL);
@@ -143,6 +154,13 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
             maat = kiesMaat(instellingen.getSupportedPreviewSizes());
             if (maat != null) instellingen.setPreviewSize(maat.width, maat.height);
             instellingen.setPreviewFormat(ImageFormat.NV21);
+            // Scherpstellen: zonder dit blijft het beeld wazig en leest de app de code niet.
+            List<String> scherpstellen = instellingen.getSupportedFocusModes();
+            if (scherpstellen != null && scherpstellen.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE)) {
+                instellingen.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE);
+            } else if (scherpstellen != null && scherpstellen.contains(Camera.Parameters.FOCUS_MODE_AUTO)) {
+                instellingen.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+            }
             camera.setParameters(instellingen);
         } catch (Exception fout) {
             Log.i(TAG, "SJPEELAVOND_SCANNER instellingen geweigerd: " + fout.getMessage());
@@ -162,6 +180,17 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
         }
         beeldBreedte = maat == null ? 0 : maat.width;
         beeldHoogte = maat == null ? 0 : maat.height;
+        // Het beeld rechtop zetten en het vlak de juiste verhouding geven: het scherm staat
+        // rechtop, het camerabeeld komt breed binnen.
+        try {
+            camera.setDisplayOrientation(beeldstand());
+        } catch (Exception fout) {
+            Log.i(TAG, "SJPEELAVOND_SCANNER beeldstand niet te zetten: " + fout.getMessage());
+        }
+        if (beeldvlak != null && beeldBreedte > 0 && beeldHoogte > 0) {
+            // Gedraaid komt het beeld als hoogte bij breedte op het scherm.
+            beeldvlak.zetVerhouding((double) beeldBreedte / beeldHoogte);
+        }
         if (oppervlakKlaar) {
             hangBeeldAan();
         } else {
@@ -209,6 +238,74 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
             if (Math.abs(maat.width - GEWENSTE_BREEDTE) < Math.abs(beste.width - GEWENSTE_BREEDTE)) beste = maat;
         }
         return beste;
+    }
+
+    /**
+     * Hoeveel graden het camerabeeld gedraaid moet worden om rechtop te staan. Dit is de
+     * standaardberekening van Android: de stand van de camera plus die van het scherm.
+     */
+    private int beeldstand() {
+        Camera.CameraInfo gegevens = new Camera.CameraInfo();
+        try {
+            Camera.getCameraInfo(0, gegevens);
+        } catch (Exception fout) {
+            return 90; // geen gegevens: rechtop is de gebruikelijke stand
+        }
+        int schermstand = 0;
+        try {
+            switch (getWindowManager().getDefaultDisplay().getRotation()) {
+                case Surface.ROTATION_90:
+                    schermstand = 90;
+                    break;
+                case Surface.ROTATION_180:
+                    schermstand = 180;
+                    break;
+                case Surface.ROTATION_270:
+                    schermstand = 270;
+                    break;
+                default:
+                    schermstand = 0;
+            }
+        } catch (Exception fout) {
+            schermstand = 0;
+        }
+        if (gegevens.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
+            return (gegevens.orientation + schermstand) % 360;
+        }
+        return (gegevens.orientation - schermstand + 360) % 360;
+    }
+
+    /**
+     * Een vlak dat de verhouding van het camerabeeld aanhoudt, zodat het beeld niet wordt
+     * uitgerekt. Het beeldvlak krijgt de volle breedte en de hoogte die daarbij hoort; de
+     * rest van het scherm blijft zwart.
+     */
+    private static class Beeldvlak extends FrameLayout {
+
+        private double verhouding = 16.0 / 9.0; // hoogte gedeeld door breedte
+        Beeldvlak(Context context) {
+            super(context);
+        }
+
+        void zetVerhouding(double nieuwe) {
+            if (nieuwe <= 0 || Math.abs(nieuwe - verhouding) < 0.001) return;
+            verhouding = nieuwe;
+            requestLayout();
+        }
+
+        @Override
+        protected void onMeasure(int breedteMaat, int hoogteMaat) {
+            int breedte = MeasureSpec.getSize(breedteMaat);
+            int hoogte = MeasureSpec.getSize(hoogteMaat);
+            int gewenst = breedte > 0 ? (int) Math.round(breedte * verhouding) : 0;
+            if (gewenst > 0 && (hoogte <= 0 || gewenst <= hoogte)) {
+                setMeasuredDimension(breedte, gewenst);
+                measureChildren(MeasureSpec.makeMeasureSpec(breedte, MeasureSpec.EXACTLY),
+                        MeasureSpec.makeMeasureSpec(gewenst, MeasureSpec.EXACTLY));
+                return;
+            }
+            super.onMeasure(breedteMaat, hoogteMaat);
+        }
     }
 
     private void sluitCamera() {
