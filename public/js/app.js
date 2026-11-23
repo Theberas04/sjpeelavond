@@ -76,6 +76,11 @@ function toonView(naam) {
   for (const vak of document.querySelectorAll('#app > section')) vak.hidden = vak.id !== `view-${naam}`;
   for (const knop of document.querySelectorAll('#tabs button')) knop.classList.toggle('actief', knop.dataset.view === naam);
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // De pagina meldt zelf welk scherm open staat. De schil kan dat niet zien: een diepe
+  // link verandert alleen het hekje in het adres, en dan laadt de pagina niet opnieuw.
+  if (typeof window.Sjpeelavond?.log === 'function') {
+    window.Sjpeelavond.log(`SJPEELAVOND_SCERM scherm=view-${naam}`);
+  }
 }
 
 document.querySelectorAll('#tabs button').forEach((knop) => {
@@ -1319,5 +1324,12 @@ async function opstarten() {
   }
   toonView('start');
 }
+
+// Een diepe link terwijl de app al openstaat (de schil doet dat met `-e scherm`): het
+// adres verandert alleen in het hekje, dus de pagina laadt niet opnieuw. Zonder deze
+// luisteraar zou zo'n sprong niets doen.
+window.addEventListener('hashchange', () => {
+  startVanAdres().catch((fout) => meld(`Kon dat scherm niet openen: ${fout.message}`));
+});
 
 opstarten().catch((fout) => meld(`Kon niet opstarten: ${fout.message}`));

@@ -65,7 +65,10 @@ opent_scherm() {
   echo "--- scherm $naam ---"
   adb logcat -c || true
   adb shell am start -W -n "$PKG/.MainActivity" -e scherm "$naam" >/dev/null
-  if ! wacht_op_marker "scherm=$verwacht" 45; then
+  # De pagina meldt zelf welk scherm openstaat: bij een diepe link verandert alleen het
+  # hekje in het adres en dan laadt de pagina niet opnieuw, dus de momentopname van de
+  # schil komt dan niet langs.
+  if ! wacht_op_marker "SJPEELAVOND_SCERM scherm=$verwacht" 45; then
     echo "scherm $naam bleef op iets anders staan dan $verwacht; logcat:" >&2
     adb logcat -d -s Sjpeelavond:I >&2 || true
     exit 1
