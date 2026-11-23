@@ -131,6 +131,57 @@ test('trekken komt uit het gekozen dek en slaat gebruikte kaarten over', async (
   );
 });
 
+test('de app verfijnt het aanbod net zo als de server', async () => {
+  const gevallen = [
+    {},
+    { jarenVan: 1990 },
+    { jarenTot: 1990 },
+    { jarenVan: 1980, jarenTot: 2005 },
+    { alleenLvkInzending: true },
+    { nooitGespeeld: true, gespeeld: [1, 100000] },
+    { jarenVan: 1990, alleenLvkInzending: false, nooitGespeeld: true, gespeeld: [] },
+  ];
+  for (const verfijning of gevallen) {
+    const vraag = { dekken: ['hits', 'limburg'], ...verfijning };
+    const vanDeServer = await vanServer('/api/pool', vraag);
+    const vanDeApp = await lokaleApi.verzoek('/api/pool', vraag);
+    assert.deepEqual(vanDeApp, vanDeServer.json, `verfijning ${JSON.stringify(verfijning)}`);
+  }
+});
+
+test('een jaarbereik telt en trekt in de app precies als in de server', async () => {
+  // De jaren tachtig: alleen nummer 100000 (1986) valt daarbinnen.
+  const vraag = { dekken: ['hits', 'limburg'], jarenVan: 1980, jarenTot: 1989 };
+  const poolServer = await vanServer('/api/pool', vraag);
+  assert.equal(poolServer.json.aantal, 1);
+  assert.deepEqual(await lokaleApi.verzoek('/api/pool', vraag), poolServer.json);
+
+  const trekVraag = { ...vraag, gebruikt: [], aantal: 1 };
+  const vanDeServer = await vanServer('/api/trek', trekVraag);
+  const vanDeApp = await lokaleApi.verzoek('/api/trek', trekVraag);
+  assert.deepEqual(vanDeApp, vanDeServer.json);
+  assert.equal(vanDeApp.kaarten[0].id, 100000, 'alleen het nummer uit de jaren tachtig');
+});
+
+test('"alleen LVK-inzendingen" laat het nummer zonder vlag vallen', async () => {
+  const vraag = { dekken: ['limburg'], alleenLvkInzending: true };
+  assert.deepEqual(await lokaleApi.verzoek('/api/pool', vraag), (await vanServer('/api/pool', vraag)).json);
+  assert.equal((await vanServer('/api/pool', vraag)).json.aantal, 1, 'alleen nummer 100000 heeft lvk: true');
+});
+
+test('als een verfijning te streng staat zeggen app en server hetzelfde', async () => {
+  const vraag = { dekken: ['hits'], jarenVan: 2020, alleenLvkInzending: true, gebruikt: [], aantal: 1 };
+  const vanDeServer = await vanServer('/api/trek', vraag);
+  assert.equal(vanDeServer.status, 409);
+  assert.match(vanDeServer.json.fout, /verfijning/i);
+  assert.match(vanDeServer.json.fout, /2020/);
+  await assert.rejects(
+    () => lokaleApi.verzoek('/api/trek', vraag),
+    (fout) => fout.message === vanDeServer.json.fout,
+    'dezelfde melding als de server',
+  );
+});
+
 test('trekken geeft dezelfde vorm als de server', async () => {
   const vanDeServer = await vanServer('/api/trek', { dekken: ['hits'], gebruikt: [1], aantal: 1 });
   const vanDeApp = await lokaleApi.verzoek('/api/trek', { dekken: ['hits'], gebruikt: [1], aantal: 1 });

@@ -228,6 +228,37 @@ nagemaakte foto (roze code, donkere tafel) zien dat de oude lezer het laat valle
 En omdat een kaartje ook weleens niet te lezen is, kun je het nummer ook gewoon overtypen — `HP0077`
 werkt net zo goed als de gescande code.
 
+### Verfijnen: welk deel van de 1.542 nummers je hoort
+
+Op het instelscherm staat onder *Verfijnen* wat je naast de dekken kunt kiezen:
+
+* **een jaarbereik** (bijvoorbeeld vanaf 1980, of 1990–2005);
+* **alleen echte LVK-inzendingen** — van veel nummers is de status niet bekend, en die vallen
+  hier dan af (93 van de 1.542 zijn het zeker);
+* **niets wat al eerder op tafel lag** — de app onthoudt welke nummers je al gehad hebt, over
+  alle avonden heen. Dat houdt de avond fris: zonder dit hoor je steeds dezelfde nummers terug.
+
+Eronder staat meteen hoeveel nummers er dan nog over zijn, en als een filter te streng staat
+zegt de app dat *voor* je begint in plaats van halverwege met een lege stapel.
+
+De zeef staat in `public/js/pool.js` en wordt door de server én de app gebruikt, zodat de
+webversie en de app hetzelfde aanbieden; `test/pool.test.js` legt de regels vast en
+`test/lokaal.test.js` vergelijkt de antwoorden van beide bij elke verfijning. Het scherm zegt
+ook wat er aanstaat ("vanaf 1980 · 604 nummers om uit te kiezen"), zodat er geen twijfel is
+over waarom je iets wel of niet hoort.
+
+### Donker thema
+
+In de kop staat een knop met een maan; die zet de app op donker (of terug op licht). Zonder
+keuze volgt de app het toestel. De keuze staat op `<html data-thema>` zodat de stylesheet hem
+volgt, en wordt onthouden — een nieuw onderdeel erft het thema vanzelf, want alle kleuren
+komen uit de tokens bovenaan de stylesheet.
+
+### Tien seconden terug
+
+Naast de afspeelknop staat **10 s terug**: handig als je het begin van een liedje net miste.
+De klok schuift terug en het einde schuift mee, dus je verliest geen seconde van het fragment.
+
 ### Pauzeren
 
 Het fragment speelt dertig seconden, maar je hoeft niet te wachten: de knop **Pauze** zet het stil en

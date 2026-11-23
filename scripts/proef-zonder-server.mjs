@@ -144,6 +144,59 @@ await js(`(() => {
   });
   return velden.length;
 })()`);
+console.log('--- verfijnen: een jaarbereik en een schakelaar ---');
+// De keuzelijsten horen gevuld te zijn en de uitleg hoort te vertellen hoeveel er overblijft.
+const jaarOpties = await js('document.querySelector("#jaar-van").options.length');
+eis(jaarOpties > 30, `de jaarkeuze is gevuld (${jaarOpties} regels)`);
+const geenFilter = await js('document.querySelector("#verfijning-uitleg").textContent');
+eis(/geen filter/i.test(geenFilter) && /nummers om uit te kiezen/.test(geenFilter), `zonder filter staat er wat er te kiezen valt (${geenFilter})`);
+
+await js(`(() => {
+  const van = document.querySelector('#jaar-van');
+  van.value = '1980';
+  van.dispatchEvent(new Event('change', { bubbles: true }));
+  van.dispatchEvent(new Event('input', { bubbles: true }));
+})()`);
+await wacht(500);
+const metFilter = await js('document.querySelector("#verfijning-uitleg").textContent');
+eis(/vanaf 1980/.test(metFilter), `de verfijning staat er (${metFilter})`);
+eis(/\d+ nummers om uit te kiezen/.test(metFilter), 'en het aantal dat er dan overblijft');
+
+// Een filter dat alles wegneemt hoort dat vooraf te zeggen, niet pas halverwege. Vanaf het
+// hoogste jaar tot het laagste jaar kan niets vallen.
+await js(`(() => {
+  const van = document.querySelector('#jaar-van');
+  const tot = document.querySelector('#jaar-tot');
+  van.value = String(new Date().getFullYear());
+  tot.value = '1965';
+  van.dispatchEvent(new Event('input', { bubbles: true }));
+  tot.dispatchEvent(new Event('input', { bubbles: true }));
+})()`);
+await wacht(500);
+const teStreng = await js('document.querySelector("#verfijning-uitleg").textContent');
+eis(/blijft niets van over/i.test(teStreng), `te streng wordt vooraf gemeld (${teStreng})`);
+
+// En weer terug naar een werkbaar bereik, zodat het spel hierna gewoon kan beginnen.
+await js(`(() => {
+  const tot = document.querySelector('#jaar-tot');
+  tot.value = '';
+  tot.dispatchEvent(new Event('input', { bubbles: true }));
+})()`);
+await wacht(400);
+
+console.log('--- donker thema ---');
+const licht = await js('getComputedStyle(document.body).backgroundColor');
+await js('document.querySelector("#thema-knop").click()');
+await wacht(300);
+eis((await js('document.documentElement.dataset.thema')) === 'donker', 'de knop zet het donkere thema');
+const donker = await js('getComputedStyle(document.body).backgroundColor');
+eis(donker !== licht, `de achtergrond verandert mee (${licht} -> ${donker})`);
+eis((await js('localStorage.getItem("sjpeelavond.thema")')) === 'donker', 'de keuze wordt onthouden');
+// Terug naar licht: de rest van de beelden hoort het gewone thema te tonen.
+await js('document.querySelector("#thema-knop").click()');
+await wacht(300);
+eis((await js('document.documentElement.dataset.thema')) === 'licht', 'en weer terug naar licht');
+
 await js('document.querySelector("#start-spel").click()');
 await wacht(1200);
 const spelOpen = await js('!document.querySelector("#view-spel").hidden');
@@ -189,6 +242,15 @@ await wacht(900);
 const naVerder = await balkStand();
 eis(naVerder > opPauze + 1, `Verder gaat verder waar het gebleven was (${opPauze.toFixed(1)}% -> ${naVerder.toFixed(1)}%)`);
 eis((await knopWoord()) === 'Pauze', 'de knop biedt weer pauzeren aan');
+
+// Tien seconden terug: de balk springt terug en loopt daarna weer door.
+const voorTerug = await balkStand();
+await js('document.querySelector(\'[data-act="terug"]\').click()');
+await wacht(250);
+const naTerug = await balkStand();
+eis(naTerug < voorTerug, `tien seconden terug zet de balk terug (${voorTerug.toFixed(1)}% -> ${naTerug.toFixed(1)}%)`);
+await wacht(700);
+eis((await balkStand()) > naTerug, 'en daarna loopt hij weer door');
 
 if (Object.keys(EMBEDS).length) {
   console.log('--- een kaartje van de fysieke doos scannen ---');

@@ -171,3 +171,51 @@ test('een fragment zonder tijd wordt één seconde, zodat er altijd iets te hore
   omgeving.vooruit(1000);
   assert.equal(einden(), 1);
 });
+
+test('tien seconden terug schuift de klok én het einde mee', () => {
+  const omgeving = nepOmgeving();
+  const { klok, einden } = klokMet(30, omgeving);
+
+  klok.start();
+  omgeving.vooruit(12000);
+  assert.equal(klok.verstreken(), 12000);
+
+  klok.terug(10);
+  assert.equal(klok.verstreken(), 2000, 'tien seconden terug');
+  assert.equal(klok.rest(), 28000, 'het einde schuift mee');
+  assert.equal(einden(), 0);
+
+  omgeving.vooruit(28000);
+  assert.equal(klok.verstreken(), 30000);
+  assert.equal(einden(), 1);
+});
+
+test('terug aan het begin blijft op nul staan', () => {
+  const omgeving = nepOmgeving();
+  const { klok } = klokMet(30, omgeving);
+
+  klok.start();
+  omgeving.vooruit(3000);
+  klok.terug(10);
+  assert.equal(klok.verstreken(), 0, 'niet voor de start van het fragment');
+  assert.equal(klok.rest(), 30000);
+});
+
+test('op pauze blijft het op pauze na een sprong terug', () => {
+  const omgeving = nepOmgeving();
+  const { klok, einden } = klokMet(30, omgeving);
+
+  klok.start();
+  omgeving.vooruit(20000);
+  klok.pauzeer();
+  klok.terug(10);
+
+  assert.equal(klok.loopt(), false, 'het gaat niet vanzelf weer spelen');
+  assert.equal(klok.verstreken(), 10000);
+  omgeving.vooruit(5000);
+  assert.equal(klok.verstreken(), 10000, 'de tijd op pauze telt niet mee');
+
+  klok.start();
+  omgeving.vooruit(20000);
+  assert.equal(einden(), 1);
+});

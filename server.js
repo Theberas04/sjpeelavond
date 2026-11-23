@@ -20,6 +20,7 @@ import { fileURLToPath } from 'node:url';
 // Dezelfde code als de pagina gebruikt: het lezen van een gescand kaartje hoort maar
 // op één plek te staan (zie public/js/kaart.js).
 import { losOp } from './public/js/kaart.js';
+import { zeefPool, verfijningUit, legeStapelTekst } from './public/js/pool.js';
 
 const HIER = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIEK = path.join(HIER, 'public');
@@ -412,14 +413,25 @@ export async function verwerk(req, res) {
       return stuurJson(res, 200, { dekken: uit });
     }
 
+    if (pad === '/api/pool' && req.method === 'POST') {
+      // Hoeveel nummers er met deze verfijning nog te horen zijn; het instelscherm laat dat
+      // zien voordat je begint.
+      const lichaam = await leesJson(req);
+      const dekken = Array.isArray(lichaam.dekken) && lichaam.dekken.length ? lichaam.dekken : ['hits'];
+      const verfijning = verfijningUit(lichaam, dekken, lichaam.gebruikt || []);
+      return stuurJson(res, 200, { aantal: zeefPool(nummers.values(), verfijning).length });
+    }
+
     if (pad === '/api/trek' && req.method === 'POST') {
       const lichaam = await leesJson(req);
       const dekken = Array.isArray(lichaam.dekken) && lichaam.dekken.length ? lichaam.dekken : ['hits'];
       const gebruikt = new Set((lichaam.gebruikt || []).map(Number));
       const aantal = Math.max(1, Math.min(20, parseInt(lichaam.aantal, 10) || 1));
-      const pool = [];
-      for (const dek of dekken) for (const id of perDek.get(dek) || []) if (!gebruikt.has(id)) pool.push(id);
-      if (!pool.length) return stuurJson(res, 409, { fout: 'Deze dekstapel is leeg. Kies een ander dek of begin opnieuw.' });
+      // Dezelfde zeef als in de app (public/js/pool.js): dekken, jaarbereik, alleen echte
+      // LVK-inzendingen en niets van een eerdere keer.
+      const verfijning = verfijningUit(lichaam, dekken, gebruikt);
+      const pool = zeefPool(nummers.values(), verfijning).map((n) => n.id);
+      if (!pool.length) return stuurJson(res, 409, { fout: legeStapelTekst(verfijning) });
       const kaarten = [];
       for (let i = 0; i < aantal && pool.length; i++) {
         const k = Math.floor(Math.random() * pool.length);

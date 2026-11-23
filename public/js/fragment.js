@@ -75,6 +75,28 @@ export function maakKlok(seconden, opties = {}) {
       klok.teken();
     },
 
+    /**
+     * Tien seconden terug (of een ander aantal): handig als je het begin net miste. De klok
+     * schuift terug en het einde schuift mee; staat het op pauze, dan blijft het op pauze.
+     */
+    terug(seconden = 10) {
+      const stap = Math.max(0, Math.round(Number(seconden) * 1000));
+      gespeeld = Math.max(0, verstreken() - stap);
+      if (loopt) {
+        sinds = nu();
+        stil();
+        const over = klok.rest();
+        if (over > 0) {
+          eindeTimer = plan(() => {
+            klok.pauzeer();
+            bijEinde?.();
+          }, over);
+        }
+        tikTimer = tik(klok.teken, 120);
+      }
+      klok.teken();
+    },
+
     /** Van voren af aan: een nieuw fragment begint bij nul. */
     opnieuw() {
       gespeeld = 0;

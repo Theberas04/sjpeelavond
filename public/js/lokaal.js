@@ -15,6 +15,7 @@
  */
 
 import { losOp } from './kaart.js';
+import { zeefPool, verfijningUit, legeStapelTekst } from './pool.js';
 
 /**
  * Waar de buitenwereld om gevraagd mag worden: Deezer en iTunes voor het fragment, en
@@ -171,13 +172,20 @@ export function maakLokaleApi({ haalJson, brug = null, versie = '1.0.0' } = {}) 
       return { dekken: (index.dekken || []).map((d) => ({ ...d, aantal: (perDek.get(d.id) || []).length })) };
     }
 
+    if (route === '/api/pool') {
+      const dekken = Array.isArray(lichaam?.dekken) && lichaam.dekken.length ? lichaam.dekken : ['hits'];
+      const verfijning = verfijningUit(lichaam || {}, dekken, lichaam?.gebruikt || []);
+      return { aantal: zeefPool(nummers.values(), verfijning).length };
+    }
+
     if (route === '/api/trek') {
       const dekken = Array.isArray(lichaam?.dekken) && lichaam.dekken.length ? lichaam.dekken : ['hits'];
       const gebruikt = new Set((lichaam?.gebruikt || []).map(Number));
       const aantal = Math.max(1, Math.min(20, parseInt(lichaam?.aantal, 10) || 1));
-      const pool = [];
-      for (const dek of dekken) for (const id of perDek.get(dek) || []) if (!gebruikt.has(id)) pool.push(id);
-      if (!pool.length) fout('Deze dekstapel is leeg. Kies een ander dek of begin opnieuw.');
+      // Dezelfde zeef als de server (public/js/pool.js).
+      const verfijning = verfijningUit(lichaam || {}, dekken, gebruikt);
+      const pool = zeefPool(nummers.values(), verfijning).map((n) => n.id);
+      if (!pool.length) fout(legeStapelTekst(verfijning));
       const kaarten = [];
       for (let i = 0; i < aantal && pool.length; i++) {
         const k = Math.floor(Math.random() * pool.length);

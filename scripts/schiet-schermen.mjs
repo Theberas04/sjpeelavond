@@ -167,7 +167,16 @@ await schiet('mobiel-bord.png');
 const meting = await js(`(() => ({
   scrollWidth: document.documentElement.scrollWidth,
   innerWidth: window.innerWidth,
-  teBreed: [...document.querySelectorAll('body *')].filter((e) => e.getBoundingClientRect().right > window.innerWidth + 1).slice(0, 6).map((e) => e.tagName + '.' + String(e.className).slice(0, 40)),
+  // Alleen echt te breed telt: iets in een strook die je kunt schuiven (de tijdlijn) hoort
+  // buiten het scherm te vallen en is geen fout.
+  teBreed: [...document.querySelectorAll('body *')].filter((e) => {
+    if (e.getBoundingClientRect().right <= window.innerWidth + 1) return false;
+    for (let o = e.parentElement; o; o = o.parentElement) {
+      const schuif = getComputedStyle(o).overflowX;
+      if (schuif === 'auto' || schuif === 'scroll') return false;
+    }
+    return true;
+  }).slice(0, 6).map((e) => e.tagName + '.' + String(e.className).slice(0, 40)),
   legeBeelden: [...document.images].filter((i) => !i.naturalWidth).length,
   beelden: document.images.length,
   fouten: window.__fouten || [],

@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f4f7fb">
+  <script>
+    // Het thema meteen zetten, vóór de eerste tekening; anders flitst het scherm even licht.
+    try {
+      var keuze = localStorage.getItem('sjpeelavond.thema');
+      var donker = keuze === 'donker' || ((!keuze || keuze === 'systeem') && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.thema = donker ? 'donker' : 'licht';
+    } catch (fout) {}
+  </script>
 <title>Sjpeelavond — muziekspellen voor je feestavond</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/icon-192.png">
@@ -19,6 +27,21 @@
   --r:14px; --r-klein:10px; --schaduw:0 1px 2px rgba(16,32,52,.05), 0 14px 30px -22px rgba(16,32,52,.45);
   --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
+/* Donker thema: dezelfde tokens, andere waarden. Alles wat hieronder staat gebruikt de
+   tokens, dus een nieuw onderdeel volgt vanzelf — behalve de twee gekleurde labels, die
+   hebben hun eigen tekstkleur nodig om leesbaar te blijven op een donkere ondergrond. */
+html[data-thema="donker"]{
+  --bg:#0d1520; --pane:#151f2d; --pane2:#1a2534; --pane3:#202c3d;
+  --line:#25313f; --line2:#33445a;
+  --txt:#e8eef7; --muted:#a6b4c6; --muted2:#7e8ea3;
+  --accent:#4bb0f7; --accent-d:#2b8ede; --accent-soft:#16283c;
+  --rood:#e8576a; --rood-soft:#33202a; --gael:#e7a84a; --gael-soft:#332a1c;
+  --greun:#4bb271; --greun-soft:#17301f; --paars:#9d7dff;
+  --schaduw:0 1px 2px rgba(0,0,0,.45), 0 14px 30px -22px rgba(0,0,0,.85);
+}
+html[data-thema="donker"] .chip.rood{color:#f0a6b0;border-color:#5b2b34}
+html[data-thema="donker"] .chip.gael{color:#eac68e;border-color:#5a4523}
+html[data-thema="donker"] input,html[data-thema="donker"] select,html[data-thema="donker"] textarea{color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{background:var(--bg);color:var(--txt);font-family:var(--font);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -104,6 +127,14 @@ label.veld{display:block;font-size:12px;letter-spacing:.07em;text-transform:uppe
 .spelerrij .bolletje{width:14px;height:14px;border-radius:50%;flex:none}
 .spelerrij input{flex:1}
 .dekkeuze{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+button.thema{width:38px;height:38px;border-radius:50%;border:1px solid var(--line2);background:var(--pane);color:var(--muted);font-size:17px;line-height:1;display:grid;place-items:center;flex:none;cursor:pointer}
+button.thema:hover{border-color:var(--accent);color:var(--accent-d)}
+.verfijning{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.verfijning select{font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line2);border-radius:9px;background:var(--pane);color:var(--ink)}
+.verfijning label.veld{margin:0}
+.vinkje{display:flex;align-items:center;gap:9px;padding:7px 2px;font-size:14px;color:var(--ink)}
+.vinkje input{width:18px;height:18px;accent-color:var(--accent-d);flex:none}
+.vinkje.uit{opacity:.45}
 .dek{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line2);border-radius:var(--r-klein);padding:11px;cursor:pointer;background:var(--pane)}
 .dek input{margin-top:3px;accent-color:var(--accent);width:17px;height:17px;flex:none}
 .dek.aan{border-color:var(--accent);background:var(--accent-soft)}
@@ -199,6 +230,7 @@ label.veld{display:block;font-size:12px;letter-spacing:.07em;text-transform:uppe
     </div>
     <div class="rechts">
       <span class="chip" id="versiechip">…</span>
+      <button class="thema" id="thema-knop" type="button" title="Donker thema" aria-label="Donker thema">☾</button>
     </div>
   </header>
 
@@ -304,6 +336,22 @@ label.veld{display:block;font-size:12px;letter-spacing:.07em;text-transform:uppe
         <div style="margin-top:14px">
           <label class="veld">Muziek</label>
           <div class="dekkeuze" id="dekkeuze"></div>
+        </div>
+        <div style="margin-top:14px">
+          <label class="veld">Verfijnen</label>
+          <p class="klein" style="margin:0 0 8px">Laat staan als je alles wil horen; met een filter erop
+            blijft de avond frisser.</p>
+          <div class="verfijning">
+            <label class="veld klein" for="jaar-van">Van jaar</label>
+            <select id="jaar-van" data-verfijning="jarenVan"></select>
+            <label class="veld klein" for="jaar-tot">Tot jaar</label>
+            <select id="jaar-tot" data-verfijning="jarenTot"></select>
+          </div>
+          <label class="vinkje"><input type="checkbox" data-verfijning="alleenLvkInzending">
+            <span>Alleen echte LVK-inzendingen</span></label>
+          <label class="vinkje" id="vinkje-nooit"><input type="checkbox" data-verfijning="nooitGespeeld">
+            <span>Niets wat al eerder op tafel lag</span></label>
+          <p class="klein" id="verfijning-uitleg" style="margin:6px 0 0"></p>
         </div>
       </div>
     </div>

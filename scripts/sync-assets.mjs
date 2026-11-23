@@ -60,6 +60,7 @@ function controleer() {
     'js/lokaal.js',
     'js/kaart.js',
     'js/fragment.js',
+    'js/pool.js',
     'js/update.js',
     'data/index.json',
     'data/nummers-hits.json',

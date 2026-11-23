@@ -5,6 +5,7 @@
 import * as S from './spel.js';
 import { kijkVoorUpdate } from './update.js';
 import { maakKlok } from './fragment.js';
+import { maakZeef, filterTekst, filtersActief } from './pool.js';
 
 /* ── hulpjes ───────────────────────────────────────────────────────────── */
 
@@ -58,7 +59,15 @@ const staat = {
   versie: null,
   dekken: [],
   spel: null,
-  keuzes: { soort: 'tijdlijn', variant: null, namen: [], dekken: [], doel: 10, fragment: 30 },
+  keuzes: {
+    soort: 'tijdlijn',
+    variant: null,
+    namen: [],
+    dekken: [],
+    doel: 10,
+    fragment: 30,
+    verfijning: { jarenVan: null, jarenTot: null, alleenLvkInzending: false, nooitGespeeld: false },
+  },
   audio: { bezig: false, kaartId: null, klok: null },
   stop: null, // {speler, seconden} bij Stop 's
   gekozenPlek: null,
@@ -248,6 +257,7 @@ function openInstellen(soort) {
     .join('');
   renderSpelers();
   renderDekken();
+  renderVerfijning();
   renderSegmente();
   toonView('instellen');
 }
@@ -279,6 +289,158 @@ function renderDekken() {
     .join('');
 }
 
+const THEMA_SLEUTEL = 'sjpeelavond.thema';
+
+/**
+ * Licht of donker. De keuze staat op <html> als data-thema, zodat de stylesheet hem kan
+ * volgen; "systeem" volgt de instelling van het toestel zolang de gebruiker zelf niets kiest.
+ */
+function zetThema(keuze) {
+  const volgtSysteem = !keuze || keuze === 'systeem';
+  const systeem = window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'donker' : 'licht';
+  const echt = volgtSysteem ? systeem : keuze;
+  document.documentElement.dataset.thema = echt;
+  const knop = $('#thema-knop');
+  if (knop) {
+    const donker = echt === 'donker';
+    knop.textContent = donker ? '☀' : '☾';
+    knop.title = donker ? 'Licht thema' : 'Donker thema';
+    knop.setAttribute('aria-label', knop.title);
+  }
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = echt === 'donker' ? '#0d1520' : '#f4f7fb';
+  return echt;
+}
+
+/** De keuze van de gebruiker onthouden en meteen toepassen. */
+function kiesThema(keuze) {
+  try {
+    localStorage.getItem(THEMA_SLEUTEL);
+    localStorage.setItem(THEMA_SLEUTEL, keuze);
+  } catch {
+    /* zonder localStorage is het thema alleen deze keer */
+  }
+  zetThema(keuze);
+}
+
+const GESPEELD_SLEUTEL = 'sjpeelavond.gespeeld';
+
+/** De nummers die al eens op tafel lagen, over alle avonden heen. */
+function gelezenGespeeld() {
+  try {
+    const ruw = JSON.parse(localStorage.getItem(GESPEELD_SLEUTEL) || '[]');
+    return Array.isArray(ruw) ? ruw.map(Number).filter((n) => Number.isFinite(n)) : [];
+  } catch {
+    return [];
+  }
+}
+
+/** Onthouden wat er gespeeld is; dat maakt "niets van een eerdere keer" mogelijk. */
+function onthoudGespeeld(ids) {
+  const nieuw = (ids || []).map(Number).filter((n) => Number.isFinite(n));
+  if (!nieuw.length) return;
+  const alles = new Set(gelezenGespeeld());
+  for (const id of nieuw) alles.add(id);
+  try {
+    localStorage.setItem(GESPEELD_SLEUTEL, JSON.stringify([...alles]));
+  } catch {
+    /* zonder localStorage speelt het spel gewoon door; alleen dit filter dan niet */
+  }
+}
+
+/**
+ * Wat er naar /api/trek gaat: de dekken, wat er in dit potje al ligt, en de verfijning van
+ * deze avond. Zo vraagt de app hetzelfde als wat er op het instelscherm staat.
+ */
+function trekvraag(spel, aantal) {
+  return {
+    dekken: spel.dekken,
+    gebruikt: spel.gebruikt,
+    aantal,
+    ...(spel.verfijning || {}),
+    gespeeld: gelezenGespeeld(),
+  };
+}
+
+/**
+ * De verfijningsregels: twee jaartallen en twee schakelaars, met eronder hoeveel nummers er
+ * dan nog over zijn. Dat laatste is het belangrijkste: zo zie je vóór het beginnen dat een
+ * filter te streng staat in plaats van dat de stapel halverwege leeg blijkt.
+ */
+function renderVerfijning() {
+  const verfijning = staat.keuzes.verfijning;
+  for (const vak of document.querySelectorAll('[data-verfijning]')) {
+    const sleutel = vak.dataset.verfijning;
+    if (vak.tagName === 'SELECT') {
+      if (!vak.options.length) vulJaartallen(vak);
+      const waarde = verfijning[sleutel];
+      vak.value = waarde === null || waarde === undefined ? '' : String(waarde);
+    } else {
+      vak.checked = Boolean(verfijning[sleutel]);
+    }
+  }
+
+  werkNooitVakBij();
+  telPool();
+}
+
+/**
+ * Wat er na een wijziging bijgewerkt moet worden: het doffe vinkje en het aantal.
+ *
+ * De velden zelf worden hier met opzet níet opnieuw gezet: de gebruiker is er net mee bezig
+ * en overschrijven zou zijn invoer wissen (en bij het wijzigen van twee velden vlak na
+ * elkaar het eerste ongedaan maken).
+ */
+function verfijningBijgewerkt() {
+  werkNooitVakBij();
+  telPool();
+}
+
+/** "Niets wat al eerder op tafel lag" is zinloos zonder geschiedenis; dan staat de regel dof. */
+function werkNooitVakBij() {
+  const verfijning = staat.keuzes.verfijning;
+  const gespeeld = gelezenGespeeld().length;
+  const vakNooit = $('#vinkje-nooit');
+  if (!vakNooit) return;
+  const aankruis = vakNooit.querySelector('input');
+  const uit = gespeeld === 0;
+  vakNooit.classList.toggle('uit', uit);
+  if (aankruis) aankruis.disabled = uit;
+  if (uit && verfijning.nooitGespeeld) {
+    verfijning.nooitGespeeld = false;
+    if (aankruis) aankruis.checked = false;
+  }
+}
+
+/** De jaartallen in de twee keuzelijsten, met een lege regel bovenaan. */
+function vulJaartallen(vak) {
+  const van = 1965;
+  const tot = new Date().getFullYear();
+  const opties = ['<option value="">maakt niet uit</option>'];
+  for (let jaar = tot; jaar >= van; jaar--) opties.push(`<option value="${jaar}">${jaar}</option>`);
+  vak.innerHTML = opties.join('');
+}
+
+/** Hoeveel nummers er met deze instellingen nog te horen zijn. */
+async function telPool() {
+  const uitleg = $('#verfijning-uitleg');
+  if (!uitleg) return;
+  const verfijning = staat.keuzes.verfijning;
+  const dekken = staat.keuzes.dekken.length ? staat.keuzes.dekken : ['hits'];
+  const vraag = { dekken, ...verfijning, gespeeld: gelezenGespeeld() };
+  try {
+    const { aantal } = await api('/api/pool', vraag);
+    const filter = filtersActief(verfijning) ? filterTekst(verfijning) : 'geen filter';
+    uitleg.textContent =
+      aantal === 0
+        ? `${filter}: hier blijft niets van over. Zet iets uit of kies een ander dek.`
+        : `${filter} · ${aantal} nummers om uit te kiezen`;
+    uitleg.style.color = aantal === 0 ? 'var(--rood, #b42318)' : '';
+  } catch {
+    uitleg.textContent = '';
+  }
+}
+
 function renderSegmente() {
   for (const knop of document.querySelectorAll('#fragmentkeuze button'))
     knop.classList.toggle('actief', Number(knop.dataset.sec) === staat.keuzes.fragment);
@@ -291,6 +453,7 @@ function renderSegmente() {
       if (knop.dataset.variant === 'lvjao') staat.keuzes.dekken = ['lvk'];
       else if (staat.keuzes.variant === 'raojs') staat.keuzes.dekken = ['limburg'];
       renderDekken();
+      renderVerfijning();
       renderSegmente();
       $('#variantuitleg').textContent = S.VARIANTEN[knop.dataset.variant].uitleg;
     };
@@ -344,6 +507,9 @@ document.addEventListener('click', async (gebeurtenis) => {
       case 'speel':
       case 'pauze':
         await speelFragment();
+        break;
+      case 'terug':
+        tienTerug();
         break;
       case 'kies-plek':
         staat.gekozenPlek = Number(knop.dataset.plek);
@@ -426,13 +592,24 @@ document.addEventListener('input', (gebeurtenis) => {
   if (doel.dataset.speler !== undefined && doel.tagName === 'INPUT' && doel.closest('#spelerslijst')) {
     staat.keuzes.namen[Number(doel.dataset.speler)] = doel.value;
   }
+  if (doel.dataset.verfijning) {
+    const sleutel = doel.dataset.verfijning;
+    staat.keuzes.verfijning[sleutel] = doel.type === 'checkbox' ? doel.checked : Number(doel.value) || null;
+    verfijningBijgewerkt();
+  }
   if (doel.dataset.dek) {
     const dek = doel.dataset.dek;
     if (doel.checked) {
       if (!staat.keuzes.dekken.includes(dek)) staat.keuzes.dekken.push(dek);
     } else staat.keuzes.dekken = staat.keuzes.dekken.filter((d) => d !== dek);
     renderDekken();
+    renderVerfijning();
   }
+});
+
+$('#thema-knop')?.addEventListener('click', () => {
+  const nu = document.documentElement.dataset.thema === 'donker' ? 'licht' : 'donker';
+  kiesThema(nu);
 });
 
 $('#speler-toevoegen').addEventListener('click', () => {
@@ -476,6 +653,7 @@ async function startSpel() {
     dekken: staat.keuzes.dekken,
     doel: staat.keuzes.doel,
     fragment: staat.keuzes.fragment,
+    verfijning: { ...staat.keuzes.verfijning },
   });
   staat.spel = spel;
   staat.gekozenPlek = null;
@@ -485,7 +663,7 @@ async function startSpel() {
   if (tijdlijnSpel(spel)) {
     // Iedere speler begint met één open kaart als startpunt.
     for (let i = 0; i < spel.spelers.length; i++) {
-      const { kaarten } = await api('/api/trek', { dekken: spel.dekken, gebruikt: spel.gebruikt, aantal: 1 });
+      const { kaarten } = await api('/api/trek', trekvraag(spel, 1));
       const kaart = kaarten[0];
       if (!kaart) break;
       spel.gebruikt.push(kaart.id);
@@ -507,7 +685,8 @@ async function trekKaart() {
   staat.gekozenPlek = null;
   staat.steel = null;
   staat.aangevinkt.clear();
-  const { kaarten, resterend } = await api('/api/trek', { dekken: spel.dekken, gebruikt: spel.gebruikt, aantal: 1 });
+  const { kaarten, resterend } = await api('/api/trek', trekvraag(spel, 1));
+  onthoudGespeeld(kaarten.map((k) => k.id));
   if (!kaarten.length) return meld('De stapel is leeg.');
   S.legKaart(spel, kaarten[0]);
   spel.resterend = resterend;
@@ -515,6 +694,23 @@ async function trekKaart() {
   bewaar();
   renderBord();
   await speelFragment();
+}
+
+/**
+ * Tien seconden terug in het fragment. De klok én de speler schuiven terug, zodat de balk
+ * klopt met wat je hoort; staat het op pauze, dan blijft het op pauze.
+ */
+function tienTerug() {
+  const klok = staat.audio.klok;
+  if (!klok) return;
+  klok.terug(10);
+  const speler = $('#speler');
+  try {
+    speler.currentTime = Math.max(0, (Number(speler.currentTime) || 0) - 10);
+  } catch {
+    /* de speler kan nog niet klaar zijn; de klok is dan de waarheid */
+  }
+  renderBord();
 }
 
 function tekenFragmentbalk(verstreken, totaal) {
@@ -793,6 +989,9 @@ function fragmentbalkHtml(spel, { knop = true } = {}) {
       <span>${woord}</span>
     </button>` : ''}
     <div class="balk"><i id="balkvulling"></i></div>
+    ${knop && klok && klok.verstreken() > 2000
+      ? '<button class="knop zacht klein" data-act="terug" title="Tien seconden terug in het fragment">10 s terug</button>'
+      : ''}
     <span class="chip">${spel.fragment}s fragment${staat.audio.bezig ? ' · speelt' : klok && !klaar ? ' · gepauzeerd' : ''}</span>
   </div>`;
 }
@@ -1347,6 +1546,9 @@ function renderScan() {
         <span>${scan.speelt ? 'Pauze' : scan.klok && scan.klok.rest() <= 0 ? 'Opnieuw' : scan.klok?.verstreken() > 500 ? 'Verder' : 'Speel'}</span>
       </button>
       <div class="balk"><i id="scan-balk"></i></div>
+      ${scan.klok && scan.klok.verstreken() > 2000
+        ? '<button class="knop zacht klein" data-act="terug" title="Tien seconden terug in het fragment">10 s terug</button>'
+        : ''}
       <span class="chip">30 seconden${scan.speelt ? ' · speelt' : scan.klok && scan.klok.rest() > 0 ? ' · gepauzeerd' : ''}</span>
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
@@ -1454,6 +1656,7 @@ async function opstarten() {
       verwerkScan(tekst).catch((fout) => meld(fout.message));
     };
   }
+  zetThema(localStorage.getItem(THEMA_SLEUTEL) || 'systeem');
   await laadVersie();
   // Niet op wachten: het spel moet meteen kunnen beginnen, het balkje komt er wel bij.
   kijkVoorNieuweVersie();

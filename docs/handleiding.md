@@ -55,10 +55,16 @@ Heb je een fysiek muziekspel in huis — **Hitster** — dan hoef je de app van 
 4. Draai de kaart om zoals je gewend bent. Wil je het antwoord ook in de app zien, druk dan op **Onthul**.
 5. Druk op **Volgende kaartje scannen** voor de volgende speler.
 
+**Verfijnen.** Op het instelscherm kun je onder *Verfijnen* kiezen welk deel van de nummers je hoort: een jaarbereik, alleen de echte LVK-inzendingen, of niets wat al eerder op tafel lag. Eronder staat hoeveel nummers er dan nog over zijn. Laat het leeg als je alles wil horen.
+
+**Donker thema.** De maan in de kop zet de app op donker. Zonder keuze volgt hij je toestel.
+
 **Op pauze zetten.** Naast de balk staat de knop waarmee het fragment speelt. Druk op **Pauze** en het
 stil valt; de balk staat dan stil en het einde schuift mee. Druk op **Verder** en het gaat verder waar
 het gebleven was — het liedje begint niet opnieuw. Is het fragment helemaal afgelopen, dan heet de knop
 **Opnieuw**. Op het spelbord werkt het precies zo.
+
+**Tien seconden terug.** Mist je net het begin van een liedje? Druk op **10 s terug**: het fragment springt tien seconden terug en speelt daarna door.
 
 **Leest de camera het kaartje niet?** Houd het kaartje plat, met de code het beeld in gevuld, en let op
 dat er licht op valt. De kaartjes van Hittepetit zijn roze op wit en dat leest lastiger dan zwart op
