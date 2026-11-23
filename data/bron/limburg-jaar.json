@@ -1,0 +1,3887 @@
+{
+ "bron": "LVK-liedjeslijst (L1/Stichting LVK), MusicBrainz (first-release-date) en Deezer (vroegste albumjaar)",
+ "opgehaald": "2026-11-23",
+ "aantal": 970,
+ "jaren": {
+  "756486": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Bach: St Matthew Passion, BWV 244)"
+  },
+  "900023": {
+   "jaar": 1998,
+   "jaarBron": "Deezer (vroegste album: Naar Huis)"
+  },
+  "914939": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Begin Twintig)"
+  },
+  "1579104": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Live From Paris)"
+  },
+  "2830482": {
+   "jaar": 2009,
+   "jaarBron": "Deezer (vroegste album: Ettes Ettes)"
+  },
+  "3012053": {
+   "jaar": 2007,
+   "jaarBron": "Deezer (vroegste album: Rastafari Centennial: Live In Paris - Elysee Montmartre)"
+  },
+  "3392926": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Bach: Cantatas, BWV 39, 73, 93, 105, 107 & 131)"
+  },
+  "4182838": {
+   "jaar": 1987,
+   "jaarBron": "Deezer (vroegste album: J.S. Bach: Matthäus-Passion)"
+  },
+  "4587269": {
+   "jaar": 2009,
+   "jaarBron": "Deezer (vroegste album: The Unforgettable Fire (Remastered))"
+  },
+  "6347574": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: ... Nur Musik ist schöner)"
+  },
+  "7118224": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Wildbolz & Süsstrunk (Live))"
+  },
+  "7405208": {
+   "jaar": 1996,
+   "jaarBron": "Deezer (vroegste album: Top Of The Bult)"
+  },
+  "10178606": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: The Wall - Live In Berlin)"
+  },
+  "15487128": {
+   "jaar": 1990,
+   "jaarBron": "Deezer (vroegste album: Live / Open Air Finkenberg)"
+  },
+  "15636522": {
+   "jaar": 1984,
+   "jaarBron": "Deezer (vroegste album: The Pros And Cons Of Hitch Hiking)"
+  },
+  "15636692": {
+   "jaar": 1984,
+   "jaarBron": "Deezer (vroegste album: The Pros And Cons Of Hitch Hiking)"
+  },
+  "15681990": {
+   "jaar": 1987,
+   "jaarBron": "Deezer (vroegste album: Radio K.A.O.S.)"
+  },
+  "15682139": {
+   "jaar": 1987,
+   "jaarBron": "Deezer (vroegste album: Radio K.A.O.S.)"
+  },
+  "15682324": {
+   "jaar": 1987,
+   "jaarBron": "Deezer (vroegste album: Radio K.A.O.S.)"
+  },
+  "25555141": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Creme De La Creme)"
+  },
+  "25556091": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: American Duets)"
+  },
+  "25556121": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: American Duets)"
+  },
+  "25558271": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Scherven Van Je Leven)"
+  },
+  "25558471": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Live (Hoogtepunten Uit 10 Jaar Theaterconcerten))"
+  },
+  "25558651": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Gouden Regen)"
+  },
+  "25562641": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Krak)"
+  },
+  "25562681": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Krak)"
+  },
+  "25562691": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Krak)"
+  },
+  "25562721": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Krak)"
+  },
+  "25562761": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Krak)"
+  },
+  "25579181": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Leven Van Liefde)"
+  },
+  "25579311": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Het Zwarte Goud)"
+  },
+  "25616761": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25616771": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25616791": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25616861": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25616881": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25616901": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25616921": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25616971": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25617081": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25617161": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25617191": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25617231": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Allermooiste)"
+  },
+  "25671741": {
+   "jaar": 2011,
+   "jaarBron": "Deezer (vroegste album: Het Mooiste Hollandse Kerstfeest)"
+  },
+  "28487261": {
+   "jaar": 2012,
+   "jaarBron": "Deezer (vroegste album: Zitte! sta arrivanne 'o mammone)"
+  },
+  "64505321": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: 't Schaep In Mokum)"
+  },
+  "64970957": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Zoon Van Het Zuiden)"
+  },
+  "64970962": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Zoon Van Het Zuiden)"
+  },
+  "66788323": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Dann Ruf Ich Wieder Deinen Namen)"
+  },
+  "66788327": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Dann Ruf Ich Wieder Deinen Namen)"
+  },
+  "66788331": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Dann Ruf Ich Wieder Deinen Namen)"
+  },
+  "66788335": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Dann Ruf Ich Wieder Deinen Namen)"
+  },
+  "66788336": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Dann Ruf Ich Wieder Deinen Namen)"
+  },
+  "68832656": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Anders)"
+  },
+  "70084394": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Plezeer!)"
+  },
+  "70093949": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Ramses Shaffy - Leef!)"
+  },
+  "70103671": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Limburg deil 1)"
+  },
+  "70103676": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Limburg deil 1)"
+  },
+  "70148381": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Mooi Limburgs sjoenste)"
+  },
+  "70148386": {
+   "jaar": 2011,
+   "jaarBron": "LVK-inzending 2011 (L1 / Stichting LVK)"
+  },
+  "70230800": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 13)"
+  },
+  "70230826": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 14)"
+  },
+  "70256627": {
+   "jaar": 2011,
+   "jaarBron": "LVK-inzending 2011 (L1 / Stichting LVK)"
+  },
+  "70256630": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: 1+1= 11)"
+  },
+  "70256634": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Manjefiek)"
+  },
+  "70256636": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Manjefiek)"
+  },
+  "70288821": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Vin iech leuk)"
+  },
+  "70288826": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Vin iech leuk)"
+  },
+  "70288827": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Vin iech leuk)"
+  },
+  "70288830": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Vin iech leuk)"
+  },
+  "70364026": {
+   "jaar": 2013,
+   "jaarBron": "LVK-inzending 2013 (L1 / Stichting LVK)"
+  },
+  "70364043": {
+   "jaar": 2013,
+   "jaarBron": "LVK-inzending 2013 (L1 / Stichting LVK)"
+  },
+  "70364046": {
+   "jaar": 2013,
+   "jaarBron": "LVK-inzending 2013 (L1 / Stichting LVK)"
+  },
+  "70364070": {
+   "jaar": 2013,
+   "jaarBron": "LVK-inzending 2013 (L1 / Stichting LVK)"
+  },
+  "70590892": {
+   "jaar": 2012,
+   "jaarBron": "LVK-inzending 2012 (L1 / Stichting LVK)"
+  },
+  "70966332": {
+   "jaar": 2011,
+   "jaarBron": "LVK-inzending 2011 (L1 / Stichting LVK)"
+  },
+  "72171056": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Sjafte)"
+  },
+  "72171057": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "72171061": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Sjafte)"
+  },
+  "73919006": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Zeroes QC)"
+  },
+  "74006931": {
+   "jaar": 2004,
+   "jaarBron": "Deezer (vroegste album: Krak)"
+  },
+  "74041052": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Boem)"
+  },
+  "74041053": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Boem)"
+  },
+  "74041054": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Boem)"
+  },
+  "74041064": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Boem)"
+  },
+  "74041082": {
+   "jaar": 2011,
+   "jaarBron": "Deezer (vroegste album: Manne Van Staal)"
+  },
+  "74111674": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: De Peel In Brand)"
+  },
+  "74111681": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Water Lucht en Liefde)"
+  },
+  "74319184": {
+   "jaar": 2004,
+   "jaarBron": "Deezer (vroegste album: Es Iech Druim...)"
+  },
+  "74823195": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Het Beste Van Frits Rademacher)"
+  },
+  "74823196": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Het Beste Van Frits Rademacher)"
+  },
+  "74823198": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Het Beste Van Frits Rademacher)"
+  },
+  "74823199": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Het Beste Van Frits Rademacher)"
+  },
+  "74823200": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Het Beste Van Frits Rademacher)"
+  },
+  "74823202": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Het Beste Van Frits Rademacher)"
+  },
+  "74823205": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Het Beste Van Frits Rademacher)"
+  },
+  "74823301": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Het Beste van Frans Theunisz)"
+  },
+  "74823302": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Het Beste van Frans Theunisz)"
+  },
+  "74823304": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Het Beste van Frans Theunisz)"
+  },
+  "74823310": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Het Beste van Frans Theunisz)"
+  },
+  "74823311": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Het Beste van Frans Theunisz)"
+  },
+  "74823312": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: Het Beste van Frans Theunisz)"
+  },
+  "75979904": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Mooi Limburgs Vastelaovend 1)"
+  },
+  "75979912": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Mooi Limburgs Vastelaovend 1)"
+  },
+  "75979919": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vandaag!)"
+  },
+  "75979922": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vandaag!)"
+  },
+  "75979924": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vandaag!)"
+  },
+  "75979928": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vandaag!)"
+  },
+  "75979929": {
+   "jaar": 2010,
+   "jaarBron": "LVK-inzending 2010 (L1 / Stichting LVK)"
+  },
+  "76034785": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Krutjuuj)"
+  },
+  "76034787": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Krutjuuj)"
+  },
+  "76034788": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Krutjuuj)"
+  },
+  "76034789": {
+   "jaar": 2007,
+   "jaarBron": "LVK-inzending 2007 (L1 / Stichting LVK)"
+  },
+  "76034790": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Krutjuuj)"
+  },
+  "76063962": {
+   "jaar": 2014,
+   "jaarBron": "LVK-inzending 2014 (L1 / Stichting LVK)"
+  },
+  "76063981": {
+   "jaar": 2014,
+   "jaarBron": "LVK-inzending 2014 (L1 / Stichting LVK)"
+  },
+  "76063986": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 21)"
+  },
+  "76270842": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Limburg deil 2)"
+  },
+  "76426628": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: RODA JC)"
+  },
+  "76498423": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 11)"
+  },
+  "76563217": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Laef van daag tot daag)"
+  },
+  "77430785": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Op volle krach deil 7)"
+  },
+  "77430823": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 10)"
+  },
+  "77430824": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 10)"
+  },
+  "77430829": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 10)"
+  },
+  "77476409": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 16)"
+  },
+  "77522597": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Noe brant de lamp)"
+  },
+  "77658403": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658411": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658412": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658416": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658417": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658425": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658432": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658434": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658435": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658436": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658441": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658442": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77658446": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 50 Jaor)"
+  },
+  "77697209": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 15)"
+  },
+  "77739188": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Passie)"
+  },
+  "77739203": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Op volle krach deil 6)"
+  },
+  "77912014": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Alle 13 good)"
+  },
+  "77912015": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Alle 13 good)"
+  },
+  "77912017": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Alle 13 good)"
+  },
+  "77912019": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Alle 13 good)"
+  },
+  "77912020": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Alle 13 good)"
+  },
+  "77912021": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Alle 13 good)"
+  },
+  "77912022": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Alle 13 good)"
+  },
+  "77912023": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Alle 13 good)"
+  },
+  "77912030": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Op volle krach deil 5)"
+  },
+  "77912046": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Joonk vaan hart)"
+  },
+  "77912053": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Joonk vaan hart)"
+  },
+  "77912070": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet de Limbo Top 100 deil 8)"
+  },
+  "78079920": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Avenue Kartoesj)"
+  },
+  "78079923": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Dreije)"
+  },
+  "78079924": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Dreije)"
+  },
+  "78079926": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Dreije)"
+  },
+  "78079927": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Dreije)"
+  },
+  "78079929": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Dreije)"
+  },
+  "78079930": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Dreije)"
+  },
+  "78079931": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Dreije)"
+  },
+  "78079942": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Alles, alles, alles)"
+  },
+  "78239933": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Noe al goldj)"
+  },
+  "78256166": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: De Allergoeiste (Reissue))"
+  },
+  "78480921": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 13)"
+  },
+  "78480925": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 13)"
+  },
+  "78480968": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Onderwaeg)"
+  },
+  "78481072": {
+   "jaar": 2006,
+   "jaarBron": "LVK-inzending 2006 (L1 / Stichting LVK)"
+  },
+  "78481074": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Leedjes Van Kartoesj)"
+  },
+  "78481075": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Leedjes Van Kartoesj)"
+  },
+  "78481076": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Leedjes Van Kartoesj)"
+  },
+  "78481077": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Leedjes Van Kartoesj)"
+  },
+  "78481078": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Leedjes Van Kartoesj)"
+  },
+  "78481079": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Leedjes Van Kartoesj)"
+  },
+  "78481081": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Leedjes Van Kartoesj)"
+  },
+  "78481082": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Leedjes Van Kartoesj)"
+  },
+  "78481156": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 9)"
+  },
+  "78629481": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 8)"
+  },
+  "78629673": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: De maon)"
+  },
+  "78629679": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: De maon)"
+  },
+  "78629682": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: De maon)"
+  },
+  "78740854": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Gein probleem)"
+  },
+  "78740867": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet de Limbo Top 100 deil 6)"
+  },
+  "78740868": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet de Limbo Top 100 deil 6)"
+  },
+  "78740932": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Op volle krach deil 4)"
+  },
+  "80164822": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Trök nao Blouwdörrep)"
+  },
+  "80517806": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517808": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517810": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517812": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517814": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517816": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517820": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517822": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517830": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517832": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517834": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80517838": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Kilomeaters ('T Beste Van 20 Joar Rowwen Hèze))"
+  },
+  "80600200": {
+   "jaar": 1990,
+   "jaarBron": "Deezer (vroegste album: Blieve Loepe (Los Limbos))"
+  },
+  "80600202": {
+   "jaar": 1990,
+   "jaarBron": "Deezer (vroegste album: Blieve Loepe (Los Limbos))"
+  },
+  "83916741": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 17)"
+  },
+  "83916743": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 17)"
+  },
+  "83916747": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 17)"
+  },
+  "84571169": {
+   "jaar": 2000,
+   "jaarBron": "Deezer (vroegste album: Vandaag)"
+  },
+  "88434099": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 25 Sinterklaasliedjes)"
+  },
+  "89228049": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Limburg deil 3)"
+  },
+  "89228065": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Limburg deil 3)"
+  },
+  "92919150": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vastelaovesmaedsje)"
+  },
+  "93317028": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Don't Touch My Brèl)"
+  },
+  "93484928": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Dèèr Emme Vor Deurgeleerd (2015))"
+  },
+  "94124748": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 16)"
+  },
+  "94526090": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 22)"
+  },
+  "94526098": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 22)"
+  },
+  "94526126": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 22)"
+  },
+  "94526164": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 22)"
+  },
+  "96123432": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Dae van os)"
+  },
+  "97559868": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559870": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559872": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559874": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559876": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559882": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559886": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559888": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559892": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559894": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559896": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559898": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559900": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "97559904": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: ' t Merretkoer LIVE)"
+  },
+  "98265288": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: D.U.C.)"
+  },
+  "102625666": {
+   "jaar": 2025,
+   "jaarBron": "LVK-inzending 2025 (L1 / Stichting LVK)"
+  },
+  "104008934": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Amused to Death)"
+  },
+  "105111358": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend Same)"
+  },
+  "105111360": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend Same)"
+  },
+  "106759346": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend 1954-1963)"
+  },
+  "106759348": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend 1954-1963)"
+  },
+  "106759364": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend 1954-1963)"
+  },
+  "106759368": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend 1954-1963)"
+  },
+  "106759378": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend 1954-1963)"
+  },
+  "110879236": {
+   "jaar": 2016,
+   "jaarBron": "LVK-inzending 2016 (L1 / Stichting LVK)"
+  },
+  "111488996": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Remix EP)"
+  },
+  "111514072": {
+   "jaar": 2016,
+   "jaarBron": "LVK-inzending 2016 (L1 / Stichting LVK)"
+  },
+  "111803322": {
+   "jaar": 2016,
+   "jaarBron": "LVK-inzending 2016 (L1 / Stichting LVK)"
+  },
+  "111952760": {
+   "jaar": 2009,
+   "jaarBron": "Deezer (vroegste album: De Regenboog Serie: Frits Rademacher)"
+  },
+  "111952764": {
+   "jaar": 2009,
+   "jaarBron": "Deezer (vroegste album: De Regenboog Serie: Frits Rademacher)"
+  },
+  "111952768": {
+   "jaar": 2009,
+   "jaarBron": "Deezer (vroegste album: De Regenboog Serie: Frits Rademacher)"
+  },
+  "111952778": {
+   "jaar": 2009,
+   "jaarBron": "Deezer (vroegste album: De Regenboog Serie: Frits Rademacher)"
+  },
+  "111952790": {
+   "jaar": 2009,
+   "jaarBron": "Deezer (vroegste album: De Regenboog Serie: Frits Rademacher)"
+  },
+  "113297664": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Dèsoké)"
+  },
+  "113631166": {
+   "jaar": 2016,
+   "jaarBron": "LVK-inzending 2016 (L1 / Stichting LVK)"
+  },
+  "113959496": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Groet gelök)"
+  },
+  "115031650": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: Best Of De Poema's)"
+  },
+  "116916968": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Me Lòòpe D'r Mee Weg!)"
+  },
+  "117323694": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Loeënde Klokke)"
+  },
+  "117324936": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Doe Bes Mie Maedje)"
+  },
+  "117419606": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419608": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419610": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419612": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419616": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419618": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419622": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419624": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419626": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419628": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117419630": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Geneet en plök d'n daag)"
+  },
+  "117902718": {
+   "jaar": 2016,
+   "jaarBron": "LVK-inzending 2016 (L1 / Stichting LVK)"
+  },
+  "117902722": {
+   "jaar": 2016,
+   "jaarBron": "LVK-inzending 2016 (L1 / Stichting LVK)"
+  },
+  "117902766": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 23)"
+  },
+  "118509024": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Bläck Fööss (Remix zum danze))"
+  },
+  "120337174": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Blaos Mich Nao Hoes)"
+  },
+  "120337176": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Blaos Mich Nao Hoes)"
+  },
+  "120337178": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Blaos Mich Nao Hoes)"
+  },
+  "120337180": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Blaos Mich Nao Hoes)"
+  },
+  "120337182": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Blaos Mich Nao Hoes)"
+  },
+  "120337198": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Blaos Mich Nao Hoes)"
+  },
+  "120383950": {
+   "jaar": 2007,
+   "jaarBron": "Deezer (vroegste album: Blaos Mich 'T Landj Door)"
+  },
+  "120383968": {
+   "jaar": 2007,
+   "jaarBron": "Deezer (vroegste album: Blaos Mich 'T Landj Door)"
+  },
+  "120666288": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Vivaldi: 7 Concerti for woodwind and strings)"
+  },
+  "120996982": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Truuk Nao Aaf)"
+  },
+  "120996992": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Truuk Nao Aaf)"
+  },
+  "121001238": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: Vlege)"
+  },
+  "121001244": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: Vlege)"
+  },
+  "121001262": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: Vlege)"
+  },
+  "121004586": {
+   "jaar": 1999,
+   "jaarBron": "Deezer (vroegste album: D'n Haof)"
+  },
+  "121004590": {
+   "jaar": 1999,
+   "jaarBron": "Deezer (vroegste album: D'n Haof)"
+  },
+  "121004592": {
+   "jaar": 1999,
+   "jaarBron": "Deezer (vroegste album: D'n Haof)"
+  },
+  "121004594": {
+   "jaar": 1999,
+   "jaarBron": "Deezer (vroegste album: D'n Haof)"
+  },
+  "121004602": {
+   "jaar": 1999,
+   "jaarBron": "Deezer (vroegste album: D'n Haof)"
+  },
+  "121010294": {
+   "jaar": 2001,
+   "jaarBron": "Deezer (vroegste album: In Het Theater)"
+  },
+  "121010302": {
+   "jaar": 2001,
+   "jaarBron": "Deezer (vroegste album: In Het Theater)"
+  },
+  "121184954": {
+   "jaar": 2011,
+   "jaarBron": "Deezer (vroegste album: Helden)"
+  },
+  "121187390": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Man Van 'N Kleine Sjtad)"
+  },
+  "121187394": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Man Van 'N Kleine Sjtad)"
+  },
+  "132483928": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Hiej geit 't krake!!)"
+  },
+  "132483934": {
+   "jaar": 2014,
+   "jaarBron": "LVK-inzending 2014 (L1 / Stichting LVK)"
+  },
+  "133498246": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Venlo Op Zien Bes)"
+  },
+  "135557326": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: ajuja - Karneval in Köln)"
+  },
+  "140383655": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 'T Verschil Is Oeral Geliek)"
+  },
+  "140383657": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 'T Verschil Is Oeral Geliek)"
+  },
+  "140383675": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 'T Verschil Is Oeral Geliek)"
+  },
+  "140383677": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 'T Verschil Is Oeral Geliek)"
+  },
+  "140606237": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Da's D'n Aard Van 't Beesje! (2017))"
+  },
+  "141191831": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Feest)"
+  },
+  "141264237": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 24)"
+  },
+  "141264243": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 24)"
+  },
+  "141264247": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 24)"
+  },
+  "141264265": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 24)"
+  },
+  "141264267": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 24)"
+  },
+  "141264277": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 24)"
+  },
+  "141264313": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 24)"
+  },
+  "144367330": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Robomuffin)"
+  },
+  "351407361": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Smell the Roses)"
+  },
+  "365971601": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Is This The Life We Really Want?)"
+  },
+  "365971611": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Is This The Life We Really Want?)"
+  },
+  "365971621": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Is This The Life We Really Want?)"
+  },
+  "365971631": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Is This The Life We Really Want?)"
+  },
+  "365971641": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Is This The Life We Really Want?)"
+  },
+  "370823651": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Zitten Op Me)"
+  },
+  "371419881": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Zomer in 't Zuuje!)"
+  },
+  "374059491": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Johnny Depp)"
+  },
+  "381697241": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Lieske)"
+  },
+  "381707581": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 24)"
+  },
+  "395131782": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet 26 joar Ummer d'r Neaver)"
+  },
+  "395131802": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet 26 joar Ummer d'r Neaver)"
+  },
+  "395131822": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet 26 joar Ummer d'r Neaver)"
+  },
+  "395131832": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet 26 joar Ummer d'r Neaver)"
+  },
+  "395131842": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet 26 joar Ummer d'r Neaver)"
+  },
+  "395131852": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet 26 joar Ummer d'r Neaver)"
+  },
+  "395131902": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet 26 joar Ummer d'r Neaver)"
+  },
+  "395131932": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: 't Beste oet 26 joar Ummer d'r Neaver)"
+  },
+  "397887282": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Miene naam is Franzl)"
+  },
+  "411056832": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Take Me Apart)"
+  },
+  "411421272": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: VBALERT)"
+  },
+  "414721062": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Zoutelande (feat. Geike))"
+  },
+  "420091562": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "421066092": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Veer weite wat veer welle)"
+  },
+  "425328052": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Jocus: 't Is Weer Vastelaovend)"
+  },
+  "425328072": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Jocus: 't Is Weer Vastelaovend)"
+  },
+  "425328102": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Jocus: 't Is Weer Vastelaovend)"
+  },
+  "425328112": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Jocus: 't Is Weer Vastelaovend)"
+  },
+  "427310042": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Wo zeen die hendjes)"
+  },
+  "427425822": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Limburg Alaaf 10)"
+  },
+  "427827462": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Danse (Met Vastelaovendj))"
+  },
+  "428702892": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: De kroan op 't werk)"
+  },
+  "428719272": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Limburg deil 6)"
+  },
+  "428719352": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Limburg deil 6)"
+  },
+  "428747392": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "433070152": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Deep House Lounge (Chill Out Set))"
+  },
+  "436548072": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Vasteloavend is ....)"
+  },
+  "440769652": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Rain Or Shine (Original Television Soundtrack / Pt. 1))"
+  },
+  "443266442": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Shape The Future)"
+  },
+  "446517112": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 25)"
+  },
+  "446517122": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "446517142": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "446517152": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "446517182": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "446517222": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "446517272": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "446517522": {
+   "jaar": 2018,
+   "jaarBron": "LVK-inzending 2018 (L1 / Stichting LVK)"
+  },
+  "469816872": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Wat Is Er Mis Met Luisteren?)"
+  },
+  "485378272": {
+   "jaar": 2011,
+   "jaarBron": "Deezer (vroegste album: Melken)"
+  },
+  "490226482": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Wetse Nog?)"
+  },
+  "503697152": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Joekskapelle & Sjoenkelmeziek)"
+  },
+  "503697172": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Joekskapelle & Sjoenkelmeziek)"
+  },
+  "503697192": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Joekskapelle & Sjoenkelmeziek)"
+  },
+  "503697212": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Joekskapelle & Sjoenkelmeziek)"
+  },
+  "503697222": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Joekskapelle & Sjoenkelmeziek)"
+  },
+  "503697232": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Joekskapelle & Sjoenkelmeziek)"
+  },
+  "503697252": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Joekskapelle & Sjoenkelmeziek)"
+  },
+  "503697262": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Joekskapelle & Sjoenkelmeziek)"
+  },
+  "509748482": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Singasong)"
+  },
+  "509748502": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Singasong)"
+  },
+  "531890141": {
+   "jaar": 2000,
+   "jaarBron": "Deezer (vroegste album: In the Flesh - Live)"
+  },
+  "531890171": {
+   "jaar": 2000,
+   "jaarBron": "Deezer (vroegste album: In the Flesh - Live)"
+  },
+  "531890231": {
+   "jaar": 2000,
+   "jaarBron": "Deezer (vroegste album: In the Flesh - Live)"
+  },
+  "531890291": {
+   "jaar": 2000,
+   "jaarBron": "Deezer (vroegste album: In the Flesh - Live)"
+  },
+  "531890361": {
+   "jaar": 2000,
+   "jaarBron": "Deezer (vroegste album: In the Flesh - Live)"
+  },
+  "547879652": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Serial Fucker)"
+  },
+  "555128342": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Hold me now)"
+  },
+  "560055352": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Dao Geit-E Haer)"
+  },
+  "562133362": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Laot Ôs Bliéve Zinge)"
+  },
+  "563565592": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Laot Ôch Ens Zeen)"
+  },
+  "565688142": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Morph)"
+  },
+  "576055462": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Jocus Vitae Quod Sal Coenae: Jocus 15x11)"
+  },
+  "581215312": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Venlo Op Zien Bes, Vastelaovend 2017)"
+  },
+  "581215322": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Venlo Op Zien Bes, Vastelaovend 2017)"
+  },
+  "581215332": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Venlo Op Zien Bes, Vastelaovend 2017)"
+  },
+  "581215342": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Venlo Op Zien Bes, Vastelaovend 2017)"
+  },
+  "581215352": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Venlo Op Zien Bes, Vastelaovend 2017)"
+  },
+  "581215362": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Venlo Op Zien Bes, Vastelaovend 2017)"
+  },
+  "581215372": {
+   "jaar": 2000,
+   "jaarBron": "LVK-inzending 2000 (L1 / Stichting LVK)"
+  },
+  "581215382": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Venlo Op Zien Bes, Vastelaovend 2017)"
+  },
+  "586541002": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: 'T Is Wie 'T Is)"
+  },
+  "590159212": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend 2017)"
+  },
+  "590159222": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend 2017)"
+  },
+  "595839762": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Ova)"
+  },
+  "616345612": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Naeve De Kerk)"
+  },
+  "617927212": {
+   "jaar": 2019,
+   "jaarBron": "LVK-inzending 2019 (L1 / Stichting LVK)"
+  },
+  "617927252": {
+   "jaar": 2019,
+   "jaarBron": "LVK-inzending 2019 (L1 / Stichting LVK)"
+  },
+  "617927492": {
+   "jaar": 2019,
+   "jaarBron": "LVK-inzending 2019 (L1 / Stichting LVK)"
+  },
+  "632530652": {
+   "jaar": 1975,
+   "jaarBron": "Deezer (vroegste album: Carnaval in Mestreech, Vol. 1)"
+  },
+  "633065972": {
+   "jaar": 1975,
+   "jaarBron": "Deezer (vroegste album: Johnny Hoes Presenteert: Carnaval in Limburg (Instrumentaal))"
+  },
+  "633065982": {
+   "jaar": 1975,
+   "jaarBron": "Deezer (vroegste album: Johnny Hoes Presenteert: Carnaval in Limburg (Instrumentaal))"
+  },
+  "640949292": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: So High Remix (feat. BCA & LMK))"
+  },
+  "652776322": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: 짙은)"
+  },
+  "652776332": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: 짙은)"
+  },
+  "652776352": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: 짙은)"
+  },
+  "652776362": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: 짙은)"
+  },
+  "652776372": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: 짙은)"
+  },
+  "652776382": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: 짙은)"
+  },
+  "652776392": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: 짙은)"
+  },
+  "652776412": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: 짙은)"
+  },
+  "665015312": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Limburg Alaaf 5)"
+  },
+  "665015462": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Limburg Alaaf 2)"
+  },
+  "665015612": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Limburg Alaaf 6)"
+  },
+  "665016532": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Limburg Alaaf 3)"
+  },
+  "665016702": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 11x1)"
+  },
+  "666989392": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: diaspora : 흩어진 사람들)"
+  },
+  "666989402": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: diaspora : 흩어진 사람들)"
+  },
+  "666989422": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: diaspora : 흩어진 사람들)"
+  },
+  "666989432": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: diaspora : 흩어진 사람들)"
+  },
+  "683576562": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Embrace)"
+  },
+  "698138982": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Hie vrieve)"
+  },
+  "698138992": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Hie vrieve)"
+  },
+  "698139012": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Hie vrieve)"
+  },
+  "698139042": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Hie vrieve)"
+  },
+  "698139052": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Hie vrieve)"
+  },
+  "705005242": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Capuché)"
+  },
+  "719880032": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Totzekotze)"
+  },
+  "721631152": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Flazjelettentaire)"
+  },
+  "721631172": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Flazjelettentaire)"
+  },
+  "721631232": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Flazjelettentaire)"
+  },
+  "721852612": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Branje en Sjnirke)"
+  },
+  "721852632": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Branje en Sjnirke)"
+  },
+  "721852672": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Branje en Sjnirke)"
+  },
+  "721852692": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Branje en Sjnirke)"
+  },
+  "721852712": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Branje en Sjnirke)"
+  },
+  "728500222": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Veërtig)"
+  },
+  "728500232": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Veërtig)"
+  },
+  "728500242": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Veërtig)"
+  },
+  "728500252": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Veërtig)"
+  },
+  "728500262": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Veërtig)"
+  },
+  "728500272": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Veërtig)"
+  },
+  "728500282": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Veërtig)"
+  },
+  "728500292": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Veërtig)"
+  },
+  "758531652": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: 500 Key)"
+  },
+  "804115712": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: FEES MIT MICH)"
+  },
+  "821927322": {
+   "jaar": 2020,
+   "jaarBron": "LVK-inzending 2020 (L1 / Stichting LVK)"
+  },
+  "822816202": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: ELLUF)"
+  },
+  "822816492": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Karneval 1991)"
+  },
+  "822816782": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Zingend door `t leve)"
+  },
+  "822816952": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Walse en polka's)"
+  },
+  "827111672": {
+   "jaar": 2020,
+   "jaarBron": "LVK-inzending 2020 (L1 / Stichting LVK)"
+  },
+  "830705122": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Nao 't Zuuje (Unplugged))"
+  },
+  "830705232": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Voorwaartsch)"
+  },
+  "830729482": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Gans Veur Gaon)"
+  },
+  "830729492": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Gans Veur Gaon)"
+  },
+  "830729882": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Saus (Live))"
+  },
+  "830729922": {
+   "jaar": 2008,
+   "jaarBron": "Deezer (vroegste album: Saus (Live))"
+  },
+  "830739712": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Wear Of Gen Wear: Slotconcert 2019)"
+  },
+  "836254132": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254202": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254232": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254262": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254322": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254352": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254432": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254452": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254482": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254562": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "836254592": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Limburgse Carnaval Oet 't ROZ-Archief (Live))"
+  },
+  "839998042": {
+   "jaar": 2020,
+   "jaarBron": "LVK-inzending 2020 (L1 / Stichting LVK)"
+  },
+  "839998062": {
+   "jaar": 2020,
+   "jaarBron": "LVK-inzending 2020 (L1 / Stichting LVK)"
+  },
+  "839998072": {
+   "jaar": 2020,
+   "jaarBron": "LVK-inzending 2020 (L1 / Stichting LVK)"
+  },
+  "839998172": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: VASTELAOVEND VAN EIJSDE TOT DE MOOKERHEI 27)"
+  },
+  "839998262": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: VASTELAOVEND VAN EIJSDE TOT DE MOOKERHEI 27)"
+  },
+  "839998322": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: VASTELAOVEND VAN EIJSDE TOT DE MOOKERHEI 27)"
+  },
+  "839998512": {
+   "jaar": 2020,
+   "jaarBron": "LVK-inzending 2020 (L1 / Stichting LVK)"
+  },
+  "839998652": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: VASTELAOVEND VAN EIJSDE TOT DE MOOKERHEI 27)"
+  },
+  "839998832": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: VASTELAOVEND VAN EIJSDE TOT DE MOOKERHEI 27)"
+  },
+  "843600872": {
+   "jaar": 2020,
+   "jaarBron": "LVK-inzending 2020 (L1 / Stichting LVK)"
+  },
+  "850613392": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: De Gouden Carnaval Toppers van Vader Abraham)"
+  },
+  "859479622": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: De Joekskepèèl & De Gietaar (362 daag))"
+  },
+  "878391392": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Loeende Klokken)"
+  },
+  "879866052": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Dit Is Vastelaovend)"
+  },
+  "881768382": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Ich Vier Vastelaovend)"
+  },
+  "895611222": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: the things that disappear)"
+  },
+  "916266942": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Jongen Van De Straat)"
+  },
+  "925161112": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: KNK)"
+  },
+  "925293192": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Midsommar (Original Motion Picture Score))"
+  },
+  "933353022": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: NYXIA. Tome III)"
+  },
+  "948075302": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: KiCk i)"
+  },
+  "955178672": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: LMK)"
+  },
+  "961140132": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 8)"
+  },
+  "961140162": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 8)"
+  },
+  "961221332": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Sunset Cassette)"
+  },
+  "964213262": {
+   "jaar": 2014,
+   "jaarBron": "Deezer (vroegste album: Vanaaf Vandaag)"
+  },
+  "964221202": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Nao 't Zuuje)"
+  },
+  "968045692": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 10)"
+  },
+  "971284012": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 2)"
+  },
+  "971284032": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 2)"
+  },
+  "971284252": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Hei is get loos)"
+  },
+  "971284282": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Hei is get loos)"
+  },
+  "984368722": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Lekker menneke)"
+  },
+  "984368742": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Lekker menneke)"
+  },
+  "984368752": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Lekker menneke)"
+  },
+  "984368782": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Lekker menneke)"
+  },
+  "984368792": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Lekker menneke)"
+  },
+  "984368842": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Lekker menneke)"
+  },
+  "984368882": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Störrem in e glaas water)"
+  },
+  "984368892": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Störrem in e glaas water)"
+  },
+  "984368912": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Störrem in e glaas water)"
+  },
+  "984368932": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Störrem in e glaas water)"
+  },
+  "984368942": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Störrem in e glaas water)"
+  },
+  "984368952": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Störrem in e glaas water)"
+  },
+  "984368972": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Störrem in e glaas water)"
+  },
+  "984369322": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Leuke bezeuke)"
+  },
+  "984369382": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Is dat daan niks Merie ?)"
+  },
+  "984369502": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Is dat daan niks Merie ?)"
+  },
+  "986454822": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Zjiemelezjo)"
+  },
+  "986454832": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Zjiemelezjo)"
+  },
+  "986454852": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Zjiemelezjo)"
+  },
+  "986454862": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Zjiemelezjo)"
+  },
+  "986454872": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Zjiemelezjo)"
+  },
+  "986454882": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Zjiemelezjo)"
+  },
+  "986454932": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Zjiemelezjo)"
+  },
+  "986454942": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Zjiemelezjo)"
+  },
+  "990382372": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Nit jod ? jeld tseruk!)"
+  },
+  "990382812": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Tam Tam)"
+  },
+  "990382952": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Aod óp nui)"
+  },
+  "998598352": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: 10)"
+  },
+  "998598362": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: 10)"
+  },
+  "998598382": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: 10)"
+  },
+  "998598422": {
+   "jaar": 2006,
+   "jaarBron": "Deezer (vroegste album: 10)"
+  },
+  "1013165792": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013165802": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013165822": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013165832": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013165842": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013165852": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013165862": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013165872": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013165892": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013165902": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Vertrokke)"
+  },
+  "1013209182": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: Mestreech)"
+  },
+  "1052537342": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Ach Wat Is 't Leve Sjoen (Remix))"
+  },
+  "1057127682": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Early summer (zitten X 406 project))"
+  },
+  "1067283012": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Votive)"
+  },
+  "1071118092": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Een Beetje Zon)"
+  },
+  "1095370722": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: ALG0)"
+  },
+  "1104186102": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Home)"
+  },
+  "1112477442": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Bad Feelings)"
+  },
+  "1114289822": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Es de nuuje daag begint)"
+  },
+  "1114289912": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Es de nuuje daag begint)"
+  },
+  "1114289962": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Es de nuuje daag begint)"
+  },
+  "1114290052": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Es de nuuje daag begint)"
+  },
+  "1114290072": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Es de nuuje daag begint)"
+  },
+  "1114290102": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Es de nuuje daag begint)"
+  },
+  "1114290122": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Es de nuuje daag begint)"
+  },
+  "1114290152": {
+   "jaar": 1997,
+   "jaarBron": "Deezer (vroegste album: Es de nuuje daag begint)"
+  },
+  "1116820492": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Push Push)"
+  },
+  "1150601012": {
+   "jaar": 2021,
+   "jaarBron": "LVK-inzending 2021 (L1 / Stichting LVK)"
+  },
+  "1159194512": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Aafgelaupe Jaor)"
+  },
+  "1161716872": {
+   "jaar": 2021,
+   "jaarBron": "LVK-inzending 2021 (L1 / Stichting LVK)"
+  },
+  "1162502332": {
+   "jaar": 1996,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 3)"
+  },
+  "1162502402": {
+   "jaar": 1996,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 3)"
+  },
+  "1164978792": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Magique)"
+  },
+  "1169679432": {
+   "jaar": 2000,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 5)"
+  },
+  "1174150152": {
+   "jaar": 1989,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend in Mestreech 1)"
+  },
+  "1174512442": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Emotional)"
+  },
+  "1176626962": {
+   "jaar": 1996,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 4)"
+  },
+  "1176627002": {
+   "jaar": 1996,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 4)"
+  },
+  "1176627492": {
+   "jaar": 1999,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 6)"
+  },
+  "1176643442": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Aon de geng)"
+  },
+  "1176643472": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Aon de geng)"
+  },
+  "1176643482": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Aon de geng)"
+  },
+  "1176643502": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Aon de geng)"
+  },
+  "1176643522": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Aon de geng)"
+  },
+  "1176643542": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Aon de geng)"
+  },
+  "1176643562": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Aon de geng)"
+  },
+  "1176645082": {
+   "jaar": 1991,
+   "jaarBron": "Deezer (vroegste album: Laot mer goon)"
+  },
+  "1176645132": {
+   "jaar": 1991,
+   "jaarBron": "Deezer (vroegste album: Laot mer goon)"
+  },
+  "1176645142": {
+   "jaar": 1991,
+   "jaarBron": "Deezer (vroegste album: Laot mer goon)"
+  },
+  "1176645152": {
+   "jaar": 1991,
+   "jaarBron": "Deezer (vroegste album: Laot mer goon)"
+  },
+  "1176661122": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661132": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661142": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661172": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661202": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661212": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661222": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661262": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661302": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661352": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: 't bèste vaan Frans Theunisz & de Nachraove)"
+  },
+  "1176661942": {
+   "jaar": 1998,
+   "jaarBron": "Deezer (vroegste album: Hei hei Limburgia)"
+  },
+  "1176661972": {
+   "jaar": 1998,
+   "jaarBron": "Deezer (vroegste album: Hei hei Limburgia)"
+  },
+  "1176704992": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Hie zit muziek in)"
+  },
+  "1176753582": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Laot Mich Huure (wat vastelaovend is))"
+  },
+  "1176755522": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Polonaise)"
+  },
+  "1176755532": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Polonaise)"
+  },
+  "1176755542": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Polonaise)"
+  },
+  "1176755562": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Polonaise)"
+  },
+  "1176755572": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Polonaise)"
+  },
+  "1176755592": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Polonaise)"
+  },
+  "1191735822": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Hald Mich 's Vas)"
+  },
+  "1192121292": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend erm in erm)"
+  },
+  "1196965352": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Proost! En gaef mer gaas!)"
+  },
+  "1200922762": {
+   "jaar": 2021,
+   "jaarBron": "LVK-inzending 2021 (L1 / Stichting LVK)"
+  },
+  "1200922782": {
+   "jaar": 2021,
+   "jaarBron": "LVK-inzending 2021 (L1 / Stichting LVK)"
+  },
+  "1200923082": {
+   "jaar": 2021,
+   "jaarBron": "LVK-inzending 2021 (L1 / Stichting LVK)"
+  },
+  "1204481582": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Stil Op Straot, Vastelaovend Anders (Solo Piano))"
+  },
+  "1204695952": {
+   "jaar": 2020,
+   "jaarBron": "Deezer (vroegste album: KPK (Ko Por Ke))"
+  },
+  "1226020752": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Laeve De 3)"
+  },
+  "1226020792": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Laeve De 3)"
+  },
+  "1226020802": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Laeve De 3)"
+  },
+  "1226020832": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Laeve De 3)"
+  },
+  "1226881192": {
+   "jaar": 2005,
+   "jaarBron": "Deezer (vroegste album: Breuker Vastelaovesleedjes 2005-2006)"
+  },
+  "1233802172": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Gelök)"
+  },
+  "1236509332": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: As 't Zoë Mot)"
+  },
+  "1238283942": {
+   "jaar": 2011,
+   "jaarBron": "Deezer (vroegste album: Breuker vastelaovesleedjes 2011-2012)"
+  },
+  "1242830872": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Ici tout commence - Première année (Bande Originale de la série))"
+  },
+  "1245339502": {
+   "jaar": 2007,
+   "jaarBron": "Deezer (vroegste album: J.S. Bach: Matthäus-Passion BWV 244)"
+  },
+  "1249886742": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: De Mek)"
+  },
+  "1260831772": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: Höf De Glazer Mit W-Dreej)"
+  },
+  "1260831782": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: Höf De Glazer Mit W-Dreej)"
+  },
+  "1260831792": {
+   "jaar": 2003,
+   "jaarBron": "Deezer (vroegste album: Höf De Glazer Mit W-Dreej)"
+  },
+  "1298352192": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Meer Dan Het Beste Van...)"
+  },
+  "1388922102": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Ono Nesto)"
+  },
+  "1402136292": {
+   "jaar": 2012,
+   "jaarBron": "Deezer (vroegste album: Serzjant Oitersprot)"
+  },
+  "1408058242": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Tout est frais)"
+  },
+  "1409039662": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Onderaan Beginne)"
+  },
+  "1421120532": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Blessed Love)"
+  },
+  "1444971792": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Ode Aan Het Landschap (Stichting Het Limburgs Landschap 90 Jaar))"
+  },
+  "1465179782": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Pineco (Remix))"
+  },
+  "1466949862": {
+   "jaar": 2011,
+   "jaarBron": "Deezer (vroegste album: 백야)"
+  },
+  "1466949882": {
+   "jaar": 2011,
+   "jaarBron": "Deezer (vroegste album: 백야)"
+  },
+  "1472368292": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Wonderland)"
+  },
+  "1472368352": {
+   "jaar": 2010,
+   "jaarBron": "Deezer (vroegste album: Wonderland)"
+  },
+  "1473107772": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: FVN!)"
+  },
+  "1500179512": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Hoor wie klopt daar kinderen? Sinterklaasfeest met Bert & Ernie Sesamstraat)"
+  },
+  "1503567122": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Gaon Nog Neet Nao Hoes [Buvke's Bootleg])"
+  },
+  "1503703212": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Dit Is Vastelaovend (Remix))"
+  },
+  "1528838562": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: 1000 Sterre (ballad))"
+  },
+  "1542435812": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Noow)"
+  },
+  "1542463562": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: On the surface of the water)"
+  },
+  "1552664622": {
+   "jaar": 2022,
+   "jaarBron": "LVK-inzending 2022 (L1 / Stichting LVK)"
+  },
+  "1552664632": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: 2 x 11 Jaor)"
+  },
+  "1552664692": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: 2 x 11 Jaor)"
+  },
+  "1552664702": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: 2 x 11 Jaor)"
+  },
+  "1552664712": {
+   "jaar": 2021,
+   "jaarBron": "LVK-inzending 2021 (L1 / Stichting LVK)"
+  },
+  "1556929382": {
+   "jaar": 2022,
+   "jaarBron": "LVK-inzending 2022 (L1 / Stichting LVK)"
+  },
+  "1559866662": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Stubeleed)"
+  },
+  "1567227182": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Zittern im Bein)"
+  },
+  "1590145482": {
+   "jaar": 2022,
+   "jaarBron": "LVK-inzending 2022 (L1 / Stichting LVK)"
+  },
+  "1592948281": {
+   "jaar": 2022,
+   "jaarBron": "LVK-inzending 2022 (L1 / Stichting LVK)"
+  },
+  "1592948301": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Gaon Nog Neet Nao Hoes)"
+  },
+  "1616621212": {
+   "jaar": 2022,
+   "jaarBron": "LVK-inzending 2022 (L1 / Stichting LVK)"
+  },
+  "1618973042": {
+   "jaar": 2022,
+   "jaarBron": "LVK-inzending 2022 (L1 / Stichting LVK)"
+  },
+  "1618973082": {
+   "jaar": 2022,
+   "jaarBron": "LVK-inzending 2022 (L1 / Stichting LVK)"
+  },
+  "1618973152": {
+   "jaar": 2022,
+   "jaarBron": "LVK-inzending 2022 (L1 / Stichting LVK)"
+  },
+  "1618973862": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Vastelaoves-Seconde-Gelök)"
+  },
+  "1623959672": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Pollux Deej Carré (Live))"
+  },
+  "1623959722": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Pollux Deej Carré (Live))"
+  },
+  "1623959762": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Pollux Deej Carré (Live))"
+  },
+  "1630506762": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: 'n Bietje Vastelaovend)"
+  },
+  "1630935052": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: De Zittesje Geis)"
+  },
+  "1644939622": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Gaon Nog Neet Nao Hoes)"
+  },
+  "1645299562": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: J. S. Bach: Matthäus-Passion, BWV 244)"
+  },
+  "1645691412": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Zittend Carnaval)"
+  },
+  "1648805912": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Vief Daag Feest Mit Vastelaovend)"
+  },
+  "1665293312": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Digitális/Analóg)"
+  },
+  "1718519587": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: La clarté dans la confusion)"
+  },
+  "1763712197": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Mir gönd in Zoo 2)"
+  },
+  "1766773487": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Your Mind)"
+  },
+  "1807538067": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: 1000 Sterre (Remix))"
+  },
+  "1809105787": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Summer)"
+  },
+  "1844318067": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Gaas aan de Maas)"
+  },
+  "1856108217": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: HÄNDE ZITTERN)"
+  },
+  "1861998047": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Le K)"
+  },
+  "1861998057": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Le K)"
+  },
+  "1916396147": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Motorom)"
+  },
+  "1923214177": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Leedjes veur de Iëuwigheid: Ein hommage aan Frans Boermans)"
+  },
+  "1974044587": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Zalige Zomer)"
+  },
+  "2006332197": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Höf de Glazer (Remix))"
+  },
+  "2012402057": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend In Venlo 1977)"
+  },
+  "2012402067": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend In Venlo 1977)"
+  },
+  "2012402077": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend In Venlo 1977)"
+  },
+  "2012402087": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend In Venlo 1977)"
+  },
+  "2020747527": {
+   "jaar": 2023,
+   "jaarBron": "LVK-inzending 2023 (L1 / Stichting LVK)"
+  },
+  "2042688077": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: The Lockdown Sessions)"
+  },
+  "2042688087": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: The Lockdown Sessions)"
+  },
+  "2042688097": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: The Lockdown Sessions)"
+  },
+  "2042688107": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: The Lockdown Sessions)"
+  },
+  "2042688117": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: The Lockdown Sessions)"
+  },
+  "2043832487": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Zitter Nicht)"
+  },
+  "2045491297": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: 11 - Live beej Baer (Live))"
+  },
+  "2045491337": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: 11 - Live beej Baer (Live))"
+  },
+  "2045491407": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: 11 - Live beej Baer (Live))"
+  },
+  "2045646737": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Flaai)"
+  },
+  "2045646747": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Flaai)"
+  },
+  "2045646807": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Flaai)"
+  },
+  "2045646837": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Flaai)"
+  },
+  "2045646847": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Flaai)"
+  },
+  "2051442087": {
+   "jaar": 2023,
+   "jaarBron": "LVK-inzending 2023 (L1 / Stichting LVK)"
+  },
+  "2054434307": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Last Words)"
+  },
+  "2054515157": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Kutfeest, Vol. 2)"
+  },
+  "2074964577": {
+   "jaar": 2023,
+   "jaarBron": "LVK-inzending 2023 (L1 / Stichting LVK)"
+  },
+  "2089045377": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Nous C’est la TH (Vol. 2))"
+  },
+  "2097366327": {
+   "jaar": 2023,
+   "jaarBron": "LVK-inzending 2023 (L1 / Stichting LVK)"
+  },
+  "2097366397": {
+   "jaar": 2023,
+   "jaarBron": "LVK-inzending 2023 (L1 / Stichting LVK)"
+  },
+  "2097366407": {
+   "jaar": 2023,
+   "jaarBron": "LVK-inzending 2023 (L1 / Stichting LVK)"
+  },
+  "2097366427": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend van Eijsde tot de Mookerhei 30)"
+  },
+  "2097366447": {
+   "jaar": 2023,
+   "jaarBron": "LVK-inzending 2023 (L1 / Stichting LVK)"
+  },
+  "2101057627": {
+   "jaar": 2022,
+   "jaarBron": "Deezer (vroegste album: Antikapitalistische Partybanger)"
+  },
+  "2129210507": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Idderein weer beejein)"
+  },
+  "2129409477": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend Löt Òs Laeve)"
+  },
+  "2133019097": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Letste Leedje)"
+  },
+  "2152447457": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Ghettosuperstar)"
+  },
+  "2159501257": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Vastelaoveshart)"
+  },
+  "2163456797": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: 7.Koğuştaki Mucize Müzikleri (Original Soundtrack))"
+  },
+  "2194117597": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Spring)"
+  },
+  "2308505875": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Op us!)"
+  },
+  "2405179695": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Lecko Mio)"
+  },
+  "2438817205": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Last Words (edapollo Remix))"
+  },
+  "2454421625": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: UNA BANDIERA)"
+  },
+  "2476059821": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2476059831": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2476059841": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2476059851": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2476059861": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2476059871": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2476059881": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2476059901": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2476059921": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2476059931": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: LEX)"
+  },
+  "2492688021": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Troublemaker)"
+  },
+  "2492688031": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Troublemaker)"
+  },
+  "2497763771": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: will we ever change?)"
+  },
+  "2508628041": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Vaan Eijsde tot de Mookerhei)"
+  },
+  "2510760241": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Licky Licky Riddim)"
+  },
+  "2511725401": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Zittern im Bein (Scheppertus Remix))"
+  },
+  "2516843741": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: De Mooiste uit de 50er Jaren)"
+  },
+  "2518278901": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Limburgse Nachte)"
+  },
+  "2526710701": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Nội Dung Nhạy Cảm - Part 1)"
+  },
+  "2533330011": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Hei is get loos)"
+  },
+  "2542618871": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "2552054942": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "2552840502": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "2558113702": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "2562374872": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "2567665432": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "2568350562": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: KKV)"
+  },
+  "2572727602": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Spas aan 't laeve)"
+  },
+  "2578149752": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "2581295002": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Planeet Limburg)"
+  },
+  "2581820282": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Zittern)"
+  },
+  "2592235402": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "2596033732": {
+   "jaar": 2013,
+   "jaarBron": "Deezer (vroegste album: Soul of Morocco)"
+  },
+  "2598564512": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Vasteloavend is ós leëve)"
+  },
+  "2608062592": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Met 'n Zaachte G)"
+  },
+  "2621473072": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Wat un weer)"
+  },
+  "2622739332": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "2628327232": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Over de Brug)"
+  },
+  "2640856092": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: De Langste Naacht Van Ós Laeve)"
+  },
+  "2657112022": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: KLK)"
+  },
+  "2661072672": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072682": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072692": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072702": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072712": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072722": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072732": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072742": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072752": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072762": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072772": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072782": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072792": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072802": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072812": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072822": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072832": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072842": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072852": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072862": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072872": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072882": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2661072892": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Venloosche Vastelaovend Oét 't Roz-Archief (Venloosche Platekas, Veur De Vastelaoves In Venlo))"
+  },
+  "2664040122": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Zittern zu zweit)"
+  },
+  "2670775582": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Million Vibes (Basik riddim))"
+  },
+  "2672833682": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: Palemoon, Pt. 2 (Original Television Soundtrack))"
+  },
+  "2678640572": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Chickens in Your Town)"
+  },
+  "2712890321": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Planeet Limburg)"
+  },
+  "2723841782": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: MKK (feat. CowBoii, djygubzin.live & Ranger))"
+  },
+  "2794365502": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Boss It)"
+  },
+  "2799841362": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Birthday Saison)"
+  },
+  "2801946572": {
+   "jaar": 2017,
+   "jaarBron": "Deezer (vroegste album: Do It for Me)"
+  },
+  "2835099352": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Different Eyes)"
+  },
+  "2838301092": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: DELAY 23)"
+  },
+  "2885159172": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Destination Unknown)"
+  },
+  "2892383002": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Stop, Go!)"
+  },
+  "2954880371": {
+   "jaar": 1966,
+   "jaarBron": "Deezer (vroegste album: Karneval In Bliërick)"
+  },
+  "2962236141": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Champagne)"
+  },
+  "2973632721": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: lonely (feat. Exitus999))"
+  },
+  "2991830411": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Nena)"
+  },
+  "2996722611": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Bercy)"
+  },
+  "3050438911": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Vastelaovendj 4ever)"
+  },
+  "3051477721": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Deixa Ela Dançar)"
+  },
+  "3059701711": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Underwater)"
+  },
+  "3066310721": {
+   "jaar": 2015,
+   "jaarBron": "Deezer (vroegste album: Groeten Uit Limburg Vol. 2)"
+  },
+  "3066512941": {
+   "jaar": 2019,
+   "jaarBron": "LVK-inzending 2019 (L1 / Stichting LVK)"
+  },
+  "3079500051": {
+   "jaar": 2025,
+   "jaarBron": "LVK-inzending 2025 (L1 / Stichting LVK)"
+  },
+  "3085994591": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: PA K)"
+  },
+  "3092417321": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: LAK)"
+  },
+  "3103083421": {
+   "jaar": 2025,
+   "jaarBron": "LVK-inzending 2025 (L1 / Stichting LVK)"
+  },
+  "3114249501": {
+   "jaar": 2025,
+   "jaarBron": "LVK-inzending 2025 (L1 / Stichting LVK)"
+  },
+  "3115376331": {
+   "jaar": 2025,
+   "jaarBron": "LVK-inzending 2025 (L1 / Stichting LVK)"
+  },
+  "3119628561": {
+   "jaar": 2025,
+   "jaarBron": "LVK-inzending 2025 (L1 / Stichting LVK)"
+  },
+  "3120326611": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: OG AKA ENT)"
+  },
+  "3128808351": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: D'r Sjoenkelwals)"
+  },
+  "3135446751": {
+   "jaar": 2025,
+   "jaarBron": "LVK-inzending 2025 (L1 / Stichting LVK)"
+  },
+  "3172084801": {
+   "jaar": 2025,
+   "jaarBron": "LVK-inzending 2025 (L1 / Stichting LVK)"
+  },
+  "3175417781": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Metamorphosis)"
+  },
+  "3177767231": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Gein Fieësttent, Gein Fieëstje!)"
+  },
+  "3179438671": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Noeit Gaon Ik Weg)"
+  },
+  "3195907591": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Van Jôngsaafaan)"
+  },
+  "3206866871": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Det Is De Vastelaovend (Venlo edit))"
+  },
+  "3210681561": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: 20 Jahre Drehorgel)"
+  },
+  "3230966431": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: DJ-Kicks: Logic1000)"
+  },
+  "3239497441": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Veer Drinke Op Us (Remix))"
+  },
+  "3248466741": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: LV (feat. Mitch, Diska & Jolagreen23))"
+  },
+  "3250542621": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Ós vrundsjap zal blieve)"
+  },
+  "3267196071": {
+   "jaar": 2018,
+   "jaarBron": "Deezer (vroegste album: Mory)"
+  },
+  "3281788271": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Pötsje Beer- (Remix))"
+  },
+  "3285167271": {
+   "jaar": 2019,
+   "jaarBron": "Deezer (vroegste album: Don't Cha feat. Kimberley Krump)"
+  },
+  "3301321401": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Gans D'r Aaf)"
+  },
+  "3321785931": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Acid Trip)"
+  },
+  "3338959051": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Zot Tes)"
+  },
+  "3339153711": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: ICI TOUT COMMENCE, Vol. 2 (Bande originale de la série))"
+  },
+  "3339287571": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: KLK)"
+  },
+  "3360293881": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: KAK)"
+  },
+  "3431002381": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Dolce Cité)"
+  },
+  "3431002421": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Dolce Cité)"
+  },
+  "3450427881": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Mi Amor 2.0)"
+  },
+  "3455578381": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Far from the ground)"
+  },
+  "3477022921": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Roger Waters: This Is Not A Drill - Live From Prague)"
+  },
+  "3477022931": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Roger Waters: This Is Not A Drill - Live From Prague)"
+  },
+  "3477023001": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Roger Waters: This Is Not A Drill - Live From Prague)"
+  },
+  "3480379521": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: LOVA)"
+  },
+  "3483979041": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Neem Er Nog Een)"
+  },
+  "3485320651": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: K.O.K)"
+  },
+  "3492098741": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Rebellion in Den Alpen - Live (Live))"
+  },
+  "3515671461": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Hi, U're Welcome!)"
+  },
+  "3524254881": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Je le dis tout haut)"
+  },
+  "3524297861": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Model Girl)"
+  },
+  "3550278731": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Universal)"
+  },
+  "3555036081": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: De Beertenthelde)"
+  },
+  "3557596811": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: PLUS RIEN A PERDRE)"
+  },
+  "3568771491": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: if things were different, i would be too)"
+  },
+  "3585196291": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Iech Bun Bleij Dat Iech Leef)"
+  },
+  "3585922091": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Ein groete femilie)"
+  },
+  "3599270302": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: fastelovenDJ (Bum Bum))"
+  },
+  "3600157482": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Dino Carnaval in Limburg)"
+  },
+  "3606101532": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Zittern)"
+  },
+  "3612216772": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Wils Dich Dat Auch? (Radioversion 2025))"
+  },
+  "3614070152": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Ich vier around the clock)"
+  },
+  "3631048282": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Breef Aan Thoes)"
+  },
+  "3631048292": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Breef Aan Thoes)"
+  },
+  "3636355722": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3651622742": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: DACHIBA KOUMGBA TCHAIBA : DALSHIM)"
+  },
+  "3656218472": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: The Dark Side of the Moon Redux)"
+  },
+  "3656218512": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: The Dark Side of the Moon Redux)"
+  },
+  "3656218542": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: The Dark Side of the Moon Redux)"
+  },
+  "3656218552": {
+   "jaar": 2023,
+   "jaarBron": "Deezer (vroegste album: The Dark Side of the Moon Redux)"
+  },
+  "3662139312": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3662139362": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3681267902": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: Síntese)"
+  },
+  "3683235462": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3683617492": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3687342362": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Vastelaovendssnuutske)"
+  },
+  "3703916552": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3704495602": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Van Offerse Bojjem (deel 1))"
+  },
+  "3704495612": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Van Offerse Bojjem (deel 1))"
+  },
+  "3704495622": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Van Offerse Bojjem (deel 1))"
+  },
+  "3704495632": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Van Offerse Bojjem (deel 1))"
+  },
+  "3704495642": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Van Offerse Bojjem (deel 1))"
+  },
+  "3704495662": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Van Offerse Bojjem (deel 1))"
+  },
+  "3704495672": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Van Offerse Bojjem (deel 1))"
+  },
+  "3704495682": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Van Offerse Bojjem (deel 1))"
+  },
+  "3704703492": {
+   "jaar": 1982,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend met Beppie Kraft)"
+  },
+  "3704703502": {
+   "jaar": 1982,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend met Beppie Kraft)"
+  },
+  "3704703532": {
+   "jaar": 1982,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend met Beppie Kraft)"
+  },
+  "3709199722": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3715944042": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3716009402": {
+   "jaar": 1989,
+   "jaarBron": "Deezer (vroegste album: Hieringe Biete 1 (Live))"
+  },
+  "3717506392": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3719386122": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: MLK.)"
+  },
+  "3726026572": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend is 't antjwoord)"
+  },
+  "3726987912": {
+   "jaar": 2025,
+   "jaarBron": "Deezer (vroegste album: Pak)"
+  },
+  "3746754772": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: MLK)"
+  },
+  "3752336282": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: BLEND)"
+  },
+  "3759744152": {
+   "jaar": 2026,
+   "jaarBron": "LVK-inzending 2026 (L1 / Stichting LVK)"
+  },
+  "3760758592": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Met 'n Zaachte G (Live in Limburg))"
+  },
+  "3760758602": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Met 'n Zaachte G (Live in Limburg))"
+  },
+  "3768495092": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Guerrier)"
+  },
+  "3782819902": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: LV2)"
+  },
+  "3786714082": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Tot Middernach)"
+  },
+  "3805988012": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Limburgs Habitat)"
+  },
+  "3812440982": {
+   "jaar": 2025,
+   "jaarBron": "LVK-inzending 2025 (L1 / Stichting LVK)"
+  },
+  "3820705871": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Leefde Veur Idderein)"
+  },
+  "3832116891": {
+   "jaar": 2024,
+   "jaarBron": "LVK-inzending 2024 (L1 / Stichting LVK)"
+  },
+  "3832216081": {
+   "jaar": 2022,
+   "jaarBron": "LVK-inzending 2022 (L1 / Stichting LVK)"
+  },
+  "3832288211": {
+   "jaar": 2020,
+   "jaarBron": "LVK-inzending 2020 (L1 / Stichting LVK)"
+  },
+  "3835567261": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: wufwufwuf)"
+  },
+  "3840558921": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Òp Karákter (Party Mix))"
+  },
+  "3893724861": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: LE DERNIER REMPART)"
+  },
+  "3937760411": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Zitternder Kopf)"
+  },
+  "3943287271": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287281": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287311": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287321": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287331": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287341": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287351": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287361": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287371": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287381": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287391": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287411": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287421": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287431": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287461": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287471": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3943287491": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Live in Ziggo Dome (Live))"
+  },
+  "3958710701": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: ZITTERNDER ATEM)"
+  },
+  "3973371841": {
+   "jaar": 1995,
+   "jaarBron": "Deezer (vroegste album: Hie Brent De Lamp)"
+  },
+  "3974490901": {
+   "jaar": 2012,
+   "jaarBron": "Deezer (vroegste album: De Sjpeigel)"
+  },
+  "3974663491": {
+   "jaar": 1994,
+   "jaarBron": "Deezer (vroegste album: De Marotte Sirk Trèk Wieër)"
+  },
+  "4021109791": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: LUCKY FRIDAY)"
+  },
+  "4033988861": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Alles Kump Good)"
+  },
+  "4054057061": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Privacidade)"
+  },
+  "4057869461": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Venaovend)"
+  },
+  "4085165411": {
+   "jaar": 2024,
+   "jaarBron": "Deezer (vroegste album: pVg)"
+  },
+  "4165100052": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: pVg (Manifest Live Remix))"
+  },
+  "4180235932": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: La Mancha Carnival (From \"Limbus Company\") [Music Box])"
+  },
+  "4209950392": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Loketo)"
+  },
+  "4218023512": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Zittern)"
+  },
+  "4239288982": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Bonbon)"
+  },
+  "4243370222": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Wat Limburg Limburg maak)"
+  },
+  "4264064652": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Zoealang ich laef)"
+  },
+  "4265473772": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: LKR (feat. LVK))"
+  },
+  "4279160962": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Leedjes veur de Iëuwigheid II: Ein ode aan 't oeuvre van Frans Pollux)"
+  },
+  "4280522082": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: LV2)"
+  },
+  "4389258151": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Hei Bie Fransie)"
+  },
+  "4333630232": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: De Nach)"
+  },
+  "4296392452": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: all messed up)"
+  },
+  "4395566311": {
+   "jaar": 2021,
+   "jaarBron": "Deezer (vroegste album: Mèt de Vastelaovend)"
+  },
+  "4346222382": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Vastelaovend op zien bés)"
+  },
+  "4370367691": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Vamos Vastelaovend)"
+  },
+  "4319170132": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Zweedse Ballen LP)"
+  },
+  "4411983901": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Ce genre de mec)"
+  },
+  "4296478092": {
+   "jaar": 2016,
+   "jaarBron": "Deezer (vroegste album: Danse Pour Moi)"
+  },
+  "4374562111": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Bastardos Inglórios 2)"
+  },
+  "4359209102": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: Carnaval 2026-2027)"
+  },
+  "4362100651": {
+   "jaar": 2026,
+   "jaarBron": "Deezer (vroegste album: De joe jaa joekskapel)"
+  }
+ }
+}

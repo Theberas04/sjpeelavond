@@ -1,0 +1,30 @@
+{
+ "gemaakt": "2026-11-23",
+ "hits": {
+  "gematcht": 826,
+  "opgenomen": 825,
+  "overgeslagen": 1,
+  "redenen": {
+   "geen fragment bij Deezer": 1
+  }
+ },
+ "limburg": {
+  "ruw": 970,
+  "opgenomen": 926,
+  "overgeslagen": 0,
+  "zonderJaartal": 0,
+  "vastelaovend": 503,
+  "lvkJa": 93,
+  "lvkNee": 420,
+  "lvkOnbekend": 413,
+  "lvkLijst": 628
+ },
+ "dekken": [
+  "Grote hits: 825",
+  "Nederlandstalig: 93",
+  "Limburgs: 926",
+  "Vastelaovend: 503",
+  "Zittesj: 94",
+  "LVK: 513"
+ ]
+}

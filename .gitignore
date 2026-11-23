@@ -1,0 +1,19 @@
+# ruwe oogstcaches (duizenden kleine bestanden, opnieuw op te halen met de scripts)
+data/bron/deezer-cache/
+data/bron/mb-cache/
+data/bron/wiki-cache/
+data/bron/lvk-cache/
+data/bron/*.log
+
+# eigen muziek en de database met eigen nummers
+media/
+data/eigen.db
+
+# opname- en tekenwerk
+.frames/
+.iconen/
+
+# besturingssysteem en editor
+.DS_Store
+*.swp
+node_modules/

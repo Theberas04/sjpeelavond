@@ -1,0 +1,51 @@
+{
+ "versie": 1,
+ "gemaakt": "2026-11-23",
+ "bestanden": [
+  "nummers-hits.json",
+  "nummers-limburg.json"
+ ],
+ "totalen": {
+  "hits": 825,
+  "limburg": 926,
+  "samen": 1751
+ },
+ "dekken": [
+  {
+   "id": "hits",
+   "naam": "Grote hits",
+   "beschrijving": "Alle nummer 1-hits uit de Nederlandse Top 40, 1965 tot nu.",
+   "aantal": 825
+  },
+  {
+   "id": "nederland",
+   "naam": "Nederlandstalig",
+   "beschrijving": "De nummer 1-hits van Nederlandse artiesten.",
+   "aantal": 93
+  },
+  {
+   "id": "limburg",
+   "naam": "Limburgs",
+   "beschrijving": "Limburgs repertoire: dialectpop, rock en vastelaovesklassiekers.",
+   "aantal": 926
+  },
+  {
+   "id": "vastelaovend",
+   "naam": "Vastelaovend",
+   "beschrijving": "Vastelaovesmuziek uit heel Limburg.",
+   "aantal": 503
+  },
+  {
+   "id": "zittesj",
+   "naam": "Zittesj",
+   "beschrijving": "Zittesje vastelaovesmuziek (Frans Theunisz, De Nachraove, Radio Nónnevot).",
+   "aantal": 94
+  },
+  {
+   "id": "lvk",
+   "naam": "LVK",
+   "beschrijving": "Liedjes waarvan zeker is of ze een LVK-inzending waren.",
+   "aantal": 513
+  }
+ ]
+}

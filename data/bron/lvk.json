@@ -1,0 +1,4456 @@
+{
+ "bron": "nl.wikipedia.org (winnaars) + l1.nl/l1nieuws.nl + stichtinglvk.nl (halve finalisten/finalisten)",
+ "licentie": "alleen feitelijke gegevens (jaar, titel, uitvoerende, ronde) overgenomen uit publieke bronnen",
+ "opgehaald": "2026-11-23",
+ "aantal": 628,
+ "perJaar": {
+  "1977": 1,
+  "1978": 1,
+  "1979": 1,
+  "1980": 1,
+  "1981": 1,
+  "1982": 1,
+  "1983": 1,
+  "1984": 1,
+  "1985": 1,
+  "1986": 1,
+  "1987": 1,
+  "1988": 1,
+  "1989": 1,
+  "1990": 1,
+  "1991": 1,
+  "1992": 1,
+  "1993": 1,
+  "1994": 1,
+  "1995": 1,
+  "1996": 1,
+  "1997": 1,
+  "1998": 1,
+  "1999": 1,
+  "2000": 1,
+  "2001": 1,
+  "2002": 1,
+  "2003": 1,
+  "2004": 1,
+  "2005": 1,
+  "2006": 1,
+  "2007": 1,
+  "2008": 1,
+  "2009": 1,
+  "2010": 1,
+  "2011": 60,
+  "2012": 1,
+  "2013": 60,
+  "2014": 19,
+  "2015": 1,
+  "2016": 20,
+  "2017": 1,
+  "2018": 60,
+  "2019": 20,
+  "2020": 20,
+  "2021": 45,
+  "2022": 45,
+  "2023": 62,
+  "2024": 60,
+  "2025": 60,
+  "2026": 60
+ },
+ "nummers": [
+  {
+   "jaar": 1977,
+   "titel": "Vaan Eysde tot de Mokerhei",
+   "uitvoerende": "Jean Innemee",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1978,
+   "titel": "De zaagte geej",
+   "uitvoerende": "Lei Driessen",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1979,
+   "titel": "Dan kal ich plat",
+   "uitvoerende": "Ben Erkens & The Country Singers",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1980,
+   "titel": "De beierheering",
+   "uitvoerende": "Peter Eijkenboom & de Ragtime Band",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1981,
+   "titel": "De vastelaovend heurt biej Limburg",
+   "uitvoerende": "Dominique Reyners & Naud Reyners",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1982,
+   "titel": "Zoa moosj ’t kènne blieve",
+   "uitvoerende": "De Zjweitvuit (Guus Steinen, John Wauben en Francien Köhnen)",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1983,
+   "titel": "Mie Limburgs blood",
+   "uitvoerende": "Ben Erkens en Kapel \"Roed is droof\" Èèsjde",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1984,
+   "titel": "Dao moste mèt ljèrre léve",
+   "uitvoerende": "Leon Volders en Luc Volders",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1985,
+   "titel": "Hauwt ‘m vas, de Vastelaovend",
+   "uitvoerende": "Jan Ridderbeekx en The Fratellies",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1986,
+   "titel": "Jao, hei in Limburg",
+   "uitvoerende": "Beppie Kraft",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1987,
+   "titel": "Wiebölle",
+   "uitvoerende": "De Kuulköpkes",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1988,
+   "titel": "Minse wie weej",
+   "uitvoerende": "Wiel Vestjens en Hay Crompvoets",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1989,
+   "titel": "De Knappe(rikke)",
+   "uitvoerende": "Wiel Vestjens en Hay Crompvoets",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1990,
+   "titel": "Ich tik neet richtig",
+   "uitvoerende": "Ben Erkens",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1991,
+   "titel": "Det is een Joekskepel op joets",
+   "uitvoerende": "Hay en Paul Peeters",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1992,
+   "titel": "Wat hebbe we ’t toch good",
+   "uitvoerende": "Wiel Vestjens en Hay Crompvoets",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1993,
+   "titel": "‘nne Late",
+   "uitvoerende": "Thei & Marij",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1994,
+   "titel": "Heej of dao",
+   "uitvoerende": "Wiel Vestjens en Hay Crompvoets",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1995,
+   "titel": "De ganse santekraom",
+   "uitvoerende": "De Wazelvotte",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1996,
+   "titel": "Drejje!",
+   "uitvoerende": "Duo Ammezasie",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1997,
+   "titel": "Had ik maar",
+   "uitvoerende": "Wiel Vestjens en Hay Crompvoets",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1998,
+   "titel": "Opziej, opziej",
+   "uitvoerende": "Gaston & zien vastelaovesvrung",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 1999,
+   "titel": "Iech höb diech weer gevoonde",
+   "uitvoerende": "'t Merretkoer",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2000,
+   "titel": "Josefien",
+   "uitvoerende": "Wiel Vestjens en Gé Deenen",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2001,
+   "titel": "Good geammezeerd",
+   "uitvoerende": "Dét môt kènne",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2002,
+   "titel": "Wie d'r Herrgot Limburg hat gemaak",
+   "uitvoerende": "Frans Croonenberg",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2003,
+   "titel": "Dèh dan, dao isse!",
+   "uitvoerende": "Peter Jansen en Wim Janssen",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2004,
+   "titel": "Twieëmoal aafgezeëg (en nog te kót)",
+   "uitvoerende": "Paul & Leo",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2005,
+   "titel": "Wat zaeter?!",
+   "uitvoerende": "Böshuuske Ontsjpannings Vereiniging",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2006,
+   "titel": "Dat zit bie os in de femilie",
+   "uitvoerende": "Kartoesj",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2007,
+   "titel": "Heej bliëf ik plekke",
+   "uitvoerende": "De Toddezèk",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2008,
+   "titel": "De kriebels",
+   "uitvoerende": "Bram Holla en Ruud Stikkelbroeck",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2009,
+   "titel": "Ni miër en ni minder",
+   "uitvoerende": "De Toddezèk",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2010,
+   "titel": "Vandaag!",
+   "uitvoerende": "W-Dreej",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Kôm 's kiéke beej ôs!",
+   "uitvoerende": "W-Dreej",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2011,
+   "titel": "'n Buulke ongeteld",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "'t Moëiste maedje van de waereld",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "'t Zaate Blaoskapellejoeksmenieke",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Allé Alaaf",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Aom Genôg",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "As ich get jônger waas",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "D'n Bessem",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "D'n Truukwaeg",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "D\\'r scepter",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Dao gaon we dân",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Dao kinse honderd mei waere",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Dat weëd 'm",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "De kroan op 't werk",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "De straot op...!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "De Vastelaoveskilomaetervraeter",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Den kènne veur alles",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Doa kunt Geertje met de boer'kapel",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Doe bes geweldig",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Doe bis gans in orde",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Doe en ich (en hóngerd anger luuj)",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Druime onder 't biljart",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Eine van os",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Es iech 't nog 'ne kier moos doen...",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Haos te moeëj um waor te zien",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Hiej brent de lamp...!!!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Ich weit van toête noch blaoze",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Ich wil dich vertélle",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Ik kóm wa latter",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "In vuur en vlam",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Jo de la",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Kiek ins op de klok",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Knalle mit z'n alle",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Kôm oët de winterslaop",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Kop oppe Limburg steit veurop mich mit",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Lachtj",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Leefde Alaaf! (Het leedje van de verlaege Prins)",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Limburg haet 't allemaol",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Meneer de Pliessie",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Mit vastelaovend hiltj mich geine taenge",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Neet te misse!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Niks is sjaonder",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Oh wat ing nach Merie",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Ooh Marjanne",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Plekt....det ut verrekt",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Same plezeer, op ós eige meneer",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Sjpastelaovend",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Vae veere zi-j aan zi-j",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Vastelaovend opera",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Vastelaovendj in Limburg",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Vastelaovesblaore",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Vastelaovesvirus",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Veer höbbe 't",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Ver Veule os wie in d'r Hiemel",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Versiere",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Vier Vasteloavend",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Wae bringk mich nao hoès?",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Wat is nog sjoener es de Vastelaovendj",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Wo zit 't bie dich?",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2011,
+   "titel": "Zoeë kèn ich t ouch",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2440683/halve-finalisten-lvk-2011-bekend"
+  },
+  {
+   "jaar": 2012,
+   "titel": "Doot 's gek",
+   "uitvoerende": "W-Dreej",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Laef Limburg Laef",
+   "uitvoerende": "La Bamba",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2013,
+   "titel": "'n Fluitje van 'ne sent",
+   "uitvoerende": "Kartoesj",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "'t Verlange",
+   "uitvoerende": "Ronald en Carien",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "33 Daag",
+   "uitvoerende": "Bram& Ruud",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Allemaol",
+   "uitvoerende": "Christel& Paul-Jean",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Dao bun ich met gebaore",
+   "uitvoerende": "Hoondervel!",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "De Vastelaovesheld",
+   "uitvoerende": "Wim en Loe",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "De Voicemail",
+   "uitvoerende": "Spik en Span",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Eh?...Lalala",
+   "uitvoerende": "Men in Pek",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Hange",
+   "uitvoerende": "De Stappers",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Höbs doe ouch zo'ne zin",
+   "uitvoerende": "Cyrille Niël",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Ich knap op en aaf!",
+   "uitvoerende": "De Geliënde",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Ik bin genne boer",
+   "uitvoerende": "Boer Jan en zien cowboys",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Ik bin vastelaovend",
+   "uitvoerende": "Roy van den Broek",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "In de Wolke",
+   "uitvoerende": "De Breurkes",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Murge blief ich Thoes",
+   "uitvoerende": "Óm in te Lieste",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Òs Bestaon",
+   "uitvoerende": "Bjorn& Mieke",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Pappa Mamma",
+   "uitvoerende": "Thijssen en Co",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Vasteloavos Samos",
+   "uitvoerende": "Pavlos& Leonidas oet Heëllas/Paul& Leo",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2413246/bekendmaking-finalisten-lvk-2013"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Al Gelache Vandaag??",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "As ich tik tak tied kos make",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Dan vruijt zich 't Herregödje",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Dans mit mich",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Dao is de prins...!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Dao môtte we beej zien",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Dat is 't sjwânne d'raan...",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Det zit zoë",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Dich bes geweldig!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Doe hings miech vies ut sjoas oes!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Ff Reure",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Fleutend durch ut leëve",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Galdere",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Haol de bônne op Merie",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Heej is ut te doon",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Heit!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Ich loat de poppe danse",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Ik bin de waeg kwiet",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Ketse",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Kiek dien auge oet",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Kluune op de buhne",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Kóm mer nao bènne!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Land van vastelaovend en gelök",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Laot dich hûëre!!!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Leef vendaog d'n daag!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Loat diene gekke kantj weer zieën",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Maak van enne mug...",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "n Gans jaor vastelaovend",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Sjaele Kal",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Super 11",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Tik aa die viehf",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Truuk van weggewaes",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Ut kôs heij wel vur niks zien",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Vastelaovesglaas",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Veer weite wie t zit",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Veur de geraniums",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Viês op 't vötje gevalle",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Viva viva viva karnaval",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Weej zien d'r klaor veur",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Wet-se nag van vroeger",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2013,
+   "titel": "Woa hatte dat da",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2496791/halve-finalisten-lvk-2013-zijn-bekend"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Onhendig Leedje",
+   "uitvoerende": "De Toddezèk",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2014,
+   "titel": "'t Krejjepeuetje",
+   "uitvoerende": "Zèkketusgaw",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Carnelaovendj",
+   "uitvoerende": "Men in Pek",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Dao hange de sjlingers",
+   "uitvoerende": "De Harie's",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "De Alleraafste",
+   "uitvoerende": "Hoondervel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Dree mer door!",
+   "uitvoerende": "Paul-Jean Jessen",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Drie daag Vastelaovend",
+   "uitvoerende": "Spik en Span",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Gaef 't door!",
+   "uitvoerende": "De Geliënde",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Hie in Limburg is 't good!",
+   "uitvoerende": "La Bamba (mit de Roepoepers)",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Is dit de hemel hei?",
+   "uitvoerende": "Niks Mier& Niks Minder",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Kaer mich mer d'r oet",
+   "uitvoerende": "Óm in te Lieste",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Leefde, Sjpass en Moeziek",
+   "uitvoerende": "De Herringbiessere",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Proost",
+   "uitvoerende": "Rempetemp",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Ut geveul van gelök",
+   "uitvoerende": "Pim van Wylick",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Vastelaovend: Diech bis ´t hielemaol!",
+   "uitvoerende": "Katja Henz",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Vastenaovend belaeve",
+   "uitvoerende": "Bjorn",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Wae zitte de toën...",
+   "uitvoerende": "De SjerpSjutters",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Wat enne mojjen dág!",
+   "uitvoerende": "Brechje& Nelleke",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2014,
+   "titel": "Zing, dans en drink",
+   "uitvoerende": "W-Dreej",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2388962/lijst-van-19-finalisten-lvk-2014"
+  },
+  {
+   "jaar": 2015,
+   "titel": "Es vastelaovend Limburg bênne vêlt",
+   "uitvoerende": "Spik & Span",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Kampioene van de nach",
+   "uitvoerende": "Spik & Span",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2016,
+   "titel": "'t Sjoonste feeske van 't jaor",
+   "uitvoerende": "René Dirkx",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "As vastelaovend neet bestónd",
+   "uitvoerende": "W-Dreej",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "De krach van de Lach",
+   "uitvoerende": "Pier& Stuf",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "De meiste sjpas",
+   "uitvoerende": "De Geliënde",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Dreij met mich meij!",
+   "uitvoerende": "Ald Prinse Convent",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Ederein",
+   "uitvoerende": "La Bamba",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Eîn Limburg",
+   "uitvoerende": "Ronald en Carien",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Haok mer in",
+   "uitvoerende": "De Breurkes",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Hie is gein WiFi",
+   "uitvoerende": "Paul-Jean Jessen",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Hier!",
+   "uitvoerende": "Bjorn& Mieke",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Is dat noe leuk?",
+   "uitvoerende": "De Kloomp",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Laef diene druim!!!",
+   "uitvoerende": "Marleen Rutten",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Met vastenaovend",
+   "uitvoerende": "Bjorn van Berkel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Tis Vasteloavesweër!",
+   "uitvoerende": "Vee& Dee",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Vastelaovesbuuje",
+   "uitvoerende": "Kristel Roulaux en Bart Janssen",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Vastelaovestwinkels!",
+   "uitvoerende": "Katja",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Vasteloavesblood",
+   "uitvoerende": "Paul& Leo",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Veer gaon wiejer",
+   "uitvoerende": "Andy en Roy",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2016,
+   "titel": "Zoa haet 't Bertha bedoeld",
+   "uitvoerende": "Irene Lardy",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2380918/de-finalisten-van-het-lvk-2016-zijn-bekend"
+  },
+  {
+   "jaar": 2017,
+   "titel": "Code 'Rood-Gael-Greun'",
+   "uitvoerende": "De Geliënde",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Blieve",
+   "uitvoerende": "Spik & Span",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2018,
+   "titel": "'t Lempke van de Keulkas",
+   "uitvoerende": "Óm in te Lieste",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Ach, dân zien we vân de straot aaf!!!",
+   "uitvoerende": "De Toddezèk",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "De Klaptoesj!",
+   "uitvoerende": "Kartoesj",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "De leukste vrouluuj zitte in de hel",
+   "uitvoerende": "Pascal Sutherland",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "De tied vaan us leve!",
+   "uitvoerende": "Katja Henz",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Deze Nach!",
+   "uitvoerende": "Marleen Rutten",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Drie daag oet de plaat",
+   "uitvoerende": "Fiorenza",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Droeëme mit de oeëge oop",
+   "uitvoerende": "Bjorn& Mieke",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Inne Sjunne Ruk",
+   "uitvoerende": "Prins-road Schaesberg",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Is 't 'm noe, of is 't 'm neet?",
+   "uitvoerende": "Don Kiesjot",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Is hei 'ne dokter in d'r zaal",
+   "uitvoerende": "Paul& Leo",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Maa Maa Maa Maa",
+   "uitvoerende": "De Kloomp",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Mörge weer",
+   "uitvoerende": "De HAP (Haelder Aod Prinse)",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Noe of nooit",
+   "uitvoerende": "Sjpringlaevend",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Òp weg nor maerge",
+   "uitvoerende": "Pruuf Már",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Vastelaovundj Bubbel",
+   "uitvoerende": "Mark& Wilhelmien",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Veer moge weer (daag en nach)",
+   "uitvoerende": "La Bamba",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Weej kleure de waereld",
+   "uitvoerende": "Pim van Wylick",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Welteruste Waereldj",
+   "uitvoerende": "Hoondervel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508733/dit-zijn-de-20-finalisten-van-het-lvk-2018"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Achterom is kèrmis",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Binnesteboête",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "D'r ober van de sjpas",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Dae kale van van Dale",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Danse Zinge Springe",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "De Vastelaovespolonaise",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Dich bis okè!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Doe en ich zeen veer!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Doot met os mei",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Hae is de prins",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Haot mich vas mit Vastelaovend",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Idder jaor opnej",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Laot mich",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Moele doon ze toch!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Mós doe neit eine gaeve",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Onder 't lich van de maon",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Ózze leefde",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Plök d'n Daag!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Prònke mit diej Vaere!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Rèk 't Neet...!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Rempetempe tot Kraak",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Snipperdaag",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Täöfelkes",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Ut gelök van Limburg",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Vastelaovendj Alles",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Veer pakke oet",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Veer zeen d'r altied bie",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Ventilere!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Verschminkt!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Vier d'n daag!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Volgend jaor",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Volle krach",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Vrundsjap",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Waat kin ut toch gaeve",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Wach neet wies morge",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Wo t landj en 't laeve good is'",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Zèk 't mich...en kiek mich aan!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Zing maar mei!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Zjwèije",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2018,
+   "titel": "Zoalang de prins op toafel sjteit",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498871/de-60-halve-finalisten-lvk-2018-zijn-bekend"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Groete oet de fieësttent",
+   "uitvoerende": "Hoondervel",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2019,
+   "titel": "'T sjoenste wat d'r is!!!",
+   "uitvoerende": "Marvin Rosier",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "1, 2, 3 Vastelaovend",
+   "uitvoerende": "Sjtóm toeval",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Alles môt sjuuve",
+   "uitvoerende": "De Kloomp",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Get sjluukskes langer",
+   "uitvoerende": "'t Graotekoeër",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Hutjemutje",
+   "uitvoerende": "Goedzat",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Jabadabai!",
+   "uitvoerende": "Herriemenie Miserabel mit Bart&Emil",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Kom mèt miech mèt!",
+   "uitvoerende": "Katja Henz",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Laot ós mer sjuve.",
+   "uitvoerende": "Jesse& Jesse",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Laot zeen datste Limburger bès!!",
+   "uitvoerende": "Don Kiesjot",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Maak 't Laat!",
+   "uitvoerende": "Heite Soep",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Maak de V",
+   "uitvoerende": "Nick en Patrick",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Nog Efkes",
+   "uitvoerende": "Bjorn& Mieke",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Plek de wiezers vas",
+   "uitvoerende": "Andy en Roy",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Same viere!",
+   "uitvoerende": "De Geliënde",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Umdet ut vastenaovend is!",
+   "uitvoerende": "Björn van Berkel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Vastelaovend Onversjlaonbaar",
+   "uitvoerende": "Roy Selder",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Wat kin ut Sjille!?",
+   "uitvoerende": "De Breurkes",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Weer tèlle aaf",
+   "uitvoerende": "Spik en Span",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2019,
+   "titel": "Zoeëmar dat moment",
+   "uitvoerende": "Pruuf Mar",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508754/dit-zijn-de-20-finalisten-van-het-lvk-2019"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Vrunj tot de allerleste runj",
+   "uitvoerende": "Spik & Span",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2020,
+   "titel": "'t is rot, maar ich mot...",
+   "uitvoerende": "Deh!",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Brèk De Nácht",
+   "uitvoerende": "Bjorn& Mieke",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Dae'n hauve haan",
+   "uitvoerende": "De Geliënde",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "De lètste hoije",
+   "uitvoerende": "'t Graotekoeër",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "De Proostende Provincie",
+   "uitvoerende": "Hoondervel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "De Vastelaoves-Cramignon",
+   "uitvoerende": "Niels en Kay",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Doorgoon!",
+   "uitvoerende": "Sjpringlaevend",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Duit Ali ut express?",
+   "uitvoerende": "Alaaf Airlines",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Gooije Gronk",
+   "uitvoerende": "De Breurkes",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Ich bön eine vastelaovesgek",
+   "uitvoerende": "La Bamba",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Laot 't los",
+   "uitvoerende": "Frank en de Sterren",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Neet zoonder diech!",
+   "uitvoerende": "Katja Henz",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Poppekas",
+   "uitvoerende": "Herriemenie Miserabel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Tösse gister en mörge",
+   "uitvoerende": "Men in Pek",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Urst látter",
+   "uitvoerende": "Pruuf Mar",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "VastelaovesVirus",
+   "uitvoerende": "Andy en Roy",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Vergaet neet te laeve",
+   "uitvoerende": "Rempetemp& Jan van Cep",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Wacht Neet Op Later",
+   "uitvoerende": "Prins& Aod Prinse Graashook",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2020,
+   "titel": "Wo is de VAR?",
+   "uitvoerende": "Jesse& Jesse",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508775/dit-zijn-de-20-finalisten-van-het-lvk-2020"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Dorst is baeter mit vrunj",
+   "uitvoerende": "Hoondervel",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2021,
+   "titel": "DE GEIS OET DE FLÈSJ",
+   "uitvoerende": "Kartoesj",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "De klein kefeekes koorts",
+   "uitvoerende": "'t Graotekoeër",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "De Kloomp Groet",
+   "uitvoerende": "De Kloomp",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "De verkieërdje verkleidje",
+   "uitvoerende": "Pier& Stuf",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Doa kins te noa fleute",
+   "uitvoerende": "Íng K (Pablo y Lionel del Valle de Corio)",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "gare oppe klos",
+   "uitvoerende": "GoedZat",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Hout Vastelaovend Vas",
+   "uitvoerende": "Andy en Roy",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Kiek nao veure!",
+   "uitvoerende": "Claire",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Knoévele",
+   "uitvoerende": "Christel en Quinn",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Laot mich huure",
+   "uitvoerende": "Rempetemp",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Noeëts Gewoeën",
+   "uitvoerende": "Pruuf Mar",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Ongerein",
+   "uitvoerende": "Pim& Chantal",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Paaf Alaaf",
+   "uitvoerende": "Spik en Span",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Rap d'r achteraan!",
+   "uitvoerende": "ZOES",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Sjtraks op Aswoonsdig",
+   "uitvoerende": "Sjpringlaevend",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Van onger tot baove",
+   "uitvoerende": "Fiorenza",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Vastenaovend is!",
+   "uitvoerende": "Björn van Berkel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Zoa wie s'te bès",
+   "uitvoerende": "De Plekbend",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Zoe sjoen um te zien",
+   "uitvoerende": "Katja Henz",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508777/dit-zijn-de-20-finalisten-van-het-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "2021",
+   "uitvoerende": "Willy en Bart",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Blieve dânse",
+   "uitvoerende": "Maik& Kyra",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Confetti",
+   "uitvoerende": "M@ud (du Chatinier)",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Dae kleî-jerkast",
+   "uitvoerende": "Ronald en Carien",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "DAT GEIT HIE GANS VAN ALLEIN",
+   "uitvoerende": "DON KIESJOT",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "De klein momente",
+   "uitvoerende": "DZN",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Dit zien Mien daag",
+   "uitvoerende": "Gwen",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Dizzen Aovend",
+   "uitvoerende": "Nevvenén",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Doa kriesse zeek mit",
+   "uitvoerende": "45èlf",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Doot mien beer mer in ein tuutje!",
+   "uitvoerende": "Sjöppe Aos",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Gaer eine sjoenkelaer",
+   "uitvoerende": "Kelly van de Lump",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Gelukkig wèr same",
+   "uitvoerende": "Loss!",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Hang de slingers same op",
+   "uitvoerende": "De Breurkes",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Laot ós in de sjteek",
+   "uitvoerende": "Jesse& Jesse",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Mèt aafstand (in alaafstand)",
+   "uitvoerende": "De Batjakkers",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Oët de maot",
+   "uitvoerende": "Jules, Gijs, Willy en Bart",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Springe vaan gelök",
+   "uitvoerende": "Nick& Patrick",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Stilte Veur de Storm",
+   "uitvoerende": "Prins& Aod Prinse Graashook",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Ut is 't land!!!",
+   "uitvoerende": "Niels en Kay",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Vae veûle os goôd",
+   "uitvoerende": "De lèste drej",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Vastelaovesdinsdig",
+   "uitvoerende": "De Geliënde",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Vier 's Vastelaovend!",
+   "uitvoerende": "Foeksewild",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Volgendj jaor zeen vae d'r weer",
+   "uitvoerende": "Stefan Wolter",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Waat löp mós se laote loupe",
+   "uitvoerende": "La Bamba",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2021,
+   "titel": "Zolang de waereld drejt",
+   "uitvoerende": "Patrick Roger",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2498918/deze-45-liedjes-gaan-door-naar-halve-finales-lvk-2021"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Âltied Ope",
+   "uitvoerende": "Bjorn & Mieke",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Alle Wege Same",
+   "uitvoerende": "Pruuf Mar",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Dat han ich gemis",
+   "uitvoerende": "Paul& Leo",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "De fieëstendje finale",
+   "uitvoerende": "'t Graotekoeër",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "De klink van de kroeg",
+   "uitvoerende": "Hoondervel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "De Lètste",
+   "uitvoerende": "Andy en Roy",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "de Partie van de Lach",
+   "uitvoerende": "Don Kiesjot& ós Limburgse Buuttereedners",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "De Spaanse Paeper",
+   "uitvoerende": "Kos Erger",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "De Vastelaovesecho",
+   "uitvoerende": "Prins& Aod Prinse Graashook",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "De Vergistoeris (Laot gaon!)",
+   "uitvoerende": "Alaaf Airlines",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "De Wins",
+   "uitvoerende": "De Toddezék",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Hallo Vastelaovendj",
+   "uitvoerende": "Mark en Wilhelmien",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Jef Jaas",
+   "uitvoerende": "ut Dreigestirn va Limburg",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Maske verplich!",
+   "uitvoerende": "Jesse& Jesse",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Mèh waal mer eine kjèr",
+   "uitvoerende": "De Kloomp",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Mörge!",
+   "uitvoerende": "Marleen Rutten",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Vastelaovendj mòsse Deile",
+   "uitvoerende": "Men in Pek",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Vastelaoves-seconde-geluk",
+   "uitvoerende": "Sjpringlaevend",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Veer zeen nog lang neit euver de datum haer",
+   "uitvoerende": "Kwebbel& Sjnebbel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Vier het laeve!",
+   "uitvoerende": "Spik& Span",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2508783/dit-zijn-ze-dan-de-20-finalisten-van-het-lvk-2022"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Alles wat va wiet kunt dat is lekker",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Bonjoure!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "D'n Hoeëgen Hood",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Dao kump Sjakie haer",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Dat is doch jee jezich",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Det heb ik auk",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Die puutsjes",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Dreej daag opriej",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Drei daog vaan de wereld los",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Elk jaor weer",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Euveral en nörges",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Maak mich bliej",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Mieër Vastelaovendj",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Mien eerste graote leefde",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Mien Veurgeveul",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Pin mich vas",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Pirate Oet 't Zuuje!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Sjtael mien hart",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Sjtel dich ins veur",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Ut konzert van ut leave",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Ut moeiste waat d'r is",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Vastelaovend is mich heilig",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Veer zeen nog lang neit euver de datum hear",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Veur det ut morge is!",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2022,
+   "titel": "Vier 's vastelaovend",
+   "uitvoerende": "",
+   "ronde": "halve finale",
+   "bronUrl": "https://www.l1.nl/44-halve-finalisten-lvk-2022-bekend-168317/"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ojjem blieve hale",
+   "uitvoerende": "Pruuf mar",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2023,
+   "titel": "(Sjt)optoch!!!",
+   "uitvoerende": "De Geliënde",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Angersom-se Heimwee",
+   "uitvoerende": "Hoondervel",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Dalik",
+   "uitvoerende": "'t Graotekoeër",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Dao!",
+   "uitvoerende": "Spik en Span",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "De Sjoenkelpolonaise",
+   "uitvoerende": "Wild Vleisj",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "De voesregel",
+   "uitvoerende": "D'r Tim",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Det zien de feite",
+   "uitvoerende": "Oët de maot",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Es Adam gay waor gewaes",
+   "uitvoerende": "Ivo van der Bijl",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Fieést Club Limburg!",
+   "uitvoerende": "De Breurkes & APK-Side",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Los van de groond",
+   "uitvoerende": "Verrékkes Moj",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Mich neet belle!",
+   "uitvoerende": "Marleen Rutten",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Noeëts mieër weg",
+   "uitvoerende": "Rempetemp",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "TE",
+   "uitvoerende": "GoedZat",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Te Vaste-te-te-laovend",
+   "uitvoerende": "Prins & Aod Prinse Graashook",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ut bönke van de jas",
+   "uitvoerende": "Sjöppe Aos",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Van 't gaas (al)aaf?!",
+   "uitvoerende": "De Plekbend",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ver laeve mer eine keer",
+   "uitvoerende": "Don Kiesjot",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "W.A.L.S. (Wil Altied Lekker Sjoenkele)",
+   "uitvoerende": "Niels en Kay",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Waat klink det good",
+   "uitvoerende": "W-Dreej",
+   "ronde": "finale",
+   "bronUrl": "https://www.l1.nl/nieuws/2499000/dit-zijn-ze-dan-de-20-finalisten-van-de-lvk-finale-2023"
+  },
+  {
+   "jaar": 2023,
+   "titel": "'n Leedsje van Niks",
+   "uitvoerende": "De Kloomp",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "'t Daak d'r aaf",
+   "uitvoerende": "Andy & Roy",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "'t Geheim",
+   "uitvoerende": "La Bamba",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "'t Moéjste maedje oët de polonaise",
+   "uitvoerende": "De Sjäöpkes",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "16 jaor",
+   "uitvoerende": "Sjpringlaevend",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Alles pieptj en alles kraaktj",
+   "uitvoerende": "Doospelse Aod Prînse",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Altied Pries!",
+   "uitvoerende": "Pascal Sutherland",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "D'r noaber",
+   "uitvoerende": "Paul & Leo",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "D'r Sjunste Prins",
+   "uitvoerende": "Jo Smeets",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Daor Leag Nuerg",
+   "uitvoerende": "Jordy Swillens",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "De Krök",
+   "uitvoerende": "Deindanger",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "De stilte velt binne",
+   "uitvoerende": "Sandra",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ein.. Twieë.. Drejje!",
+   "uitvoerende": "Stefan Wolter",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Es de mör vaan eus kaffeeke,..!",
+   "uitvoerende": "De Jatsers!",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Es of d'r duuvel d'r mit sjpilt",
+   "uitvoerende": "45èlf",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Fees van reagebaogen",
+   "uitvoerende": "Fio",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Hêldj van de aovendj",
+   "uitvoerende": "Mark Gruijthuijsen",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Höbse 'T Nao De Zin",
+   "uitvoerende": "Kartoesj",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Hoempapa",
+   "uitvoerende": "Ommezang",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Hokus Pokus",
+   "uitvoerende": "De HerringBiessere",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ich wil ut Allemaol",
+   "uitvoerende": "Mark en Wilhelmien",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ig druim al daag",
+   "uitvoerende": "Pier & Stuf",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ik bin zoë heis",
+   "uitvoerende": "De Toddezèk",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Kóm derbie!",
+   "uitvoerende": "Claire",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Leef zoea leef",
+   "uitvoerende": "Limbo Project",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Muziek zit in ós laeve",
+   "uitvoerende": "Twieë Half Um",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Nie te beschrieve",
+   "uitvoerende": "Maik & Kyra",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ós verhaol",
+   "uitvoerende": "Manon & Bart",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ozze Pap",
+   "uitvoerende": "Pim & Peet",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Pak mich vas!",
+   "uitvoerende": "Maud du Chatinier",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Sjei toch oet!",
+   "uitvoerende": "Sjeigelentaire",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Sjoenkel Polonaise",
+   "uitvoerende": "Wild Vleisj",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Sjtaek dien naeske in 'n glaeske",
+   "uitvoerende": "Jesse & Jesse",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Ut barst los!",
+   "uitvoerende": "Pim en Chantal",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Van 't gaas (al)aaf?!",
+   "uitvoerende": "Plekbend",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Vastelaovend, det bis dich!",
+   "uitvoerende": "Marina Claessen",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Veer trèkke alles oet de kas!",
+   "uitvoerende": "Duo X-Elle",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Veer zeen dao",
+   "uitvoerende": "Ivana",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Veur blieve hiej!",
+   "uitvoerende": "Deh!",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Waor zal ich zien?",
+   "uitvoerende": "Shirley Lemmen",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Wo brent nog leich",
+   "uitvoerende": "Cyrille Niël",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2023,
+   "titel": "Woa ziede geej d'r enne vá?",
+   "uitvoerende": "Moelbaereboys",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/1907623/zestig-deelnemers-halve-finales-lvk-2023-bekend"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Vastenach",
+   "uitvoerende": "Spik en Span",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2024,
+   "titel": "'t Vastelaoveskroege-ritme",
+   "uitvoerende": "'t Graotekoeër",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "1000 Klanke, 1000 kleure",
+   "uitvoerende": "Kartoesj ft. Nuchter Vertroch",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "D'n drejdaagsvleeg",
+   "uitvoerende": "De Kwante Diekzèk",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "De euveral-uh-fees-van-makers",
+   "uitvoerende": "Sjpringlaevend",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Gans Limburg geit plat!",
+   "uitvoerende": "De Geliënde",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Heerlik",
+   "uitvoerende": "Rempetemp",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Ich vastelaovendj",
+   "uitvoerende": "Men in Pek",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Ik wooj nie gaon",
+   "uitvoerende": "Van Lieshout & Arts",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Made in Limburg",
+   "uitvoerende": "Andy & Roy",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Noeëts Mèr Vergaete",
+   "uitvoerende": "Bjorn & Mieke",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Nog nie te laat",
+   "uitvoerende": "Pruuf Mar",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Nondeju",
+   "uitvoerende": "De Toddezék",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Pas dan kom ich thoes",
+   "uitvoerende": "Claire",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Póshaas",
+   "uitvoerende": "GoedZat",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Sjoenkele of springe",
+   "uitvoerende": "4TON",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Sjpaslegioen",
+   "uitvoerende": "Wild Vleisj",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Vastelaovend is los",
+   "uitvoerende": "Spass Partout",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Vreej mét Vastelaovendj",
+   "uitvoerende": "Mark en Wilhelmien",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Woke, mèt 'n zachte G",
+   "uitvoerende": "De Plekbend",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/article/12a544b4-70f7-5a79-b5e9-1e6bfc4acb1d"
+  },
+  {
+   "jaar": 2024,
+   "titel": "11 Steeje toch",
+   "uitvoerende": "Maik & Kyra",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Als mâr Gekker!",
+   "uitvoerende": "Björn van Berkel",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Ás geej dôrs kriegt",
+   "uitvoerende": "Heite Soep",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Baeter dán gister",
+   "uitvoerende": "Viêf vùr Elluf",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Bel ze thoes mer eve op veer koume later",
+   "uitvoerende": "Alleh daan",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Dao is euver naogedach",
+   "uitvoerende": "De Kloomp",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "De langste nacht van os laeve",
+   "uitvoerende": "Danny Pouwels",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "De Vastelaovend mót d'r door!",
+   "uitvoerende": "Kos Erger",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Det doon weej morge",
+   "uitvoerende": "W-Dreej",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Die-hards van de Vasteloavend",
+   "uitvoerende": "3xNIX",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Dien ouge sjtraole verhaole",
+   "uitvoerende": "Raoj 'ns",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Doézend kleure",
+   "uitvoerende": "Marina Claessen",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "e Good Hart",
+   "uitvoerende": "Katja Henz",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Enkeltje plezeer",
+   "uitvoerende": "Twië Hand Op Iën Proêk",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "És de lempkes zjweije",
+   "uitvoerende": "Maud du Chatinier",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Fiès van doezend sjtömme",
+   "uitvoerende": "ZOES",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Hey baas, helaas!",
+   "uitvoerende": "Ron van richting Roy",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Ich kôm d'r aan",
+   "uitvoerende": "Nena Spronkmans",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Ich vraog dit väör eine vrundj",
+   "uitvoerende": "Sjöppe Aos",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Kabaal",
+   "uitvoerende": "Rossi",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Neet oet te légke",
+   "uitvoerende": "Ronald en Carien",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Nie te filme",
+   "uitvoerende": "Nevvenén",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Niks hèlt us nog tege",
+   "uitvoerende": "Duo X-Elle",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Nog eine",
+   "uitvoerende": "Ceryll Aubert",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Nog ing kieër",
+   "uitvoerende": "Ummer d'r neaver",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Oeit",
+   "uitvoerende": "Prins & Aod Prinse Graashook",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Ooit",
+   "uitvoerende": "Ivana",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Pôh!",
+   "uitvoerende": "Frank en de Sterren",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Stayin' alaaf",
+   "uitvoerende": "Jesse & Jesse",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Tequila",
+   "uitvoerende": "Miel en Dirk",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Van Sjingelbells tot Sjingeleboem",
+   "uitvoerende": "SjingBoem",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Vaste-laeves-concert",
+   "uitvoerende": "Martijn",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Vier mótte verjónge",
+   "uitvoerende": "Paul & Leo",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Vlamme!",
+   "uitvoerende": "Marie José",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Vrees neet",
+   "uitvoerende": "Niels en Kay",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Waatse in dien hert bewaars",
+   "uitvoerende": "Marleen Rutten",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Wat 'n sjoon köpke",
+   "uitvoerende": "Don Kiesjot",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Wat as 't zeuj störme",
+   "uitvoerende": "Koen & Ankie",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Wat kriegè v'r noe?",
+   "uitvoerende": "'t Maog Geine Naam Höbbe",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2024,
+   "titel": "Weej bliéve wie weej zien",
+   "uitvoerende": "Enne Bink",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/nieuws/2342906/dit-zijn-de-60-halvefinalisten-van-het-lvk-2024"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Verrèktes gooje zin",
+   "uitvoerende": "Rempetemp",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Dânsmesjien",
+   "uitvoerende": "Van Lieshout en Arts",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "De bende van 't zuuje",
+   "uitvoerende": "Wild Vleisj",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Det bin ik neet gewaes",
+   "uitvoerende": "Enne Bink",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Drek Prinses",
+   "uitvoerende": "Miss Patty Pam-Pam",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Feek nuuts",
+   "uitvoerende": "De Knöppele",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Kepotmakereej",
+   "uitvoerende": "Pruuf Mar",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Koekoek",
+   "uitvoerende": "Plekbend",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Limburgse lente",
+   "uitvoerende": "De Breurkes",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Mörge gratis beer",
+   "uitvoerende": "Sjöppe Aos",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Rollercoasterproosters",
+   "uitvoerende": "ZOES",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Stökske gelök",
+   "uitvoerende": "Spass Partout",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "t Gaetje vanne reêm",
+   "uitvoerende": "Moerepetazie",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "t Rendement van de fieësttent",
+   "uitvoerende": "Biej-1 Geraaptj",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Uhhhhhhh",
+   "uitvoerende": "'t Graotekoeër",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Ut Vastelaovesapparaat",
+   "uitvoerende": "De Kwante Diekzèk",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Väör altied vanaovendj",
+   "uitvoerende": "Raoj 'ns",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Vastenaovesdroëmbaan",
+   "uitvoerende": "Moelbaereboys",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Weej stón nog ieën kieër òp",
+   "uitvoerende": "Bjorn & Mieke",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Wie in Limburg",
+   "uitvoerende": "Sjpringlaevend",
+   "ronde": "finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2834722/lvk-2025-met-zeven-debutanten-in-de-finale"
+  },
+  {
+   "jaar": 2025,
+   "titel": "'t Maatmiechnuusoes",
+   "uitvoerende": "De HerringBiessere",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "'t Mimi",
+   "uitvoerende": "René Reulings",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "'t Sjtamlokaal",
+   "uitvoerende": "Noeëts Jedaat",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "2 Vingers inne naas",
+   "uitvoerende": "Ron van Richting Roy",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Aanne gang",
+   "uitvoerende": "Stefan Wolter",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Ai Ai Ai Ai",
+   "uitvoerende": "Kelly van de Lump",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Alvas van harte beatersjap",
+   "uitvoerende": "Tim Hamers",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Bliéve zinge",
+   "uitvoerende": "W-Dreej",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Bucketlist",
+   "uitvoerende": "Nevvenén",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "D'n tied vaan 't jaor",
+   "uitvoerende": "Oet 't niks",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Dae slome pater",
+   "uitvoerende": "Mark Gruijthuijsen / W11",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Dao wille weej ziën",
+   "uitvoerende": "Miel & Dirk",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Dao zit 'n gaetje in",
+   "uitvoerende": "Baer, Lei en Ron",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "De charme van de zachte G",
+   "uitvoerende": "Kartoesj",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "De LimboTaki",
+   "uitvoerende": "Mark Gruijthuijsen / W11",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "De mafia va Vasteloavend",
+   "uitvoerende": "Paul & Leo",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "De nach weëd gepluk",
+   "uitvoerende": "Sám Smits & Stan Peters",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "De sjäöre en knäöre wals",
+   "uitvoerende": "Koeraasj",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "De Solonaise",
+   "uitvoerende": "De InterLimbo's",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "De Vastelaoveslinedance",
+   "uitvoerende": "Ivo van der Bijl",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Ein moment",
+   "uitvoerende": "Kitty Roeffen",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Generatie V",
+   "uitvoerende": "Pier & Stuf",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Goud",
+   "uitvoerende": "Milou",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Griep dien kans",
+   "uitvoerende": "Maud du Chatinier",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Kort sloeting",
+   "uitvoerende": "Marleen Rutten",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Langzaam",
+   "uitvoerende": "GoedZat",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Mit 11.000 door de sjtraote",
+   "uitvoerende": "Claire",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Nag iëne da",
+   "uitvoerende": "Happy Hotdogs",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Ôs paradiés",
+   "uitvoerende": "Marina Claessen",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Vastelaovesactiviste",
+   "uitvoerende": "Enne Bink",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Vastelaoveseuforie",
+   "uitvoerende": "Aod Prinse Egchel",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Veer verstoon us good",
+   "uitvoerende": "Duo X-Elle",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Veul de straole",
+   "uitvoerende": "Heite Hinne",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Vreug of laat",
+   "uitvoerende": "SjingBoem",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Wae dinke um",
+   "uitvoerende": "Prins & Aod Prinse Graashook",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Wae zaet mich?",
+   "uitvoerende": "Ivana",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Wat zoej Limburg zónger Vastelaovend zien?",
+   "uitvoerende": "3 Kier Nix en de Aod Prinse oeht Kepèl",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Weej telle same áf",
+   "uitvoerende": "SOW!!!",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Woe kriebelt 't biej dich?",
+   "uitvoerende": "D'r Wielly",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2025,
+   "titel": "Zwa vaerdig wie ein communiejeske (veur Bram)",
+   "uitvoerende": "De Kloomp",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1nieuws.nl/entertainment/2809781/dit-zijn-de-60-halvefinalisten-voor-het-lvk-2025"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Òp Karákter",
+   "uitvoerende": "Pruuf mar",
+   "ronde": "winnaar",
+   "bronUrl": "https://nl.wikipedia.org/w/api.php?action=parse&format=json&formatversion=2&prop=wikitext&page=Limburgs_Vastelaovesleedjes_Konkoer"
+  },
+  {
+   "jaar": 2026,
+   "titel": "'t Puntje van de tóng",
+   "uitvoerende": "De Hanebatse",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "20 Waeke Echo",
+   "uitvoerende": "Plekbend",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Alles op 11",
+   "uitvoerende": "Spass Partout",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "De Vastelaovesvirtuoos",
+   "uitvoerende": "Oét de Maot",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "De Zjwaorgewichte van de Sjpas",
+   "uitvoerende": "4TON",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Es ich örges getapt mot waere",
+   "uitvoerende": "'t Graotekoeër",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Gebaore Um Te Leave",
+   "uitvoerende": "Andy en Roy",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Gein zîn um ut aaf te lieëre",
+   "uitvoerende": "Miserabel",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Het sjtopleech van de vasteloavend",
+   "uitvoerende": "Joy Blijdenstein",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Ich heb 'n stam ontdektj",
+   "uitvoerende": "Men in Pek",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Ich loester nao mien lief",
+   "uitvoerende": "Sjöppe aos",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Nel in häör tijgervel",
+   "uitvoerende": "Spik en Span",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Niks Niks Niks!",
+   "uitvoerende": "Prins & Aod Prinse Graashook",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Ode án d'n Natte Rug",
+   "uitvoerende": "Van Lieshout en Arts",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Ravaasj!",
+   "uitvoerende": "Wild Vleisj",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Sóms zitj 't mej…",
+   "uitvoerende": "Doospelse Aod Prînse",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Vastelaovend is lit!",
+   "uitvoerende": "Happy Hotdogs",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Vastelaoves-afterparty",
+   "uitvoerende": "Ivana",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Wat 'n verhaol",
+   "uitvoerende": "Rempetemp",
+   "ronde": "finale",
+   "bronUrl": "https://stichtinglvk.nl/finale/finalisten-lvk-2026"
+  },
+  {
+   "jaar": 2026,
+   "titel": "'t Fundament",
+   "uitvoerende": "de HerringBiessere",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "'t Glaas nao de lètste",
+   "uitvoerende": "Timo en Dave",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Alle harte knalle aope!",
+   "uitvoerende": "Sjpringlaevend",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Allerletste muntje in de tes",
+   "uitvoerende": "Veterane Revoc-VCB",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Altied mit dich",
+   "uitvoerende": "Kelly van de Lump",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Bis de zón de nach vingt",
+   "uitvoerende": "Sám & Stan",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "D'r richtieje iech",
+   "uitvoerende": "Radauw",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "De Nachbraekers",
+   "uitvoerende": "Claire",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "De sound van Vasteloavend",
+   "uitvoerende": "3xNiX",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Dit waor t dan!",
+   "uitvoerende": "Ivo van der Bijl",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Doorgezakt",
+   "uitvoerende": "Amber Coolen",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Fladdere",
+   "uitvoerende": "Nena Spronkmans",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Gaef Gaas!",
+   "uitvoerende": "Enne Bink",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Gekkehoês",
+   "uitvoerende": "Heite Soep",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Heej hebste alles!!",
+   "uitvoerende": "Mark Gruijthuijsen",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Hert veur vastelaovend",
+   "uitvoerende": "Sharon Meelkop-Suiker",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Hoe Dan?",
+   "uitvoerende": "GoedZat",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Joeks in zicht",
+   "uitvoerende": "Moelbaereboys",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Laaj di-j laaj leeg!",
+   "uitvoerende": "Stefan Wolter",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Laege Beurs-Garantie",
+   "uitvoerende": "Half Getroffe",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Laevesgeneeter",
+   "uitvoerende": "Tim Hamers",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Lekker belangriek!",
+   "uitvoerende": "Nevvenén",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Limburg Wert Ieën",
+   "uitvoerende": "Maik & Kyra",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "MAOS",
+   "uitvoerende": "Shirley en Roger",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Nae",
+   "uitvoerende": "AJO (Aad Jeugprinse Óffebek)",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Oppe heupe",
+   "uitvoerende": "APK (Aod Prinse oeht Kepèl)",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Sjtóppe óp 't deeptepunt",
+   "uitvoerende": "45èlf",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Ut Masker",
+   "uitvoerende": "WAERS",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Vast aan Vastelaovendj",
+   "uitvoerende": "Ronald en Carien",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Vastelaovesboots",
+   "uitvoerende": "ZOES",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Vastelaovesklanteservice",
+   "uitvoerende": "Badmötse",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Vastelaovesknaldrang",
+   "uitvoerende": "Alaaf Airlines",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Vastenaovesvlinders",
+   "uitvoerende": "Roel & Marion",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Veerdj Vastelaovendj met Wiel en Nel",
+   "uitvoerende": "Un dael van Riete gek",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Waat eine praoter!",
+   "uitvoerende": "Björn van Berkel & Ken en Robbie",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Wae Gaon Verhoèze!",
+   "uitvoerende": "De Kwante Diekzèk",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Wae zien neet stil te kriege",
+   "uitvoerende": "De Breurkes",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Waorum auch neet!",
+   "uitvoerende": "De Aafterparty",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Welke Rol Sjpeels Dich Dit Jaor?",
+   "uitvoerende": "Maud",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  },
+  {
+   "jaar": 2026,
+   "titel": "Zoeë waere druime gemaakt",
+   "uitvoerende": "Raoj 'ns",
+   "ronde": "halve finale",
+   "bronUrl": "https://l1.nl/nieuws/3061318/dit-zijn-de-60-halvefinalisten-van-het-lvk"
+  }
+ ]
+}

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f7fb">
+<title>Sjpeelavond — muziekspellen voor je feestavond</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<style>
+:root{
+  --bg:#f4f7fb; --pane:#ffffff; --pane2:#f7fafd; --pane3:#eef3fa;
+  --line:#dde5ef; --line2:#c9d5e4;
+  --txt:#0f1c2b; --muted:#5b6b7f; --muted2:#8595a8;
+  --accent:#2ea3f2; --accent-d:#1e73be; --accent-soft:#e8f4fd;
+  --rood:#d7263d; --rood-soft:#fdeaec; --gael:#e0902a; --gael-soft:#fdf3e3;
+  --greun:#1f8a4c; --greun-soft:#e8f6ee; --paars:#7c4dff;
+  --r:14px; --r-klein:10px; --schaduw:0 1px 2px rgba(16,32,52,.05), 0 14px 30px -22px rgba(16,32,52,.45);
+  --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:var(--font);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-d)}
+button,input,select,textarea{font-family:inherit;font-size:15px;color:inherit}
+button{cursor:pointer}
+h1,h2,h3{margin:0;letter-spacing:-.015em}
+h1{font-size:clamp(24px,4.4vw,34px)}
+h2{font-size:clamp(19px,2.6vw,23px)}
+h3{font-size:16px}
+p{margin:.4em 0}
+.klein{font-size:13px;color:var(--muted)}
+.kleiner{font-size:12px;color:var(--muted2)}
+#app{max-width:1140px;margin:0 auto;padding:0 16px 72px}
+
+/* ── kop ── */
+header.kop{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:12px 0 10px;
+  background:linear-gradient(to bottom,var(--bg) 66%,rgba(244,247,251,.72));backdrop-filter:blur(8px)}
+.merk{display:flex;align-items:center;gap:11px;min-width:0}
+.merk .logo{width:38px;height:38px;border-radius:12px;flex:none;display:grid;place-items:center;
+  background:linear-gradient(150deg,#d7263d,#8c1626);box-shadow:0 6px 16px -8px rgba(215,38,61,.9)}
+.merk .logo svg{width:21px;height:21px}
+.merk .naam{font-weight:700;font-size:17px;line-height:1.15}
+.merk .sub{font-size:11.5px;color:var(--muted2);letter-spacing:.05em;text-transform:uppercase}
+header.kop .rechts{margin-left:auto;display:flex;align-items:center;gap:8px;flex:none}
+nav.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:9px 12px;color:var(--muted);font-weight:600;white-space:nowrap}
+nav.tabs button:hover{color:var(--accent-d)}
+nav.tabs button.actief{color:var(--accent-d);border-bottom-color:var(--accent);background:linear-gradient(to top,var(--accent-soft),transparent 78%)}
+
+/* ── bouwstenen ── */
+.kaart{background:var(--pane);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--schaduw)}
+.kaart+ .kaart{margin-top:14px}
+.raster{display:grid;gap:14px}
+@media(min-width:760px){.raster.twee{grid-template-columns:1fr 1fr}.raster.drie{grid-template-columns:repeat(3,1fr)}}
+.knop{display:inline-flex;align-items:center;gap:8px;background:var(--accent-d);color:#fff;border:1px solid var(--accent-d);
+  border-radius:var(--r-klein);padding:10px 16px;font-weight:600;text-decoration:none;transition:.15s}
+.knop:hover{background:#175c9c;border-color:#175c9c}
+.knop.zacht{background:var(--pane);color:var(--txt);border-color:var(--line2)}
+.knop.zacht:hover{background:var(--pane3);border-color:var(--accent)}
+.knop.rood{background:var(--rood);border-color:var(--rood)}
+.knop.rood:hover{background:#b31c30;border-color:#b31c30}
+.knop.groen{background:var(--greun);border-color:var(--greun)}
+.knop.groen:hover{background:#166b3a}
+.knop.groot{padding:14px 22px;font-size:17px}
+.knop.klein{padding:7px 11px;font-size:13.5px}
+.knop:disabled{opacity:.45;cursor:not-allowed}
+input[type=text],input[type=password],input[type=number],select{background:var(--pane);border:1px solid var(--line2);border-radius:var(--r-klein);padding:10px 12px;width:100%}
+input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+label.veld{display:block;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted2);font-weight:700;margin-bottom:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--pane3);border:1px solid var(--line);border-radius:999px;
+  padding:3px 11px;font-size:12.5px;color:var(--muted);font-weight:600}
+.chip.rood{background:var(--rood-soft);color:#a5152a;border-color:#f6ccd2}
+.chip.gael{background:var(--gael-soft);color:#8a5a10;border-color:#f3ddb8}
+.chip.greun{background:var(--greun-soft);color:#166b3a;border-color:#c4e5d2}
+.chip.blauw{background:var(--accent-soft);color:var(--accent-d);border-color:#c9e2f8}
+.stippen{display:flex;gap:5px;align-items:center}
+.stip{width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.stip.leeg{background:var(--pane3);border:1px solid var(--line2);box-shadow:none}
+.melding{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#101f30;color:#fff;padding:11px 18px;
+  border-radius:11px;font-size:14px;opacity:0;pointer-events:none;transition:.2s;z-index:60;max-width:88vw;text-align:center}
+.melding.aan{opacity:1}
+
+/* ── startpagina ── */
+.hero{padding:26px 0 6px}
+.hero p.lead{font-size:16.5px;color:var(--muted);max-width:62ch}
+.spelkaart{background:var(--pane);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--schaduw);display:flex;flex-direction:column}
+.spelkaart .kop{height:104px;display:flex;align-items:flex-end;padding:14px;color:#fff;position:relative}
+.spelkaart.tijdlijn .kop{background:linear-gradient(135deg,#2ea3f2,#1e73be)}
+.spelkaart.raojs .kop{background:linear-gradient(135deg,#d7263d,#8c1626)}
+.spelkaart.hittepetit .kop{background:linear-gradient(135deg,#e0902a,#a25a0c)}
+.spelkaart .kop h3{font-size:21px;color:#fff}
+.spelkaart .kop .sub{font-size:12.5px;opacity:.9;text-transform:uppercase;letter-spacing:.07em}
+.spelkaart .kop svg{position:absolute;right:12px;top:12px;width:42px;height:42px;opacity:.5}
+.spelkaart .lijf{padding:15px;display:flex;flex-direction:column;gap:12px;flex:1}
+.spelkaart ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+.spelkaart .knop{align-self:flex-start;margin-top:auto}
+.statrij{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0}
+
+/* ── spelers instellen ── */
+.spelerrij{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.spelerrij .bolletje{width:14px;height:14px;border-radius:50%;flex:none}
+.spelerrij input{flex:1}
+.dekkeuze{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.dek{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line2);border-radius:var(--r-klein);padding:11px;cursor:pointer;background:var(--pane)}
+.dek input{margin-top:3px;accent-color:var(--accent);width:17px;height:17px;flex:none}
+.dek.aan{border-color:var(--accent);background:var(--accent-soft)}
+.dek .naam{font-weight:600}
+.dek .uitleg{font-size:12.5px;color:var(--muted)}
+.seg{display:inline-flex;background:var(--pane3);border:1px solid var(--line);border-radius:var(--r-klein);padding:3px;gap:3px;flex-wrap:wrap}
+.seg button{background:none;border:0;border-radius:8px;padding:7px 13px;font-weight:600;color:var(--muted)}
+.seg button.actief{background:var(--pane);color:var(--accent-d);box-shadow:0 1px 3px rgba(16,32,52,.12)}
+
+/* ── speelbord ── */
+.bordkop{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 0 12px}
+.spelers{display:flex;gap:9px;overflow-x:auto;padding:2px 0 6px;scrollbar-width:thin}
+.speler{flex:none;min-width:132px;background:var(--pane);border:1px solid var(--line);border-left:5px solid var(--accent);
+  border-radius:var(--r-klein);padding:9px 11px}
+.speler.aan{border-color:var(--accent);border-left-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);background:#fff}
+.speler .naam{font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:6px}
+.speler .score{font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;margin-top:3px}
+.speler .fiches{margin-top:5px}
+.speelveld{background:var(--pane);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--schaduw)}
+.fragmentbalk{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fragmentbalk .speelknop{width:56px;height:56px;border-radius:50%;border:0;background:var(--accent-d);color:#fff;display:grid;place-items:center;flex:none;box-shadow:0 8px 20px -10px rgba(30,115,190,.9)}
+.fragmentbalk .speelknop svg{width:24px;height:24px}
+.balk{flex:1;min-width:120px;height:8px;background:var(--pane3);border-radius:99px;overflow:hidden}
+.balk i{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .2s linear}
+.tijdlijn{display:flex;gap:0;align-items:stretch;overflow-x:auto;padding:8px 2px 12px}
+.tijdlijn .gleuf{flex:none;width:34px;display:grid;place-items:center}
+.tijdlijn .gleuf button{width:28px;height:74px;border-radius:9px;border:1px dashed var(--line2);background:var(--pane2);color:var(--muted2);font-size:20px;font-weight:700}
+.tijdlijn .gleuf button:hover{border-color:var(--accent);color:var(--accent-d);background:var(--accent-soft)}
+.tijdlijn .gleuf.gekozen button{border:2px solid var(--accent);background:var(--accent-soft);color:var(--accent-d)}
+.kaartje{flex:none;width:104px;background:var(--pane);border:1px solid var(--line2);border-radius:10px;padding:8px;text-align:center;box-shadow:0 4px 10px -8px rgba(16,32,52,.5)}
+.kaartje .jaar{font-weight:800;font-size:19px;color:var(--accent-d);letter-spacing:-.02em}
+.kaartje .titel{font-size:11.5px;color:var(--muted);line-height:1.25;margin-top:2px;max-height:44px;overflow:hidden}
+.kaartje .hoes{width:100%;aspect-ratio:1;border-radius:7px;object-fit:cover;margin-bottom:6px;background:var(--pane3)}
+.kaartje.rugg{background:linear-gradient(140deg,#d7263d,#7d1220);border-color:#8c1626;color:#fff;display:grid;place-items:center;height:104px}
+.kaartje.rugg .vraag{font-size:40px;font-weight:800;opacity:.85}
+.onthulling{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.onthulling img.hoes{width:104px;height:104px;border-radius:11px;object-fit:cover;background:var(--pane3);flex:none}
+.onthulling .jaar{font-size:38px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.oordeel{font-size:20px;font-weight:800}
+.oordeel.goed{color:var(--greun)}
+.oordeel.fout{color:var(--rood)}
+.buzzer{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.buzzer button{border-radius:var(--r);border:2px solid var(--line2);background:var(--pane);padding:16px 12px;font-weight:800;font-size:16px}
+.buzzer button.geraden{border-color:var(--gael);background:var(--gael-soft)}
+.buzzer button.goed{border-color:var(--greun);background:var(--greun-soft);color:#166b3a}
+.buzzer button.fout{border-color:var(--rood);background:var(--rood-soft);color:#a5152a}
+.grotekeuze{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.grotekeuze button{padding:22px;border-radius:var(--r);border:2px solid var(--line2);background:var(--pane);font-size:19px;font-weight:800}
+.grotekeuze button:hover{border-color:var(--accent)}
+.log{max-height:230px;overflow:auto;font-size:13.5px}
+.log .regel{display:flex;gap:9px;padding:6px 0;border-bottom:1px solid var(--line)}
+.log .regel:last-child{border-bottom:0}
+.log .goed{color:var(--greun);font-weight:700}
+.log .fout{color:var(--rood);font-weight:700}
+.teller{display:flex;gap:14px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+
+/* ── muziekbibliotheek ── */
+.tabel{width:100%;border-collapse:collapse;font-size:14px}
+.tabel th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted2);padding:8px 8px;border-bottom:1px solid var(--line)}
+.tabel td{padding:8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.tabel tr:hover td{background:var(--pane2)}
+.tabel img{width:36px;height:36px;border-radius:6px;object-fit:cover;background:var(--pane3)}
+.tabel .jaar{font-weight:700;color:var(--accent-d);white-space:nowrap}
+
+/* ── uitleg ── */
+.uitlegblok{border-left:4px solid var(--accent);padding-left:14px;margin:14px 0}
+.uitlegblok.rood{border-color:var(--rood)}
+.uitlegblok.gael{border-color:var(--gael)}
+.uitlegblok h3{margin-bottom:4px}
+.uitlegblok ul{margin:6px 0 0;padding-left:20px;color:var(--muted)}
+.voet{color:var(--muted2);font-size:12.5px;text-align:center;margin-top:26px}
+@media(max-width:640px){
+  .kaart{padding:15px}
+  .speler{min-width:118px}
+  .kaartje{width:92px}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="kop">
+    <div class="merk">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+      </span>
+      <span>
+        <span class="naam">Sjpeelavond</span><br>
+        <span class="sub">muziekspellen</span>
+      </span>
+    </div>
+    <div class="rechts">
+      <span class="chip" id="versiechip">…</span>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-view="start" class="actief">Spelen</button>
+    <button data-view="muziek">Muziek</button>
+    <button data-view="uitleg">Uitleg</button>
+    <button data-view="beheer">Beheer</button>
+  </nav>
+
+  <!-- ── start ── -->
+  <section id="view-start">
+    <div class="hero">
+      <h1>Drie muziekspellen, één app</h1>
+      <p class="lead">Speel <strong>Tijdlijn</strong> (Hitster-stijl), <strong>Raoj 's</strong> en <strong>Hittepetit</strong> met je eigen telefoon of laptop. Je hoort een fragment van 30 seconden en raadt waar het in de tijdlijn hoort — geen Spotify-abonnement nodig.</p>
+      <div class="statrij" id="statrij"></div>
+    </div>
+
+    <div class="raster drie" id="spelkaarten" style="margin-top:20px"></div>
+
+    <div class="kaart" style="margin-top:18px">
+      <h2>Hoe werkt het?</h2>
+      <div class="raster drie" style="margin-top:10px">
+        <div><h3>1. Kies een spel</h3><p class="klein">Tijdlijn voor de grote hits, Raoj 's voor vier Limburgse varianten, Hittepetit voor het Zittesje vastelaovesrepertoire.</p></div>
+        <div><h3>2. Zet de spelers klaar</h3><p class="klein">Iedereen krijgt een eigen tijdlijn en fiches (bij Hittepetit: nónnevotte). Eén apparaat op tafel is genoeg.</p></div>
+        <div><h3>3. Luister en leg aan</h3><p class="klein">Trek een kaart, luister naar het fragment en leg de kaart op de plek waar jij het jaartal verwacht. Draai om en tel je punt.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── instellen ── -->
+  <section id="view-instellen" hidden>
+    <h1 id="instellen-titel">Spel instellen</h1>
+    <p class="klein" id="instellen-uitleg"></p>
+    <div class="raster twee" style="margin-top:14px">
+      <div class="kaart">
+        <h2>Spelers</h2>
+        <p class="klein">Vul de namen in. Laat een regel leeg om er minder te gebruiken.</p>
+        <div id="spelerslijst" style="margin-top:10px"></div>
+        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+          <button class="knop zacht klein" id="speler-toevoegen">+ Speler</button>
+          <button class="knop zacht klein" data-aantal="2">2 spelers</button>
+          <button class="knop zacht klein" data-aantal="4">4 spelers</button>
+          <button class="knop zacht klein" data-aantal="6">6 spelers</button>
+        </div>
+      </div>
+      <div class="kaart">
+        <h2>Instellingen</h2>
+        <div id="variantvak" style="margin-top:12px" hidden>
+          <label class="veld">Variant</label>
+          <div class="seg" id="variantkeuze"></div>
+          <p class="klein" id="variantuitleg" style="margin-top:8px"></p>
+        </div>
+        <div style="margin-top:12px">
+          <label class="veld">Fragment</label>
+          <div class="seg" id="fragmentkeuze">
+            <button data-sec="30">30 seconden</button>
+            <button data-sec="20">20 seconden</button>
+            <button data-sec="10">10 seconden (moeilijk)</button>
+          </div>
+        </div>
+        <div style="margin-top:12px">
+          <label class="veld">Winnen bij</label>
+          <div class="seg" id="doelkeuze">
+            <button data-doel="5">5 kaarten</button>
+            <button data-doel="8">8 kaarten</button>
+            <button data-doel="10">10 kaarten</button>
+          </div>
+        </div>
+        <div style="margin-top:14px">
+          <label class="veld">Muziek</label>
+          <div class="dekkeuze" id="dekkeuze"></div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+      <button class="knop groot" id="start-spel" data-act="start-spel">Spelen maar</button>
+      <button class="knop zacht" id="terug-start" data-act="terug-start">Terug</button>
+    </div>
+  </section>
+
+  <!-- ── spel ── -->
+  <section id="view-spel" hidden>
+    <div class="bordkop">
+      <h2 id="spel-titel">Spel</h2>
+      <span class="chip blauw" id="spel-ronde"></span>
+      <span class="chip" id="spel-rest"></span>
+      <div style="margin-left:auto;display:flex;gap:8px">
+        <button class="knop zacht klein" id="spel-uitleg" data-act="spel-uitleg">Spelregels</button>
+        <button class="knop zacht klein" id="spel-stoppen" data-act="spel-stoppen">Stoppen</button>
+      </div>
+    </div>
+    <div class="spelers" id="spelers"></div>
+    <div id="bord"></div>
+    <div class="kaart" style="margin-top:14px">
+      <h3>Verloop</h3>
+      <div class="log" id="spellog"><p class="klein">Nog niets gebeurd.</p></div>
+    </div>
+  </section>
+
+  <!-- ── muziek ── -->
+  <section id="view-muziek" hidden>
+    <h1>Muziek</h1>
+    <p class="klein">Alles wat in de app zit. De jaartallen komen uit de bronnen die erbij staan; de fragmenten zijn de 30-secondenfragmenten die Deezer zelf publiceert.</p>
+    <div class="kaart" style="margin-top:14px">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">
+        <div style="flex:1;min-width:220px">
+          <label class="veld">Zoeken</label>
+          <input type="text" id="muziek-zoek" placeholder="Artiest of titel">
+        </div>
+        <div style="min-width:200px">
+          <label class="veld">Dek</label>
+          <select id="muziek-dek"></select>
+        </div>
+        <button class="knop zacht" id="muziek-laden">Zoek</button>
+      </div>
+      <p class="klein" id="muziek-telling" style="margin-top:10px"></p>
+      <div style="overflow:auto">
+        <table class="tabel">
+          <thead><tr><th></th><th>Titel</th><th>Artiest</th><th>Jaar</th><th>Soort</th><th></th></tr></thead>
+          <tbody id="muziek-lijst"></tbody>
+        </table>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px;justify-content:center">
+        <button class="knop zacht klein" id="muziek-vorige">← Vorige</button>
+        <button class="knop zacht klein" id="muziek-volgende">Volgende →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── uitleg ── -->
+  <section id="view-uitleg" hidden>
+    <h1>Uitleg en spelregels</h1>
+    <div class="kaart" style="margin-top:14px">
+      <div class="uitlegblok">
+        <h3>Tijdlijn — Hitster-stijl</h3>
+        <p class="klein">Doel: als eerste je doel aantal kaarten goed in chronologische volgorde hebben liggen.</p>
+        <ul>
+          <li>Iedere speler begint met één open kaart als startpunt.</li>
+          <li>Je hoort een fragment, legt de kaart dicht op de plek waar jij het jaartal verwacht en draait hem daarna om.</li>
+          <li>Goed is houden en een punt; fout is van tafel.</li>
+          <li>Gelijk jaartal mag direct voor of na een kaart met datzelfde jaartal.</li>
+          <li><strong>Fiches:</strong> 1 fiche om een nummer over te slaan, 1 fiche om te roepen dat een tegenstander verkeerd legt (en de kaart te stelen als je gelijk hebt), 3 fiches om een kaart te kopen en direct goed neer te leggen. Je verdient een fiche als je titel én artiest noemt. Maximaal 5.</li>
+        </ul>
+      </div>
+      <div class="uitlegblok rood">
+        <h3>Raoj 's — vier varianten</h3>
+        <ul>
+          <li><strong>Raoj 's:</strong> plaats het afgespeelde nummer op de juiste positie in jouw tijdlijn.</li>
+          <li><strong>Zîng 's:</strong> wie kan de meeste nummers meezingen en kent de teksten het best?</li>
+          <li><strong>Stop 's:</strong> herken je het liedje al na de eerste klanken? Druk zo snel mogelijk op je knop.</li>
+          <li><strong>LVJao of LVNein:</strong> raad of het nummer ooit een inzending was voor het Limburgs Vastelaovesleedjes Konkoer.</li>
+        </ul>
+      </div>
+      <div class="uitlegblok gael">
+        <h3>Hittepetit — Zittesje vastelaovend</h3>
+        <p class="klein">Tijdlijnspel op Zittesj en Limburgs vastelaovesrepertoire, met nónnevotte in plaats van fiches.</p>
+        <ul>
+          <li>Zelfde spelverloop als Tijdlijn, maar met vastelaovesmuziek.</li>
+          <li><strong>Nónnevotte:</strong> 1 inzetten om over te slaan, 1 om een kaart te stelen, 2 om een hint te kopen (het decennium) en 3 om een kaart te kopen.</li>
+          <li>Je verdient een nónnevot als je titel én artiest noemt.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="kaart">
+      <h2>Over de muziek en de rechten</h2>
+      <p class="klein">Deze app speelt de 30-secondenfragmenten die Deezer zelf publiek aanbiedt bij zijn nummers; er wordt geen muziek gedownload of opgeslagen. De hoesjes komen van dezelfde bron.</p>
+      <p class="klein">De hitlijsten komen van de jaarlijkse lijsten <em>nummer 1-hits in de Nederlandse Top 40</em> op nl.wikipedia.org (CC BY-SA 4.0); alleen de feitelijke gegevens (artiest, titel, hitjaar) zijn overgenomen. De jaartallen van het Limburgse repertoire komen uit MusicBrainz en uit het vroegste albumjaar bij Deezer.</p>
+      <p class="klein">Sjpeelavond is een eigen, niet-commerciële implementatie geïnspireerd op bestaande muziekspellen (Hitster, Raoj 's van Raoj's, Hittepetit van Radio Nónnevot en De Marotte Zitterd). De kaarten en de muziekkeuze van die spellen zitten hier niet in; de spelregels hierboven zijn de bekende regels, met eigen varianten waar nodig.</p>
+    </div>
+  </section>
+
+  <!-- ── beheer ── -->
+  <section id="view-beheer" hidden>
+    <h1>Beheer</h1>
+    <p class="klein">Eigen nummers toevoegen — bijvoorbeeld Zittesje vastelaovesmuziek die niet op streamingdiensten staat — kan alleen met het beheerderswachtwoord.</p>
+    <div class="kaart" id="beheer-inlog" style="margin-top:14px">
+      <h2>Inloggen</h2>
+      <div style="max-width:340px;margin-top:10px">
+        <label class="veld">Wachtwoord</label>
+        <input type="password" id="beheer-wachtwoord" autocomplete="current-password">
+        <button class="knop" id="beheer-inloggen" style="margin-top:10px">Inloggen</button>
+      </div>
+      <p class="klein" id="beheer-melding" style="margin-top:10px"></p>
+    </div>
+    <div id="beheer-paneel" hidden>
+      <div class="kaart">
+        <h2>Eigen nummer toevoegen</h2>
+        <div class="raster twee" style="margin-top:10px">
+          <div>
+            <label class="veld">Titel</label><input type="text" id="eigen-titel">
+            <label class="veld" style="margin-top:10px">Artiest</label><input type="text" id="eigen-artiest">
+            <label class="veld" style="margin-top:10px">Jaartal</label><input type="number" id="eigen-jaar" min="1900" max="2100" placeholder="1975">
+            <label class="veld" style="margin-top:10px">Album (optioneel)</label><input type="text" id="eigen-album">
+          </div>
+          <div>
+            <label class="veld">Muziekbestand</label>
+            <input type="file" id="eigen-bestand" accept="audio/*">
+            <p class="klein" style="margin-top:8px">mp3, m4a, wav of ogg, maximaal 30 MB. Gebruik dit voor materiaal dat je zelf hebt of mag gebruiken.</p>
+            <button class="knop" id="eigen-opslaan" style="margin-top:10px">Toevoegen</button>
+          </div>
+        </div>
+      </div>
+      <div class="kaart">
+        <h2>Eigen nummers</h2>
+        <div id="eigen-lijst" style="margin-top:10px"></div>
+      </div>
+    </div>
+  </section>
+
+  <p class="voet">Sjpeelavond · <span id="voetversie"></span> · fragmenten via Deezer</p>
+</div>
+
+<audio id="speler" preload="none"></audio>
+<div class="melding" id="melding"></div>
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>
