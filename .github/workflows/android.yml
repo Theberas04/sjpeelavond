@@ -137,8 +137,13 @@ jobs:
           if git check-ignore -v docs/apk/apk-start.png >/dev/null 2>&1; then
             echo "docs/apk wordt genegeerd door .gitignore"; exit 1
           fi
+          # De namen die de rooktest echt maakt: het startscherm, het scannen van een
+          # kaartje, en het kaartje van Raoj 's. (Er heeft hier eerder apk-spel.png
+          # gestaan, een naam die de rooktest nooit schrijft — daardoor zakte deze stap
+          # altijd, ook als de rooktest zelf groen was.)
           test -s docs/apk/apk-start.png
-          test -s docs/apk/apk-spel.png
+          test -s docs/apk/apk-scannen.png
+          test -s docs/apk/apk-scannen-raojs.png
           git config user.name "hermes-ci"
           git config user.email "ci@werdensmedia.local"
           git add docs
