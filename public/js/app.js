@@ -11,6 +11,8 @@ const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
 async function api(pad, lichaam, extra = {}) {
+  // In de Android-app is er geen server: lokaal.js doet dan hetzelfde werk.
+  if (typeof window !== 'undefined' && window.SJPEEL_LOKAAL) return window.SJPEEL_LOKAAL(pad, lichaam, extra);
   const antwoord = await fetch(pad, {
     method: lichaam ? 'POST' : 'GET',
     headers: lichaam ? { 'content-type': 'application/json' } : {},
@@ -1071,8 +1073,39 @@ async function laadVersie() {
   renderStart();
 }
 
+/* ── diepe link ────────────────────────────────────────────────────────── */
+
+/**
+ * Een adres als `index.html#muziek` of `#spel-kaart` opent meteen dat scherm.
+ * De Android-schil gebruikt dit om een scherm te openen voor een foto, en het is
+ * tegelijk een gewone deeplink: #muziek, #uitleg, #instellen, #spel, #spel-kaart
+ * en #hittepetit doen allemaal wat je verwacht.
+ */
+async function startVanAdres() {
+  const naam = String(location.hash || '').replace(/^#/, '').trim();
+  if (!naam) return false;
+  if (naam === 'muziek') {
+    await laadMuziek();
+    toonView('muziek');
+    return true;
+  }
+  if (naam === 'uitleg') {
+    toonView('uitleg');
+    return true;
+  }
+  const soorten = { instellen: 'tijdlijn', spel: 'tijdlijn', 'spel-kaart': 'tijdlijn', hittepetit: 'hittepetit' };
+  if (!(naam in soorten)) return false;
+  openInstellen(soorten[naam]);
+  if (naam === 'instellen') return true;
+  staat.keuzes.namen = ['Speler 1', 'Speler 2'];
+  await startSpel();
+  if (naam === 'spel-kaart') await trekKaart();
+  return true;
+}
+
 async function opstarten() {
   await laadVersie();
+  if (await startVanAdres()) return;
   const spel = herstel();
   if (spel) {
     staat.spel = spel;

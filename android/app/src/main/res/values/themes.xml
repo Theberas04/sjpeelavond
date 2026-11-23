@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Geen actiebalk: de pagina heeft zijn eigen kop. -->
+    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <item name="android:windowBackground">@color/achtergrond</item>
+        <item name="android:statusBarColor">@color/achtergrond</item>
+        <item name="android:navigationBarColor">@color/achtergrond</item>
+    </style>
+</resources>

@@ -128,12 +128,40 @@ repo is het resultaat van die reeks.
 ## Testen
 
 ```bash
-node --test test/app.test.js
+node --test test/*.test.js        # spellogica, routes, dataset en de lokale versie
+python3 scripts/zelfcontrole.py   # de hulpscripts keuren zichzelf
+node scripts/proef-zonder-server.mjs   # een hele beurt zonder server, in de browser
 ```
 
 De suite dekt de spellogica (plaatsen, gelijke jaartallen, fiches, stelen, buzzers, winnen), alle
 API-routes (inclusief de grendel op beheer) en de gebouwde dataset zelf: elk nummer heeft een
 jaartal, een titel, een artiest, een fragment en een dek, en de id's blijven in hun eigen bereik.
+`test/lokaal.test.js` vergelijkt de app-versie met de server: dezelfde vraag hoort hetzelfde antwoord
+te geven, anders ziet de pagina op de telefoon andere gegevens dan op de computer.
+
+## De Android-app
+
+Dezelfde app is er ook als Android-app, **zonder server**: de pagina en de hele muziekdatabase zitten
+in het APK-bestand. Wat de server in de webversie doet — de dataset ontsluiten, kaarten trekken,
+onthullen en de jaartallen verborgen houden — zit daar in `public/js/lokaal.js` in de pagina zelf, met
+dezelfde antwoorden (daar is een proef op). Alleen het muziekfragment komt van buiten: Deezer stuurt
+geen CORS-kop mee, dus vraagt de app-schil het op en geeft het antwoord aan de pagina door.
+
+Wat de app **niet** heeft: eigen nummers toevoegen (dat hoort bij de serverversie met database) en het
+beheer. Spelen, de drie spellen, de dekken, de fragmenten en de hoesjes werken allemaal.
+
+```bash
+node scripts/sync-assets.mjs            # de webapp in de app-bundel zetten
+node tools/maak-app-iconen.mjs          # de app-iconen uit public/favicon.svg
+cd android && gradle :app:assembleRelease
+```
+
+De bouwpijplijn (`.github/workflows/android.yml`) bouwt de ondertekende APK en draait daarna een
+emulatorrooktest: elk scherm wordt via zijn eigen diepe link geopend, een kaart trekken moet via de
+schil een echt fragment opleveren, en van elk scherm komt een schermafbeelding in `docs/apk/`.
+
+De APK staat bij de [uitgaven](https://github.com/Theberas04/sjpeelavond/releases); de nieuwste heet
+`Sjpeelavond-Android-<versie>.apk`.
 
 ## Beheer
 
@@ -149,13 +177,15 @@ server.js                    HTTP, API en de dataset in het geheugen (geen npm)
 public/index.html            de hele pagina: opmaak en schermen
 public/js/spel.js            alle spellogica, los van de pagina en dus testbaar
 public/js/app.js             de bediening: schermen, knoppen, geluid
+public/js/lokaal.js          dezelfde spellogica in de pagina, voor de Android-app zonder server
 data/nummers-hits.json       de hits (id 1 en verder)
 data/nummers-limburg.json    het Limburgse repertoire (id 100000 en verder)
 data/bron/                   de ruwe oogst waaruit de dataset gebouwd wordt
 scripts/                     de oogst-, verrijkings- en opnamescripts
-test/app.test.js             de testsuite
+android/                     het Android-project: één WebView met de app erin
+test/                        de testsuite (server, spellogica en de lokale versie)
 deploy/proxmox/              de installatiekit met one-liner
-docs/                        handleiding, schermafbeeldingen en de demo-opname
+docs/                        handleiding, schermafbeeldingen, demo-opname en de app-beelden
 ```
 
 ---

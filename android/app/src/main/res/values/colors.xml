@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dezelfde kleuren als de pagina: de schil valt niet op. -->
+    <color name="achtergrond">#F4F7FB</color>
+    <color name="accent">#D7263D</color>
+    <color name="ic_launcher_background">#D7263D</color>
+</resources>

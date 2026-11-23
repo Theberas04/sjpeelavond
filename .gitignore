@@ -17,3 +17,12 @@ data/eigen.db
 .DS_Store
 *.swp
 node_modules/
+
+# Android-bouwsel: de app-bundel is afgeleid werk, de sleutel is privé.
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+android/out-test/
+android/app/release.p12
+android/app/src/main/assets/
