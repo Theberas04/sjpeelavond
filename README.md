@@ -150,6 +150,12 @@ geen CORS-kop mee, dus vraagt de app-schil het op en geeft het antwoord aan de p
 Wat de app **niet** heeft: eigen nummers toevoegen (dat hoort bij de serverversie met database) en het
 beheer. Spelen, de drie spellen, de dekken, de fragmenten en de hoesjes werken allemaal.
 
+![De app zonder server, een beurt Tijdlijn](docs/img/apk-zonder-server.png)
+
+Die afbeelding komt uit `scripts/proef-zonder-server.mjs`: de bundel wordt op een eigen poort gezet,
+de schil wordt nagedaan en er wordt een hele beurt gespeeld — spel kiezen, namen invullen, starten,
+kaart trekken, fragment ophalen. Zonder server, zonder netwerk.
+
 ```bash
 node scripts/sync-assets.mjs            # de webapp in de app-bundel zetten
 node tools/maak-app-iconen.mjs          # de app-iconen uit public/favicon.svg
