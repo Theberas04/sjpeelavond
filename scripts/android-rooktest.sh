@@ -104,8 +104,28 @@ logcat_naar "$UIT/logcat-start.txt"
 
 opent_scherm instellen view-instellen
 opent_scherm spel view-spel "bordtekst=[1-9][0-9]*"
-# Een kaart trekken: hier moet de schil een fragment bij Deezer ophalen.
-opent_scherm spel-kaart view-spel "SJPEELAVOND_FRAGMENT (deezer|itunes)"
+# Een kaart trekken: hier haalt de schil een fragment bij Deezer of iTunes op. Die dienst
+# is van buiten en is soms even niet bereikbaar; dan trekken we een nieuw kaartje in
+# plaats van de hele ronde te laten zakken. Lukt het drie keer niet, dan is er echt iets mis.
+echo "--- scherm spel-kaart ---"
+gelukt=""
+for poging in 1 2 3; do
+  adb logcat -c || true
+  adb shell am start -W -n "$PKG/.MainActivity" -e scherm spel-kaart >/dev/null
+  if wacht_op_marker "SJPEELAVOND_SCERM scherm=view-spel" 45 && wacht_op_marker "SJPEELAVOND_FRAGMENT (deezer|itunes)" 45; then
+    gelukt=ja
+    break
+  fi
+  echo "  poging $poging gaf geen fragment; nog een keer"
+done
+if [ -z "$gelukt" ]; then
+  echo "bij scherm spel-kaart kwam geen fragment uit de dienst van buiten; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+sleep 2
+schiet "spel-kaart"
+logcat_naar "$UIT/logcat-spel-kaart.txt"
 opent_scherm hittepetit view-spel
 opent_scherm muziek view-muziek
 opent_scherm scannen view-scannen
