@@ -151,6 +151,14 @@ jobs:
             echo "geen nieuwe beelden"
           else
             git commit -m "Schermafbeeldingen uit de Android-emulator (versie $(cat android/version.txt))"
-            git pull --rebase --autostash
+            # Er kan intussen iemand anders naar main gepusht hebben (een eigen push van de
+            # maker van de app). Beelden zijn niet samen te voegen: bij een conflict houden
+            # we de nieuwste, dat zijn deze. Zonder dit zakt deze stap op een botsing
+            # terwijl de rooktest zelf groen was.
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              git merge -X ours --no-edit -m "Schermafbeeldingen samenvoegen met main" origin/main
+            fi
             git push
           fi
