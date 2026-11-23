@@ -48,6 +48,16 @@ export const RAOJS_CDN = 'https://caught-cdn.s3.eu-west-1.amazonaws.com/raojs/';
 export const RAOJS_VARIANTEN = { raojs: 'preview', zings: 'custom', stops: 'intro' };
 
 /**
+ * Hittepetit: hun app haalt het fragment van een kaartje uit de openbare opslag van de
+ * spelmaker. Nagegaan met de echte bestanden (HP0001, HP0077, HP0100 en HP0222 geven alle
+ * vier een mp3): het pad is steeds `hittepetit/<kaartnummer>.mp3`. Titel, artiest en
+ * jaartal staan er niet bij — die staan op het kaartje zelf.
+ */
+export const HITTEPETIT_BRON = 'https://firebasestorage.googleapis.com/v0/b/nonnevot-9cea7.appspot.com/o/';
+/** De kaartjes lopen van HP0001 tot HP0222; de code in de QR is het kaartnummer. */
+const HITTEPETIT_KAART = /^HP\d{3,5}$/;
+
+/**
  * Leest wat er in een QR-code stond.
  *
  * Geeft altijd iets terug: bij een onbekende code blijft `spel` op 'onbekend' staan,
@@ -193,6 +203,18 @@ export function leesEmbed(html) {
 }
 
 /**
+ * Het fragment van een Hittepetit-kaartje: dat staat openbaar in de opslag van de
+ * spelmaker, op het kaartnummer. Er is geen titel bij — die staat op het kaartje.
+ */
+export function haalHittepetitFragment(kaart) {
+  const code = String(kaart || '').trim().toUpperCase();
+  if (!HITTEPETIT_KAART.test(code)) {
+    throw new Error('Dit kaartje van Hittepetit heeft geen nummer in de code staan.');
+  }
+  return HITTEPETIT_BRON + encodeURIComponent(`hittepetit/${code}.mp3`) + '?alt=media';
+}
+
+/**
  * Het fragment van een Raoj 's-kaartje opvragen bij hun eigen web-app.
  *
  * `maakSocket` is er om dit zonder netwerk te kunnen natrekken in een test; zonder die
@@ -277,8 +299,18 @@ export async function losOp(tekst, { tabel, haalTekst, maakSocket, variant } = {
     };
   }
   if (lees.spel === 'hittepetit') {
-    const nummer = lees.kaart ? ` (kaartje ${lees.kaart})` : '';
-    throw new Error(`Dit is een kaartje van Hittepetit${nummer}. Hun app speelt de fragmenten en die koppeling is niet openbaar, dus naspelen kan nog niet.`);
+    if (!lees.kaart) throw new Error('Dit kaartje van Hittepetit heeft geen nummer in de code staan.');
+    const fragment = haalHittepetitFragment(lees.kaart);
+    return {
+      lees,
+      spel: 'hittepetit',
+      kaart: lees.kaart,
+      editie: { naam: 'Hittepetit' },
+      editieId: 'hittepetit',
+      // Net als bij Raoj 's geeft Hittepetit geen titel: het fragment wel, het antwoord staat
+      // op het kaartje.
+      lied: { titel: null, artiest: null, jaar: null, fragment, hoes: null, speelbaar: true, antwoordOpKaartje: true },
+    };
   }
   if (lees.spel !== 'hitster') throw new Error('Deze code hoort niet bij een van de spellen.');
 

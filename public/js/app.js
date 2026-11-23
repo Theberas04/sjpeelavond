@@ -143,16 +143,34 @@ function toonUpdate() {
         <strong>Nieuwe versie ${esc(updateMelding.versie)}</strong>
         <p class="klein" style="margin:2px 0 0">${
           inApp
-            ? `Je hebt ${esc(staat.versie.versie)}. Tik op Downloaden voor de nieuwe app; Android vraagt daarna of je hem wilt installeren.`
+            ? `Je hebt ${esc(staat.versie.versie)}. Tik op Bijwerken: de app haalt de nieuwe versie zelf op en Android vraagt daarna of hij hem mag installeren.`
             : `Deze versie staat klaar; werk de installatie bij met update-from-github.sh.`
         }</p>
       </div>
-      <a class="knop" href="${esc(updateMelding.url)}">${
-        inApp ? 'Downloaden' : 'Bekijk op GitHub'
-      }</a>
+      ${
+        inApp
+          ? '<button class="knop" data-act="update-nu">Bijwerken</button>'
+          : `<a class="knop" href="${esc(updateMelding.url)}">Bekijk op GitHub</a>`
+      }
       <button class="knop zacht" data-act="update-weg">Later</button>
     </div>`;
   vak.hidden = false;
+}
+
+/**
+ * Bijwerken: in de app haalt de schil de nieuwe versie op en geeft hem aan de installateur
+ * van Android (dezelfde weg als in Smakenland). In de browser bestaat die schil niet, dus
+ * daar blijft het bij de uitgavenpagina.
+ */
+function werkBij() {
+  const schil = window.Sjpeelavond;
+  if (!updateMelding) return;
+  if (!schil || typeof schil.werkBij !== 'function') {
+    location.href = updateMelding.url;
+    return;
+  }
+  meld(`Bezig met bijwerken naar ${updateMelding.versie}…`);
+  schil.werkBij(updateMelding.url);
 }
 
 function verbergUpdate() {
@@ -292,6 +310,9 @@ document.addEventListener('click', async (gebeurtenis) => {
         break;
       case 'update-weg':
         verbergUpdate();
+        break;
+      case 'update-nu':
+        werkBij();
         break;
       case 'speler-weg':
         staat.keuzes.namen.splice(i, 1);

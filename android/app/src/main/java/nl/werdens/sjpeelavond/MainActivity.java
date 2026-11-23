@@ -1,11 +1,19 @@
 package nl.werdens.sjpeelavond;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.provider.Settings;
 import android.util.Log;
+import android.widget.Toast;
 import android.webkit.ConsoleMessage;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
@@ -15,6 +23,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import androidx.webkit.WebViewAssetLoader;
+import androidx.core.content.FileProvider;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 /**
  * De schil van Sjpeelavond: één WebView met de app erin.
@@ -43,6 +58,7 @@ public class MainActivity extends Activity {
     private WebViewAssetLoader assetLoader;
     private String versie = "";
     private String proefKaart = null;
+    private final Handler hoofd = new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +118,11 @@ public class MainActivity extends Activity {
             // Alleen in een debugversie: de rooktest laat zo de camerakant van de app lopen
             // (dezelfde weg als de knop Kaart scannen), zonder dat er iemand op hoeft te tikken.
             if (proefCameraUit(getIntent())) webView.postDelayed(this::openScanner, 800);
+            // Alleen in een debugversie: de rooktest laat zo het bijwerken lopen.
+            String proefUpdate = getIntent() == null ? null : getIntent().getStringExtra("update");
+            if (proefUpdate != null && (getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0) {
+                webView.postDelayed(() -> downloadEnInstalleer(proefUpdate), 800);
+            }
         } else {
             webView.restoreState(savedInstanceState);
         }
@@ -176,6 +197,122 @@ public class MainActivity extends Activity {
         if (isFinishing()) return;
         Log.i(TAG, "SJPEELAVOND_SCANNER openen");
         startActivityForResult(new Intent(this, Scanner.class), VERZOEK_SCAN);
+    }
+
+    /* ── bijwerken: de nieuwe versie zelf ophalen en aan de installateur geven ───── */
+
+    /**
+     * De nieuwe versie downloaden en aan de installateur van Android geven. Dit is
+     * dezelfde weg als in Smakenland: Android laat een app alleen een gedownload bestand
+     * installeren als de gebruiker die app dat zelf heeft toegestaan.
+     */
+    private void downloadEnInstalleer(String url) {
+        // Alleen onze eigen uitgaven: een pagina mag de app niet een willekeurige APK
+        // laten installeren.
+        if (url == null || !url.startsWith("https://github.com/Theberas04/sjpeelavond/")) {
+            Log.i(TAG, "SJPEELAVOND_UPDATE vreemde downloadlink geweigerd: " + url);
+            meld("Deze downloadlink hoort niet bij Sjpeelavond.");
+            return;
+        }
+        final String naam = Bijwerken.bestandsnaam(url);
+        if (naam == null) {
+            meld("De downloadlink van de nieuwe versie klopt niet.");
+            return;
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && !getPackageManager().canRequestPackageInstalls()) {
+            // Android wil eerst dat je deze app laat installeren.
+            Log.i(TAG, "SJPEELAVOND_UPDATE toestemming nodig");
+            meld("Zet eerst \u201conbekende apps installeren\u201d aan voor Sjpeelavond.");
+            try {
+                startActivity(new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
+                        Uri.parse("package:" + getPackageName())));
+            } catch (Exception fout) {
+                Log.i(TAG, "SJPEELAVOND_UPDATE instelpagina niet te openen: " + fout.getMessage());
+            }
+            return;
+        }
+        final ProgressDialog dialoog = new ProgressDialog(this);
+        dialoog.setTitle("Bijwerken");
+        dialoog.setMessage("Bezig met downloaden…");
+        dialoog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        dialoog.setMax(100);
+        dialoog.setCancelable(false);
+        dialoog.show();
+
+        new Thread(() -> {
+            File doel = new File(new File(getCacheDir(), "update"), naam);
+            try {
+                File map = doel.getParentFile();
+                if (map != null && !map.exists() && !map.mkdirs()) throw new IllegalStateException("geen map");
+                download(url, doel, procent -> hoofd.post(() -> {
+                    if (dialoog.isShowing()) dialoog.setProgress(procent);
+                }));
+                Log.i(TAG, "SJPEELAVOND_UPDATE gedownload: " + doel.getAbsolutePath()
+                        + " (" + doel.length() + " bytes)");
+                hoofd.post(() -> {
+                    if (dialoog.isShowing()) dialoog.dismiss();
+                    installeer(doel);
+                });
+            } catch (Exception fout) {
+                Log.i(TAG, "SJPEELAVOND_UPDATE downloaden mislukt: " + fout);
+                hoofd.post(() -> {
+                    if (dialoog.isShowing()) dialoog.dismiss();
+                    meld("Bijwerken mislukt — probeer het later opnieuw.");
+                });
+            }
+        }).start();
+    }
+
+    private void installeer(File apk) {
+        try {
+            Uri uri = FileProvider.getUriForFile(this, getPackageName() + ".bestanden", apk);
+            Intent intent = new Intent(Intent.ACTION_VIEW)
+                    .setDataAndType(uri, "application/vnd.android.package-archive")
+                    .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            Log.i(TAG, "SJPEELAVOND_UPDATE installatie aangeboden");
+        } catch (Exception fout) {
+            Log.i(TAG, "SJPEELAVOND_UPDATE installeren mislukt: " + fout);
+            meld("De nieuwe versie staat klaar, maar de installateur wilde niet openen.");
+        }
+    }
+
+    private interface Voortgang {
+        void bij(int procent);
+    }
+
+    /** Het APK-bestand ophalen, met de voortgang erbij zodat de balk meeloopt. */
+    private void download(String adres, File doel, Voortgang voortgang) throws Exception {
+        HttpURLConnection verbinding = (HttpURLConnection) new URL(adres).openConnection();
+        try {
+            verbinding.setConnectTimeout(10000);
+            verbinding.setReadTimeout(30000);
+            verbinding.setRequestProperty("User-Agent", "Sjpeelavond/" + versie);
+            verbinding.setInstanceFollowRedirects(true);
+            int code = verbinding.getResponseCode();
+            if (code != 200) throw new IllegalStateException("status " + code);
+            long totaal = verbinding.getContentLengthLong();
+            try (InputStream in = verbinding.getInputStream();
+                 FileOutputStream uit = new FileOutputStream(doel)) {
+                byte[] buffer = new byte[16384];
+                long gedaan = 0;
+                int gelezen;
+                while ((gelezen = in.read(buffer)) > 0) {
+                    uit.write(buffer, 0, gelezen);
+                    gedaan += gelezen;
+                    if (totaal > 0) voortgang.bij((int) (gedaan * 100 / totaal));
+                }
+            }
+            if (doel.length() == 0) throw new IllegalStateException("leeg bestand");
+        } finally {
+            verbinding.disconnect();
+        }
+    }
+
+    /** Iets op het scherm zeggen; hetzelfde bericht gaat ook het logboek in. */
+    private void meld(String tekst) {
+        Log.i(TAG, "SJPEELAVOND_UPDATE melding: " + tekst);
+        Toast.makeText(this, tekst, Toast.LENGTH_LONG).show();
     }
 
     /** Staat het camerascherm in het opstartcommando? Alleen een debugversie doet dat. */
@@ -272,6 +409,16 @@ public class MainActivity extends Activity {
         @JavascriptInterface
         public void scanKaart() {
             runOnUiThread(MainActivity.this::openScanner);
+        }
+
+        /**
+         * De nieuwe versie ophalen en aan de installateur van Android geven. De pagina
+         * meldt alleen welke versie er is; het downloaden en installeren doet de schil
+         * (zie downloadEnInstalleer).
+         */
+        @JavascriptInterface
+        public void werkBij(String url) {
+            runOnUiThread(() -> downloadEnInstalleer(url));
         }
     }
 

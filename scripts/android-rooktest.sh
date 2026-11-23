@@ -163,6 +163,27 @@ sleep 2
 schiet "apk-scannen-raojs"
 logcat_naar "$UIT/logcat-scannen-raojs.txt"
 
+# En het kaartje van Hittepetit: het nummer uit de code bepaalt welk fragment er speelt,
+# uit de openbare opslag van de spelmaker.
+echo "--- een kaartje van Hittepetit scannen ---"
+adb logcat -c || true
+adb shell am start -W -n "$PKG/.MainActivity" \
+  -e scherm scannen \
+  -e proefkaart "https://hittepetit.radiononnevot.nl/q/HP0077" >/dev/null
+if ! wacht_op_marker "SJPEELAVOND_SCAN kaartje=HP0077" 60; then
+  echo "het Hittepetit-kaartje werd niet opgezocht; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+if ! wacht_op_marker "SJPEELAVOND_SCAN kaartje=HP0077 .*fragment=ja" 45; then
+  echo "bij het Hittepetit-kaartje kwam geen fragment; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+sleep 2
+schiet "apk-scannen-hittepetit"
+logcat_naar "$UIT/logcat-scannen-hittepetit.txt"
+
 # De camera zelf. De emulator heeft een namaakcamera (hw.camera.back=emulated), dus de app
 # kan hem echt openen. Eerst zonder toestemming: dan moet de app erom vragen. Daarna met
 # toestemming: dan moet de camera opengaan. Zo wordt de camerakant nagegaan zonder dat er
@@ -189,6 +210,41 @@ fi
 sleep 2
 schiet "apk-camera"
 logcat_naar "$UIT/logcat-camera.txt"
+adb shell input keyevent KEYCODE_BACK >/dev/null 2>&1 || true
+sleep 1
+
+# Het bijwerken. De app haalt de nieuwe versie zelf op en geeft hem aan de installateur.
+# Eerst zonder de toestemming die Android daarvoor eist: dan moet de app dat melden en de
+# instelpagina openen. Daarna met die toestemming: dan moet het bestand echt gedownload
+# worden. Er wordt een bestaande uitgave gebruikt, want de nieuwste is tijdens deze ronde
+# misschien nog niet klaar.
+echo "--- het bijwerken ---"
+PROEF_UPDATE="https://github.com/Theberas04/sjpeelavond/releases/download/v1.3.2/Sjpeelavond-Android-1.3.2.apk"
+adb shell appops set "$PKG" REQUEST_INSTALL_PACKAGES deny >/dev/null 2>&1 || true
+adb shell am force-stop "$PKG" >/dev/null 2>&1 || true
+adb logcat -c || true
+adb shell am start -W -n "$PKG/.MainActivity" -e update "$PROEF_UPDATE" >/dev/null
+if ! wacht_op_marker "SJPEELAVOND_UPDATE toestemming nodig" 45; then
+  echo "de app vroeg niet om de installeertoestemming; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+adb shell appops set "$PKG" REQUEST_INSTALL_PACKAGES allow >/dev/null 2>&1 || true
+adb shell am force-stop "$PKG" >/dev/null 2>&1 || true
+adb logcat -c || true
+adb shell am start -W -n "$PKG/.MainActivity" -e update "$PROEF_UPDATE" >/dev/null
+if ! wacht_op_marker "SJPEELAVOND_UPDATE gedownload: .*\\([1-9][0-9]* bytes\\)" 120; then
+  echo "de nieuwe versie werd niet gedownload; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+if ! wacht_op_marker "SJPEELAVOND_UPDATE installatie aangeboden" 45; then
+  echo "de installateur werd niet geopend; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+schiet "apk-bijwerken"
+logcat_naar "$UIT/logcat-bijwerken.txt"
 adb shell input keyevent KEYCODE_BACK >/dev/null 2>&1 || true
 sleep 1
 

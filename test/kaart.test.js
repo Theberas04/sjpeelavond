@@ -8,7 +8,15 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { haalRaojsFragment, kandidaten, leesEmbed, leesKaart, losOp, zoekLied } from '../public/js/kaart.js';
+import {
+  haalHittepetitFragment,
+  haalRaojsFragment,
+  kandidaten,
+  leesEmbed,
+  leesKaart,
+  losOp,
+  zoekLied,
+} from '../public/js/kaart.js';
 
 /**
  * Een nagemaakte WebSocket: hij speelt het gesprek van de web-app van Raoj 's na, zodat
@@ -243,4 +251,24 @@ test('een kaartje dat Raoj \'s niet kent geeft een duidelijke melding', async ()
     () => haalRaojsFragment('NPRP', { maakSocket: stil.maakSocket, tijd: 30 }),
     /antwoordde niet op tijd/,
   );
+});
+
+test('een Hittepetit-kaartje levert het fragment van hun eigen opslag op', async () => {
+  const uit = await losOp('https://hittepetit.radiononnevot.nl/q/HP0077', {});
+  assert.equal(uit.spel, 'hittepetit');
+  assert.equal(uit.kaart, 'HP0077');
+  assert.equal(uit.editie.naam, 'Hittepetit');
+  assert.equal(
+    uit.lied.fragment,
+    'https://firebasestorage.googleapis.com/v0/b/nonnevot-9cea7.appspot.com/o/hittepetit%2FHP0077.mp3?alt=media',
+  );
+  assert.equal(uit.lied.titel, null, 'Hittepetit geeft geen titel; die staat op het kaartje');
+  assert.equal(uit.lied.antwoordOpKaartje, true);
+});
+
+test('het fragment wordt op het kaartnummer opgezocht, niet op iets anders', () => {
+  assert.match(haalHittepetitFragment('hp0132'), /hittepetit%2FHP0132\.mp3\?alt=media$/);
+  assert.throws(() => haalHittepetitFragment('HP'), /geen nummer/);
+  assert.throws(() => haalHittepetitFragment(''), /geen nummer/);
+  assert.throws(() => haalHittepetitFragment('../../etc/passwd'), /geen nummer/);
 });

@@ -159,9 +159,17 @@ balkje: **Nieuwe versie 1.3.0** met een knop *Downloaden* naar de nieuwe APK, en
 het balkje voor díe versie wegzet.
 
 Zonder internet, of met een raar antwoord, blijft het stil — dit mag het spel nooit in de weg zitten.
-Er wordt ook niets vanzelf geïnstalleerd: Android laat dat alleen toe als je het zelf bevestigt, dus
-het blijft bij melden en één tik naar de download. De webversie leest hetzelfde versienummer uit
-`android/version.txt` (één bron voor app en pagina) en toont dezelfde melding.
+De webversie leest hetzelfde versienummer uit `android/version.txt` (één bron voor app en pagina) en
+toont dezelfde melding.
+
+**Bijwerken gaat in de app zelf** (dezelfde weg als in Smakenland): achter de knop *Bijwerken*
+downloadt de app het nieuwe APK-bestand naar zijn eigen cachemap, met een voortgangsbalk, en geeft
+het daarna aan de installateur van Android. Eerst vraagt Android één keer om toestemming
+(*onbekende apps installeren*); daarna is bijwerken één tik plus de bevestiging van Android zelf. Het
+downloaden gebeurt alleen vanaf de uitgaven van deze repo — een andere link wordt geweigerd — en het
+bestand gaat via een eigen provider naar de installateur, zodat de app geen toegang tot het hele
+toestel nodig heeft. In de browser bestaat die schil niet, dus daar blijft het bij een link naar de
+uitgaven.
 
 ## Je eigen doos op tafel: kaartjes scannen
 
@@ -201,13 +209,15 @@ het liednummer blijft hetzelfde, alleen het fragment verschilt.
 
 ### Hittepetit
 
-Daarvan herkent de app het kaartje wel — een Hittepetit-kaartje wijst naar
-`hittepetit.radiononnevot.nl/q/HP0077`, met kaartnummers van HP0001 tot HP0222 — maar de fragmenten
-zitten in de app van Radio Nónnevot zelf en die koppeling is nergens openbaar. De app zegt dus welk
-kaartje je in handen hebt en verder nog niets. Speel dit spel voorlopig met de knop *Spelen* op de
-startpagina; daar komt dezelfde muziek uit de eigen database.
+Dat spel werkt nu ook. Een Hittepetit-kaartje wijst naar
+`hittepetit.radiononnevot.nl/q/HP0077` en het kaartnummer staat in de code: HP0001 tot HP0222. De
+fragmenten staan openbaar in de opslag van de spelmaker, op datzelfde nummer —
+`hittepetit/HP0077.mp3` in de opslagmap van de app van Radio Nónnevot. De app speelt dat fragment,
+met dezelfde dertig seconden als bij de andere spellen. Titel, artiest en jaartal geeft Hittepetit
+niet vrij: die staan op het kaartje zelf.
 
-Het hele onderzoek staat in [docs/onderzoek-kaartscanners.md](docs/onderzoek-kaartscanners.md).
+Het hele onderzoek staat in [docs/onderzoek-kaartscanners.md](docs/onderzoek-kaartscanners.md) en
+[docs/onderzoek-hittepetit-app.md](docs/onderzoek-hittepetit-app.md).
 
 Zo ziet dat eruit — eerst alleen het fragment, dan pas het antwoord:
 

@@ -61,11 +61,11 @@ Onderaan staat welke kaartjes je deze ronde al gehad hebt, met het jaartal zodra
 
 **Raoj 's.** Dit spel werkt ook met je eigen doos. Je scant de QR-code op een kaartje en de app vraagt bij de web-app van Raoj 's welk fragment erbij hoort; dat speelt hij af. Titel, artiest en jaartal geeft Raoj 's niet vrij — die staan op het kaartje, dus dat draai je om zoals altijd. Let op: je hebt internet nodig en de web-app van Raoj 's moet bereikbaar zijn.
 
-**Hittepetit.** De app herkent het kaartje wel (hij zegt welk nummer je in handen hebt), maar kan het nog niet naspelen: de fragmenten zitten in de app van Radio Nónnevot zelf en die koppeling is niet openbaar. Speel dit spel met de knop **Spelen** op de startpagina, dan gebruikt de app dezelfde muziek uit de eigen database.
+**Hittepetit.** Dit spel werkt ook met je eigen doos. Je scant de QR-code op een kaartje (HP0001 tot HP0222) en de app speelt het fragment dat bij dat kaartnummer hoort. Titel, artiest en jaartal geeft Hittepetit niet vrij — die staan op het kaartje, dus dat draai je om zoals altijd.
 
 ## 6. Als er iets niet werkt
 
-- **Er staat een balkje "Nieuwe versie".** Er is een nieuwere versie van de app. Tik op **Downloaden** en installeer hem; met **Later** gaat het balkje voor die versie weg en komt het pas terug bij een nog nieuwere versie.
+- **Er staat een balkje "Nieuwe versie".** Er is een nieuwere versie van de app. Tik op **Bijwerken**: de app haalt de nieuwe versie zelf op en Android vraagt daarna of hij hem mag installeren. De eerste keer vraagt Android ook om *onbekende apps installeren* toe te staan voor Sjpeelavond; dat is één keer instellen. Met **Later** gaat het balkje voor die versie weg en komt het pas terug bij een nog nieuwere versie.
 - **Geen geluid.** Druk nog eens op de ronde afspeelknop. Browsers staan geluid pas toe nadat je één keer op de pagina hebt gedrukt; de eerste kaart speelt daarom soms pas na een tweede tik.
 - **"Deze dekstapel is leeg."** Je hebt alle kaarten van dit dek gehad. Kies een ander dek of begin een nieuw spel.
 - **"Geen fragment beschikbaar voor dit nummer."** Van dit nummer is het fragment tijdelijk niet leverbaar. De app probeert het daarna via een tweede bron; lukt dat ook niet, kies dan **Overslaan**.
