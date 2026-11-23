@@ -3,6 +3,7 @@
  * Alle spellogica staat in spel.js; hier alleen schermen, knoppen en het geluid.
  */
 import * as S from './spel.js';
+import { kijkVoorUpdate } from './update.js';
 
 /* ── hulpjes ───────────────────────────────────────────────────────────── */
 
@@ -94,6 +95,78 @@ document.querySelectorAll('#tabs button').forEach((knop) => {
 });
 
 /* ── startpagina ───────────────────────────────────────────────────────── */
+
+/* ── een nieuwe versie melden ──────────────────────────────────────────── */
+
+/** Per versie onthouden dat het balkje is weggeklikt, zodat het niet blijft terugkomen. */
+const UPDATE_ONTHOUDEN = 'sjpeelavond.update.weg';
+let updateMelding = null;
+
+/**
+ * Kijkt bij het opstarten of er een nieuwere versie van de app is en zet dan een balkje
+ * op het startscherm. Zonder internet, of als de app bij is, gebeurt er niets.
+ */
+async function kijkVoorNieuweVersie() {
+  const huidig = staat.versie?.versie;
+  if (!huidig) return;
+  let uitgave = null;
+  try {
+    uitgave = await kijkVoorUpdate({
+      huidig,
+      haalTekst: async (adres) => {
+        const antwoord = await fetch(adres, { headers: { accept: 'application/vnd.github+json' } });
+        return antwoord.text();
+      },
+    });
+  } catch {
+    return; // geen internet: niets melden
+  }
+  if (!uitgave) return;
+  let weggeklikt = null;
+  try {
+    weggeklikt = localStorage.getItem(UPDATE_ONTHOUDEN);
+  } catch {
+    weggeklikt = null;
+  }
+  if (weggeklikt === uitgave.versie) return;
+  updateMelding = uitgave;
+  toonUpdate();
+}
+
+function toonUpdate() {
+  const vak = $('#updatevak');
+  if (!vak || !updateMelding) return;
+  const inApp = typeof window !== 'undefined' && !!window.Sjpeelavond;
+  vak.innerHTML = `
+    <div class="update">
+      <div style="flex:1;min-width:220px">
+        <strong>Nieuwe versie ${esc(updateMelding.versie)}</strong>
+        <p class="klein" style="margin:2px 0 0">${
+          inApp
+            ? `Je hebt ${esc(staat.versie.versie)}. Tik op Downloaden voor de nieuwe app; Android vraagt daarna of je hem wilt installeren.`
+            : `Deze versie staat klaar; werk de installatie bij met update-from-github.sh.`
+        }</p>
+      </div>
+      <a class="knop" href="${esc(updateMelding.url)}">${
+        inApp ? 'Downloaden' : 'Bekijk op GitHub'
+      }</a>
+      <button class="knop zacht" data-act="update-weg">Later</button>
+    </div>`;
+  vak.hidden = false;
+}
+
+function verbergUpdate() {
+  const vak = $('#updatevak');
+  if (vak) {
+    vak.hidden = true;
+    vak.innerHTML = '';
+  }
+  try {
+    if (updateMelding) localStorage.setItem(UPDATE_ONTHOUDEN, updateMelding.versie);
+  } catch {
+    /* zonder localStorage komt het balkje de volgende keer terug; geen ramp */
+  }
+}
 
 const ILLUSTRATIE = {
   tijdlijn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5m0 0 7 3-7 3M4 5l7 3"/><rect x="13" y="8" width="7" height="10" rx="1.5"/></svg>',
@@ -216,6 +289,9 @@ document.addEventListener('click', async (gebeurtenis) => {
     switch (act) {
       case 'kies-spel':
         openInstellen(knop.dataset.spel);
+        break;
+      case 'update-weg':
+        verbergUpdate();
         break;
       case 'speler-weg':
         staat.keuzes.namen.splice(i, 1);
@@ -1313,6 +1389,8 @@ async function opstarten() {
     };
   }
   await laadVersie();
+  // Niet op wachten: het spel moet meteen kunnen beginnen, het balkje komt er wel bij.
+  kijkVoorNieuweVersie();
   if (await startVanAdres()) return;
   const spel = herstel();
   if (spel) {

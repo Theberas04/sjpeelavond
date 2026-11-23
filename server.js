@@ -28,7 +28,18 @@ const MEDIA = process.env.SJPEELAVOND_MEDIA || path.join(HIER, 'media');
 const DB_PAD = process.env.SJPEELAVOND_DB || path.join(DATA, 'eigen.db');
 const POORT = parseInt(process.env.POORT || '8080', 10);
 const WACHTWOORD = process.env.SJPEELAVOND_WACHTWOORD || '';
-const VERSIE = '1.0.0';
+/**
+ * Het versienummer komt uit android/version.txt: één bron voor de webversie en de app,
+ * zodat de update-melding in de app en op de pagina hetzelfde nummer vergelijkt.
+ */
+function leesVersie() {
+  try {
+    return readFileSync(path.join(HIER, 'android/version.txt'), 'utf8').trim();
+  } catch {
+    return '1.0.0';
+  }
+}
+const VERSIE = process.env.SJPEELAVOND_VERSIE || leesVersie();
 const EIGEN_BASIS = 900000;
 
 /* ── database (alleen voor eigen nummers en beheerderssessies) ─────────── */

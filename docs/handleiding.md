@@ -65,6 +65,7 @@ Onderaan staat welke kaartjes je deze ronde al gehad hebt, met het jaartal zodra
 
 ## 6. Als er iets niet werkt
 
+- **Er staat een balkje "Nieuwe versie".** Er is een nieuwere versie van de app. Tik op **Downloaden** en installeer hem; met **Later** gaat het balkje voor die versie weg en komt het pas terug bij een nog nieuwere versie.
 - **Geen geluid.** Druk nog eens op de ronde afspeelknop. Browsers staan geluid pas toe nadat je één keer op de pagina hebt gedrukt; de eerste kaart speelt daarom soms pas na een tweede tik.
 - **"Deze dekstapel is leeg."** Je hebt alle kaarten van dit dek gehad. Kies een ander dek of begin een nieuw spel.
 - **"Geen fragment beschikbaar voor dit nummer."** Van dit nummer is het fragment tijdelijk niet leverbaar. De app probeert het daarna via een tweede bron; lukt dat ook niet, kies dan **Overslaan**.

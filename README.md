@@ -150,6 +150,19 @@ geen CORS-kop mee, dus vraagt de app-schil het op en geeft het antwoord aan de p
 Wat de app **niet** heeft: eigen nummers toevoegen (dat hoort bij de serverversie met database) en het
 beheer. Spelen, de drie spellen, de dekken, de fragmenten en de hoesjes werken allemaal.
 
+### De app meldt zelf een nieuwe versie
+
+Bij het opstarten kijkt de app bij GitHub welke uitgave de laatste is
+(`api.github.com/repos/Theberas04/sjpeelavond/releases/latest`, openbaar, geen sleutel nodig) en
+vergelijkt dat met zijn eigen versienummer. Is die nieuwer, dan staat er bovenaan het startscherm een
+balkje: **Nieuwe versie 1.3.0** met een knop *Downloaden* naar de nieuwe APK, en een knop *Later* die
+het balkje voor díe versie wegzet.
+
+Zonder internet, of met een raar antwoord, blijft het stil — dit mag het spel nooit in de weg zitten.
+Er wordt ook niets vanzelf geïnstalleerd: Android laat dat alleen toe als je het zelf bevestigt, dus
+het blijft bij melden en één tik naar de download. De webversie leest hetzelfde versienummer uit
+`android/version.txt` (één bron voor app en pagina) en toont dezelfde melding.
+
 ## Je eigen doos op tafel: kaartjes scannen
 
 Met de app kun je ook de **fysieke** spellen spelen: je scant de QR-code op een kaartje van Hitster en

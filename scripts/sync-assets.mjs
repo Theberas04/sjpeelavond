@@ -59,6 +59,7 @@ function controleer() {
     'js/spel.js',
     'js/lokaal.js',
     'js/kaart.js',
+    'js/update.js',
     'data/index.json',
     'data/nummers-hits.json',
     'data/nummers-limburg.json',

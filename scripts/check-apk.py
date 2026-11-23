@@ -20,6 +20,7 @@ VERPLICHT = [
     "assets/js/spel.js",
     "assets/js/lokaal.js",
     "assets/js/kaart.js",
+    "assets/js/update.js",
     "assets/data/index.json",
     "assets/data/nummers-hits.json",
     "assets/data/nummers-limburg.json",
