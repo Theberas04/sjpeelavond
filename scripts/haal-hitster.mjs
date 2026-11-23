@@ -10,10 +10,11 @@
  * fragment haalt de app zelf op bij het scannen (zie public/js/kaart.js) — dat scheelt
  * tienduizenden verzoeken en de fragmenten blijven zo vers.
  *
- *   node scripts/haal-hitster.mjs [--alles]
+ *   node scripts/haal-hitster.mjs [--thuis]
  *
- * Zonder --alles worden alleen de Nederlandse en Benelux-edities bewaard (klein bestand);
- * met --alles komen alle 176 edities mee, zodat ook een Duitse of Spaanse doos werkt.
+ * Standaard komen alle edities mee, zodat ook een Duitse of Spaanse doos werkt; dat is
+ * ongeveer 1,6 MB. Met --thuis blijven alleen de Nederlandse en Benelux-edities over
+ * (130 kB) — genoeg voor een Nederlandse doos, en kleiner voor de app.
  */
 import { writeFileSync, existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
@@ -29,7 +30,7 @@ const URL_BRON = 'https://hitster.jumboplay.com/hitster-assets/gameset_database.
 // meest waarschijnlijk, en de Benelux-editie hangt daar tegenaan.
 const THUISLANDEN = ['netherlands', 'benelux'];
 
-const alles = process.argv.includes('--alles');
+const alles = !process.argv.includes('--thuis');
 
 if (!existsSync(BRON)) {
   console.error(`De brontabel ontbreekt: ${BRON}`);

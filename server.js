@@ -17,6 +17,10 @@ import crypto from 'node:crypto';
 import { DatabaseSync } from 'node:sqlite';
 import { fileURLToPath } from 'node:url';
 
+// Dezelfde code als de pagina gebruikt: het lezen van een gescand kaartje hoort maar
+// op één plek te staan (zie public/js/kaart.js).
+import { losOp } from './public/js/kaart.js';
+
 const HIER = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIEK = path.join(HIER, 'public');
 const DATA = process.env.SJPEELAVOND_DATA || path.join(HIER, 'data');
@@ -121,6 +125,21 @@ function herlaadDataset() {
   herlaadEigen();
   const indexPad = path.join(DATA, 'index.json');
   if (existsSync(indexPad)) index = JSON.parse(readFileSync(indexPad, 'utf8'));
+}
+
+/**
+ * De kaartjestabel van de fysieke spellen (data/hitster.json, zie scripts/haal-hitster.mjs).
+ * Pas bij het eerste gebruik inlezen: het bestand is groot en lang niet elke sessie
+ * heeft het nodig.
+ */
+let kaartjestabelInhoud = null;
+function kaartjestabel() {
+  if (!kaartjestabelInhoud) {
+    const pad = path.join(DATA, 'hitster.json');
+    if (!existsSync(pad)) throw new Error(`De kaartjestabel ontbreekt (${pad}); draai scripts/haal-hitster.mjs.`);
+    kaartjestabelInhoud = JSON.parse(readFileSync(pad, 'utf8'));
+  }
+  return kaartjestabelInhoud;
 }
 
 function herlaadEigen() {
@@ -345,6 +364,35 @@ export async function verwerk(req, res) {
             : []),
         ],
       });
+    }
+
+    // De kaartjestabel van de fysieke spellen (Hitster). Pas bij het eerste gebruik
+    // inlezen: het bestand is groot en de meeste sessies hebben het niet nodig.
+    if (pad === '/api/hitster') {
+      try {
+        return stuurJson(res, 200, kaartjestabel());
+      } catch (fout) {
+        return stuurJson(res, 404, { fout: String((fout && fout.message) || fout) });
+      }
+    }
+
+    // Een gescand kaartje opzoeken: de QR-code van een fysiek spel omzetten in een
+    // liedje. Dezelfde code als in de app (public/js/kaart.js).
+    if (pad === '/api/kaart' && req.method === 'POST') {
+      const lichaam = await leesJson(req);
+      try {
+        const uitkomst = await losOp(String(lichaam.code || ''), {
+          tabel: kaartjestabel(),
+          haalTekst: async (url) => {
+            const antwoord = await fetch(url, { headers: { 'user-agent': 'Sjpeelavond/1.0 (partyspel voor thuis)' } });
+            if (!antwoord.ok) throw new Error(`Spotify antwoordde ${antwoord.status}`);
+            return antwoord.text();
+          },
+        });
+        return stuurJson(res, 200, uitkomst);
+      } catch (fout) {
+        return stuurJson(res, 400, { fout: String((fout && fout.message) || fout) });
+      }
     }
 
     if (pad === '/api/dekken') {

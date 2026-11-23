@@ -60,6 +60,7 @@ DATA=(
   "data/nummers-hits.json"
   "data/nummers-limburg.json"
   "data/index.json"
+  "data/hitster.json"
 )
 
 for f in "${RUNTIME[@]}" "${PAGINA[@]}" "${DATA[@]}"; do

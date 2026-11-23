@@ -59,6 +59,7 @@ haal_kit
 # De kit moet compleet zijn vóór we iets aanraken of aanmaken.
 for f in server.js public/index.html public/js/app.js \
          data/nummers-hits.json data/nummers-limburg.json data/index.json \
+        data/hitster.json \
          deploy/proxmox/create-sjpeelavond-lxc.sh \
          deploy/proxmox/provision-sjpeelavond.sh
 do

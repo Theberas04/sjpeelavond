@@ -14,8 +14,14 @@
  * geeft het antwoord als tekst terug.
  */
 
-/** Waar de buitenwereld (Deezer, iTunes) om gevraagd mag worden. */
-export const TOEGESTANE_GASTEN = ['api.deezer.com', 'itunes.apple.com'];
+import { losOp } from './kaart.js';
+
+/**
+ * Waar de buitenwereld om gevraagd mag worden: Deezer en iTunes voor het fragment, en
+ * Spotify voor de titel, de artiest, het jaartal en het fragment van een gescand
+ * kaartje (zie public/js/kaart.js).
+ */
+export const TOEGESTANE_GASTEN = ['api.deezer.com', 'itunes.apple.com', 'open.spotify.com'];
 
 export function maakLokaleApi({ haalJson, brug = null, versie = '1.0.0' } = {}) {
   const nummers = new Map();
@@ -88,6 +94,37 @@ export function maakLokaleApi({ haalJson, brug = null, versie = '1.0.0' } = {}) 
       laatsteBuitenfout = fout.message;
       return null;
     }
+  }
+
+  /**
+   * Een adres als tekst ophalen — voor de Spotify-embedpagina van een gescand kaartje
+   * (zie public/js/kaart.js). Alleen bij de gastheren die we toestaan, en in de app
+   * doet de schil het verzoek omdat Spotify geen CORS-kop stuurt.
+   */
+  async function haalTekstBuiten(url) {
+    const gastheer = (() => {
+      try {
+        return new URL(url).host;
+      } catch {
+        return '';
+      }
+    })();
+    if (!TOEGESTANE_GASTEN.includes(gastheer)) throw new Error(`Deze app mag niets bij ${gastheer || 'dat adres'} ophalen.`);
+
+    if (brug?.bron) {
+      let antwoord = {};
+      try {
+        antwoord = JSON.parse(brug.bron(url) || '{}');
+      } catch {
+        antwoord = { ok: false, fout: 'onleesbaar antwoord van de schil' };
+      }
+      if (!antwoord.ok) throw new Error(antwoord.fout || `Geen antwoord van ${gastheer}`);
+      return antwoord.tekst || '';
+    }
+
+    const antwoord = await fetch(url);
+    if (!antwoord.ok) throw new Error(`${gastheer} antwoordde ${antwoord.status}`);
+    return antwoord.text();
   }
 
   async function haalFragment(nummer) {
@@ -209,6 +246,15 @@ export function maakLokaleApi({ haalJson, brug = null, versie = '1.0.0' } = {}) 
         lvk: typeof n.lvk === 'boolean' ? n.lvk : null,
       }));
       return { totaal: lijst.length, vanaf, limiet, nummers: pagina };
+    }
+
+    // De kaartjes van de fysieke spellen: dezelfde tabel en dezelfde uitleg als de
+    // server, maar uit de app zelf (data/hitster.json zit in de bundel).
+    if (route === '/api/hitster' || route === '/api/kaart') {
+      const tabel = await haalJson('data/hitster.json');
+      if (!tabel || !tabel.kaarten) fout('De kaartjestabel zit niet in deze app.');
+      if (route === '/api/hitster') return tabel;
+      return losOp(String(lichaam?.code || ''), { tabel, haalTekst: haalTekstBuiten });
     }
 
     // Beheer hoort bij de serverversie: in de app zit geen database en geen wachtwoord.

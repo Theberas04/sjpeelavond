@@ -28,10 +28,21 @@ public class MainActivity extends Activity {
 
     private static final String TAG = "Sjpeelavond";
     private static final String BASIS = "https://appassets.androidplatform.net/index.html";
+    private static final int VERZOEK_SCAN = 1001;
+
+    /**
+     * De pagina is er nog niet meteen; deze wikkel wacht tot de app zijn haakje
+     * (window.SJPEEL_SCAN) heeft aangemeld en geeft de code dan door.
+     */
+    private static final String JS_WACHT = "(function probeer(n, code) {"
+            + " if (window.SJPEEL_SCAN) { window.SJPEEL_SCAN(code); return; }"
+            + " if (n > 0) setTimeout(function () { probeer(n - 1, code); }, 200);"
+            + " })(";
 
     private WebView webView;
     private WebViewAssetLoader assetLoader;
     private String versie = "";
+    private String proefKaart = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +78,13 @@ public class MainActivity extends Activity {
                                 + "'scherm='+Array.prototype.filter.call(document.querySelectorAll('#app > section'),"
                                 + "function(s){return !s.hidden}).map(function(s){return s.id}).join(',')].join('|')",
                         waarde -> Log.i(TAG, "DOM " + waarde));
+                // Een kaartcode die met het opstartcommando is meegegeven (alleen in een
+                // debugversie): zo kan de rooktest het scannen narekenen zonder camera.
+                if (proefKaart != null) {
+                    String code = proefKaart;
+                    proefKaart = null;
+                    geefCodeDoor(code);
+                }
             }
 
             @Override
@@ -92,6 +110,7 @@ public class MainActivity extends Activity {
         setContentView(webView);
         if (savedInstanceState == null) {
             webView.loadUrl(startAdres(getIntent()));
+            proefKaart = proefKaartUit(getIntent());
         } else {
             webView.restoreState(savedInstanceState);
         }
@@ -128,6 +147,67 @@ public class MainActivity extends Activity {
         }
     }
 
+    /**
+     * Een kaartcode die met het opstartcommando is meegegeven, en alleen in een
+     * debugversie: zo kan de rooktest het scannen narekenen zonder camera. In een
+     * uitgebrachte app is dit altijd null.
+     */
+    private String proefKaartUit(Intent intent) {
+        boolean debugbaar = (getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0;
+        if (!debugbaar || intent == null) return null;
+        String code = intent.getStringExtra("proefkaart");
+        return code == null || code.trim().isEmpty() ? null : code.trim();
+    }
+
+    /** De code van een gescand kaartje aan de pagina geven. */
+    private void geefCodeDoor(String code) {
+        if (webView == null) return;
+        if (code == null) {
+            Log.i(TAG, "SJPEELAVOND_SCAN geannuleerd");
+            return;
+        }
+        Log.i(TAG, "SJPEELAVOND_SCAN code=" + code);
+        webView.evaluateJavascript(JS_WACHT + "30, " + alsJsTekst(code) + ")", null);
+    }
+
+    /** Een tekst als JavaScript-tekst, met dezelfde ontsnapping als JSON. */
+    static String alsJsTekst(String tekst) {
+        StringBuilder uit = new StringBuilder(tekst.length() + 16);
+        uit.append('"');
+        for (int i = 0; i < tekst.length(); i++) {
+            char c = tekst.charAt(i);
+            switch (c) {
+                case '"':
+                    uit.append("\\\"");
+                    break;
+                case '\\':
+                    uit.append("\\\\");
+                    break;
+                case '\n':
+                    uit.append("\\n");
+                    break;
+                case '\r':
+                    uit.append("\\r");
+                    break;
+                case '\t':
+                    uit.append("\\t");
+                    break;
+                default:
+                    if (c < 0x20) uit.append(String.format("\\u%04x", (int) c));
+                    else uit.append(c);
+            }
+        }
+        return uit.append('"').toString();
+    }
+
+    @Override
+    protected void onActivityResult(int verzoek, int uitslag, Intent gegevens) {
+        super.onActivityResult(verzoek, uitslag, gegevens);
+        if (verzoek != VERZOEK_SCAN) return;
+        String code = uitslag == RESULT_OK && gegevens != null ? gegevens.getStringExtra(Scanner.EXTRA_CODE) : null;
+        geefCodeDoor(code);
+    }
+
     /** Wat de pagina van de schil mag vragen. */
     private final class Brug {
 
@@ -146,10 +226,16 @@ public class MainActivity extends Activity {
             Log.i(TAG, tekst);
         }
 
-        /** Haalt een adres op (alleen Deezer en iTunes) en geeft {ok,status,tekst,fout} terug. */
+        /** Haalt een adres op (alleen Deezer, iTunes en Spotify) en geeft {ok,status,tekst,fout} terug. */
         @JavascriptInterface
         public String bron(String url) {
             return Buiten.haal(url, "Sjpeelavond/" + versie);
+        }
+
+        /** De camera openen om een kaartje te scannen; het antwoord komt via window.SJPEEL_SCAN. */
+        @JavascriptInterface
+        public void scanKaart() {
+            runOnUiThread(() -> startActivityForResult(new Intent(MainActivity.this, Scanner.class), VERZOEK_SCAN));
         }
     }
 

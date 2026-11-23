@@ -63,16 +63,39 @@ const basis = `http://127.0.0.1:${server.address().port}`;
 /* ── de schil nadoen ──────────────────────────────────────────────────── */
 
 const PREVIEW = 'https://cdns-preview-nagemaakt.example/fragment.mp3';
+
+// Voor het scannen van een kaartje is de embedpagina van Spotify nodig. Die halen we
+// hier echt op (één keer, in Node) en stoppen we in de nagemaakte schil: de schil in de
+// app doet hetzelfde verzoek, maar synchroon, dus de pagina merkt geen verschil.
+const KAART_CODE = 'https://www.hitstergame.com/nl/aaaa0001/00308';
+const KAART_SPOTIFY = '3DamFFqW32WihKkTVlwTYQ';
+const EMBEDS = {};
+try {
+  const antwoord = await fetch(`https://open.spotify.com/embed/track/${KAART_SPOTIFY}`, {
+    headers: { 'user-agent': 'Sjpeelavond/1.0 (partyspel voor thuis)' },
+  });
+  EMBEDS[KAART_SPOTIFY] = await antwoord.text();
+  console.log(`  (embedpagina van Spotify opgehaald: ${EMBEDS[KAART_SPOTIFY].length} tekens)`);
+} catch (fout) {
+  console.error(`Kon de embedpagina niet ophalen (${fout.message}); de scanproef wordt overgeslagen.`);
+}
+
 const BRUG = `
 window.Sjpeelavond = {
   lokaal: function () { return 'ja'; },
   versie: function () { return '1.0.0-proef'; },
   log: function (tekst) { console.info('SJPEELAVOND ' + tekst); },
   bron: function (url) {
-    if (url.indexOf('api.deezer.com') < 0) {
-      return JSON.stringify({ ok: false, status: 0, tekst: null, fout: 'deze website mag niet: ' + url });
+    if (url.indexOf('api.deezer.com') >= 0) {
+      return JSON.stringify({ ok: true, status: 200, tekst: JSON.stringify({ preview: '${PREVIEW}' }) });
     }
-    return JSON.stringify({ ok: true, status: 200, tekst: JSON.stringify({ preview: '${PREVIEW}' }) });
+    if (url.indexOf('open.spotify.com') >= 0) {
+      var embeds = ${JSON.stringify(EMBEDS)};
+      var id = url.split('/').pop();
+      if (embeds[id]) return JSON.stringify({ ok: true, status: 200, tekst: embeds[id], fout: null });
+      return JSON.stringify({ ok: false, status: 404, tekst: null, fout: 'nummer niet gevonden' });
+    }
+    return JSON.stringify({ ok: false, status: 0, tekst: null, fout: 'deze website mag niet: ' + url });
   }
 };
 `;
@@ -131,6 +154,40 @@ eis(/beurt 1/.test(ronde), `de beurt staat op het bord (${ronde})`);
 // Tegen het spieken: een getrokken kaart levert alleen een nummer op, geen jaartal.
 const velden = await js(`window.SJPEEL_LOKAAL('/api/trek', { dekken: ['hits'], gebruikt: [], aantal: 1 }).then((k) => Object.keys(k.kaarten[0]).join(','))`);
 eis(velden === 'id', `een getrokken kaart geeft alleen een nummer (${velden})`);
+
+if (Object.keys(EMBEDS).length) {
+  console.log('--- een kaartje van de fysieke doos scannen ---');
+  // Precies wat de schil doet: de gelezen code aan de pagina geven.
+  await js(`window.SJPEEL_SCAN(${JSON.stringify(KAART_CODE)})`);
+  await wacht(2000);
+  eis(await js('!document.querySelector("#view-scannen").hidden'), 'het scaanscherm staat open');
+  const scanMelding = await js('document.querySelector("#scan-melding").textContent');
+  eis(/00308/.test(scanMelding), `het kaartje is opgezocht (${scanMelding})`);
+  const scanAudio = await js('document.querySelector("#speler").getAttribute("src") || ""');
+  eis(scanAudio.includes('scdn.co'), `het fragment komt van Spotify (${scanAudio.slice(0, 46)}…)`);
+  eis(await js('document.querySelector("#scan-onthulling").hidden'), 'titel, artiest en jaartal blijven eerst verborgen');
+  const kaartVak = await js('document.querySelector("#scan-kaart").innerText');
+  eis(!/Fireflies|Owl City|2009/.test(kaartVak), 'er staat nog niets over het nummer op het scherm');
+  if (BEELD) {
+    const antwoord = await stuur('Page.captureScreenshot', { format: 'png' });
+    writeFileSync(BEELD.replace(/\.png$/, '-verborgen.png'), Buffer.from(antwoord.result.data, 'base64'));
+  }
+
+  await js('document.querySelector(\'[data-act="scan-onthul"]\').click()');
+  await wacht(400);
+  const onthuld = await js('document.querySelector("#scan-onthulling").innerText');
+  eis(/2009/.test(onthuld) && /Fireflies/.test(onthuld), `onthullen geeft titel en jaartal (${onthuld.replace(/\s+/g, ' ').slice(0, 60)}…)`);
+  const rondeLijst = await js('document.querySelector("#scan-ronde").innerText');
+  eis(/00308/.test(rondeLijst) && /2009/.test(rondeLijst), `het kaartje staat in de ronde van deze avond (${rondeLijst.replace(/\s+/g, ' ').trim()})`);
+  if (BEELD) {
+    const antwoord = await stuur('Page.captureScreenshot', { format: 'png' });
+    writeFileSync(BEELD.replace(/\.png$/, '-onthuld.png'), Buffer.from(antwoord.result.data, 'base64'));
+    console.log(`  beelden bewaard: ${BEELD.replace(/\.png$/, '-verborgen.png')} en ${BEELD.replace(/\.png$/, '-onthuld.png')}`);
+  }
+} else {
+  console.log('--- geen netwerk: het scannen van een kaartje is niet nagegaan ---');
+  eis(false, 'de embedpagina van Spotify was niet op te halen');
+}
 
 if (BEELD) {
   const antwoord = await stuur('Page.captureScreenshot', { format: 'png' });

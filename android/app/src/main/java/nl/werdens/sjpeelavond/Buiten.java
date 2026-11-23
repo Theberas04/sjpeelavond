@@ -9,20 +9,22 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Het enige wat de app naar buiten vraagt: het muziekfragment.
+ * Het enige wat de app naar buiten vraagt: het muziekfragment en de gegevens van een
+ * gescand kaartje.
  *
- * De pagina mag dat niet zelf: Deezer stuurt geen CORS-kop mee, dus een verzoek uit
- * de WebView wordt door de browser tegengehouden. Daarom doet de schil het verzoek en
- * geeft het antwoord als één JSON-regel terug ({@code {ok, status, tekst, fout}}).
+ * De pagina mag dat niet zelf: Deezer en Spotify sturen geen CORS-kop mee, dus een
+ * verzoek uit de WebView wordt door de browser tegengehouden. Daarom doet de schil het
+ * verzoek en geeft het antwoord als één JSON-regel terug
+ * ({@code {ok, status, tekst, fout}}).
  *
- * Alleen Deezer en iTunes staan op de lijst: zonder die grens zou de pagina een
- * open deur naar het hele internet zijn.
+ * Alleen Deezer, iTunes en Spotify staan op de lijst: zonder die grens zou de pagina
+ * een open deur naar het hele internet zijn.
  *
  * Zonder Android-imports, zodat het met javac/java na te rekenen is.
  */
 public final class Buiten {
 
-    public static final List<String> GASTEN = Arrays.asList("api.deezer.com", "itunes.apple.com");
+    public static final List<String> GASTEN = Arrays.asList("api.deezer.com", "itunes.apple.com", "open.spotify.com");
     private static final int TIJD_LIMIET_MS = 8000;
     private static final int MAX_BYTES = 512 * 1024;
 
@@ -96,7 +98,9 @@ public final class Buiten {
             verbinding.setReadTimeout(TIJD_LIMIET_MS);
             verbinding.setInstanceFollowRedirects(true);
             verbinding.setRequestProperty("User-Agent", userAgent);
-            verbinding.setRequestProperty("Accept", "application/json");
+            // Deezer en iTunes antwoorden in JSON, de Spotify-embedpagina is HTML.
+            boolean html = "open.spotify.com".equalsIgnoreCase(new URL(url).getHost());
+            verbinding.setRequestProperty("Accept", html ? "text/html,application/xhtml+xml" : "application/json");
             int code = verbinding.getResponseCode();
             if (code < 200 || code >= 300) {
                 return envelop(false, code, null, "antwoord " + code);

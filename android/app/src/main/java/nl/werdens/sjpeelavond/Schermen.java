@@ -18,6 +18,7 @@ public final class Schermen {
             "spel-kaart",
             "hittepetit",
             "muziek",
+            "scannen",
             "uitleg");
 
     private Schermen() {

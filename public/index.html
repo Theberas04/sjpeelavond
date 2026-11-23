@@ -201,6 +201,7 @@ label.veld{display:block;font-size:12px;letter-spacing:.07em;text-transform:uppe
 
   <nav class="tabs" id="tabs">
     <button data-view="start" class="actief">Spelen</button>
+    <button data-view="scannen">Kaart scannen</button>
     <button data-view="muziek">Muziek</button>
     <button data-view="uitleg">Uitleg</button>
     <button data-view="beheer">Beheer</button>
@@ -223,6 +224,37 @@ label.veld{display:block;font-size:12px;letter-spacing:.07em;text-transform:uppe
         <div><h3>2. Zet de spelers klaar</h3><p class="klein">Iedereen krijgt een eigen tijdlijn en fiches (bij Hittepetit: nónnevotte). Eén apparaat op tafel is genoeg.</p></div>
         <div><h3>3. Luister en leg aan</h3><p class="klein">Trek een kaart, luister naar het fragment en leg de kaart op de plek waar jij het jaartal verwacht. Draai om en tel je punt.</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- ── kaart scannen ── -->
+  <section id="view-scannen" hidden>
+    <h1>Kaart scannen</h1>
+    <p class="klein">Speel je eigen doos met de app als dj: scan de QR-code op een kaartje, dan zoekt de app het nummer op en speelt het fragment. Titel, artiest en jaartal blijven verborgen tot je op <strong>Onthul</strong> drukt — net als bij het omdraaien van de kaart.</p>
+
+    <div class="raster twee" style="margin-top:14px">
+      <div class="kaart">
+        <h2>Kaartje scannen</h2>
+        <button class="knop" id="scan-knop" data-act="scan" style="width:100%;padding:15px;font-size:16px">Scan een kaartje</button>
+        <p class="klein" id="scan-melding" style="margin-top:10px"></p>
+        <div style="margin-top:14px">
+          <label class="veld">Of typ de code van het kaartje</label>
+          <div style="display:flex;gap:8px">
+            <input id="scan-code" placeholder="aaaa0001/00308" autocomplete="off" style="flex:1">
+            <button class="knop zacht" data-act="scan-code">Zoek</button>
+          </div>
+          <p class="klein" style="margin-top:6px">De QR-code bevat een adres als <em>www.hitstergame.com/nl/aaaa0001/00308</em>; de laatste twee stukjes zijn genoeg.</p>
+        </div>
+      </div>
+      <div class="kaart">
+        <h2>Deze kaart</h2>
+        <div id="scan-kaart"></div>
+      </div>
+    </div>
+
+    <div class="kaart" style="margin-top:14px" id="scan-rondevak" hidden>
+      <h2>Deze ronde</h2>
+      <div id="scan-ronde"></div>
     </div>
   </section>
 

@@ -43,6 +43,11 @@ jobs:
           java -cp android/out-test BuitenTest
       - name: "Zelfcontrole: de hulpscripts en hun controles"
         run: python3 scripts/zelfcontrole.py
+      - name: "Proeven: een echte QR-code inlezen (zonder camera)"
+        run: |
+          # De proef bouwt zelf een QR-code, zet die om naar het beeldformaat van de
+          # camera en eist dat QrLezer de tekst er weer uithaalt.
+          gradle -p android :app:testDebugUnitTest
       - name: Ondertekeningssleutel uitpakken
         run: |
           printf '%s' "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > android/app/release.p12

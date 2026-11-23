@@ -213,6 +213,19 @@ document.addEventListener('click', async (gebeurtenis) => {
       case 'terug-start':
         toonView('start');
         break;
+      case 'scan':
+        toonView('scannen');
+        scanKaartje();
+        break;
+      case 'scan-code':
+        await verwerkScan($('#scan-code')?.value || '');
+        break;
+      case 'scan-speel':
+        await speelScanFragment();
+        break;
+      case 'scan-onthul':
+        onthulScan();
+        break;
       case 'trek':
         await trekKaart();
         break;
@@ -1073,6 +1086,163 @@ async function laadVersie() {
   renderStart();
 }
 
+/* ── de kaartjes van de fysieke spellen scannen ────────────────────────── */
+
+/**
+ * De doos op tafel met de app als dj. De schil leest de QR-code en geeft de tekst
+ * door aan {@link verwerkScan}; het opzoeken gaat via /api/kaart, zodat de app en de
+ * serverversie precies hetzelfde doen (zie public/js/kaart.js).
+ */
+const scan = { kaart: null, ronde: [], timer: null, stopTimer: null, onthuld: false };
+
+function scanMelding(tekst) {
+  const vak = $('#scan-melding');
+  if (vak) vak.textContent = tekst || '';
+}
+
+/** De camera openen. Zonder schil (in de browser) blijft het bij de code overtypen. */
+function scanKaartje() {
+  const schil = window.Sjpeelavond;
+  if (!schil || typeof schil.scanKaart !== 'function') {
+    scanMelding('Scannen kan in de Android-app; typ hiernaast de code van het kaartje over.');
+    return;
+  }
+  scanMelding('De camera gaat open…');
+  schil.scanKaart();
+}
+
+async function verwerkScan(tekst) {
+  if (!tekst) {
+    scanMelding('Geen code gelezen; probeer het nog eens.');
+    return;
+  }
+  scanMelding('Kaartje gelezen, nummer opzoeken…');
+  try {
+    const uitkomst = await api('/api/kaart', { code: tekst });
+    scan.kaart = uitkomst;
+    scan.onthuld = false;
+    scan.ronde.push({ kaart: uitkomst.kaart, editie: uitkomst.editie?.naam || uitkomst.editieId, lied: uitkomst.lied, onthuld: false });
+    // Waar de rooktest op wacht: de code is opgezocht, er is een jaartal en er is een
+    // fragment. Zonder een van die drie is het scannen niet gelukt.
+    if (typeof window.Sjpeelavond?.log === 'function') {
+      window.Sjpeelavond.log(
+        `SJPEELAVOND_SCAN kaartje=${uitkomst.kaart} jaar=${uitkomst.lied.jaar} fragment=${uitkomst.lied.fragment ? 'ja' : 'nee'}`,
+      );
+    }
+    renderScan();
+    await speelScanFragment();
+    scanMelding(`Kaartje ${uitkomst.kaart} van ${uitkomst.editie?.naam || uitkomst.editieId}.`);
+  } catch (fout) {
+    scan.kaart = null;
+    renderScan();
+    scanMelding(fout.message);
+    meld(fout.message);
+  }
+}
+
+/** Het fragment van het gescande kaartje, met dezelfde speler als het spel. */
+async function speelScanFragment() {
+  const lied = scan.kaart?.lied;
+  const speler = $('#speler');
+  if (!lied?.fragment) {
+    scanMelding('Voor dit nummer is geen fragment beschikbaar.');
+    return;
+  }
+  speler.pause();
+  speler.src = lied.fragment;
+  speler.currentTime = 0;
+  try {
+    await speler.play();
+  } catch (fout) {
+    scanMelding(`Het fragment kon niet starten: ${fout.message}`);
+    return;
+  }
+  scan.start = performance.now();
+  clearTimeout(scan.stopTimer);
+  scan.stopTimer = setTimeout(() => {
+    speler.pause();
+    scanMelding('Fragment afgelopen. Onthul of scan het volgende kaartje.');
+  }, 30000);
+  clearInterval(scan.timer);
+  scan.timer = setInterval(tekenScanBalk, 120);
+  renderScan();
+}
+
+function tekenScanBalk() {
+  const balk = $('#scan-balk');
+  if (!balk) return clearInterval(scan.timer);
+  const deel = Math.min(1, (performance.now() - (scan.start || 0)) / 30000);
+  balk.style.width = `${deel * 100}%`;
+}
+
+function renderScan() {
+  const vak = $('#scan-kaart');
+  if (!vak) return;
+  const kaart = scan.kaart;
+  if (!kaart) {
+    vak.innerHTML = '<p class="klein">Nog geen kaartje gescand. Pak een kaart uit de doos en scan de QR-code — je hoort het fragment en ziet nog niets.</p>';
+    return;
+  }
+  const editie = kaart.editie?.naam || kaart.editieId;
+  vak.innerHTML = `
+    <p class="klein" style="margin:0 0 10px">Kaartje <strong>${esc(kaart.kaart)}</strong> · ${esc(editie)}</p>
+    <div class="fragmentbalk">
+      <button class="speelknop" data-act="scan-speel" title="Fragment afspelen">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
+      </button>
+      <div class="balk"><i id="scan-balk"></i></div>
+      <span class="chip">30 seconden</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+      <button class="knop" data-act="scan-onthul">Onthul</button>
+      <button class="knop zacht" data-act="scan">Volgende kaartje scannen</button>
+    </div>
+    <div id="scan-onthulling" style="margin-top:14px" ${scan.onthuld ? '' : 'hidden'}>
+      ${scan.onthuld ? scanOnthullingHtml(kaart) : ''}
+    </div>`;
+}
+
+function scanOnthullingHtml(kaart) {
+  const lied = kaart.lied;
+  return `
+  <div class="onthulling">
+    ${lied.hoes ? `<img class="hoes" src="${esc(lied.hoes)}" alt="">` : ''}
+    <div style="flex:1;min-width:200px">
+      <div class="jaar">${esc(lied.jaar ?? '?')}</div>
+      <h3>${esc(lied.titel)}</h3>
+      <p class="klein" style="margin:0">${esc(lied.artiest)}</p>
+      <p class="kleiner">kaartje ${esc(kaart.kaart)} · ${esc(kaart.editie?.naam || kaart.editieId)}</p>
+    </div>
+  </div>`;
+}
+
+/** Het kaartje omdraaien: nu mogen titel, artiest en jaartal gezien worden. */
+function onthulScan() {
+  if (!scan.kaart) return;
+  scan.onthuld = true;
+  const laatste = scan.ronde[scan.ronde.length - 1];
+  if (laatste) laatste.onthuld = true;
+  const vak = $('#scan-onthulling');
+  if (vak) {
+    vak.hidden = false;
+    vak.innerHTML = scanOnthullingHtml(scan.kaart);
+  }
+  renderScanRonde();
+}
+
+function renderScanRonde() {
+  const vak = $('#scan-ronde');
+  const houder = $('#scan-rondevak');
+  if (!vak || !houder) return;
+  houder.hidden = scan.ronde.length === 0;
+  vak.innerHTML = scan.ronde
+    .map((k, i) => {
+      const jaar = k.onthuld && k.lied?.jaar ? ` · ${esc(k.lied.jaar)}` : '';
+      return `<p class="klein" style="margin:0 0 6px">${i + 1}. kaartje ${esc(k.kaart)} · ${esc(k.editie)}${jaar}</p>`;
+    })
+    .join('');
+}
+
 /* ── diepe link ────────────────────────────────────────────────────────── */
 
 /**
@@ -1093,6 +1263,10 @@ async function startVanAdres() {
     toonView('uitleg');
     return true;
   }
+  if (naam === 'scannen') {
+    toonView('scannen');
+    return true;
+  }
   const soorten = { instellen: 'tijdlijn', spel: 'tijdlijn', 'spel-kaart': 'tijdlijn', hittepetit: 'hittepetit' };
   if (!(naam in soorten)) return false;
   openInstellen(soorten[naam]);
@@ -1104,6 +1278,13 @@ async function startVanAdres() {
 }
 
 async function opstarten() {
+  // De schil geeft de code van een gescand kaartje hierlangs door.
+  if (typeof window !== 'undefined') {
+    window.SJPEEL_SCAN = (tekst) => {
+      toonView('scannen');
+      verwerkScan(tekst).catch((fout) => meld(fout.message));
+    };
+  }
   await laadVersie();
   if (await startVanAdres()) return;
   const spel = herstel();

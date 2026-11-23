@@ -102,7 +102,37 @@ opent_scherm spel view-spel "bordtekst=[1-9][0-9]*"
 opent_scherm spel-kaart view-spel "SJPEELAVOND_FRAGMENT (deezer|itunes)"
 opent_scherm hittepetit view-spel
 opent_scherm muziek view-muziek
+opent_scherm scannen view-scannen
 opent_scherm uitleg view-uitleg
+
+# Het scannen zelf. De emulator heeft geen camera die een kaartje kan lezen, dus gaat
+# de code via het opstartcommando naar binnen (alleen een debugversie doet dat). Wat
+# hier bewezen wordt is de hele keten daarna: de code wordt opgezocht in de
+# kaartjestabel, de schil haalt de gegevens bij Spotify op en er komt een jaartal en
+# een fragmentadres uit.
+echo "--- een kaartje scannen ---"
+adb logcat -c || true
+adb shell am start -W -n "$PKG/.MainActivity" \
+  -e scherm scannen \
+  -e proefkaart "https://www.hitstergame.com/nl/aaaa0001/00308" >/dev/null
+if ! wacht_op_marker "SJPEELAVOND_SCAN code=" 45; then
+  echo "de kaartcode kwam niet bij de pagina aan; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+if ! wacht_op_marker "SJPEELAVOND_SCAN kaartje=00308" 60; then
+  echo "het kaartje werd niet opgezocht; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+if ! wacht_op_marker "SJPEELAVOND_SCAN .*jaar=[0-9]{4} fragment=ja" 30; then
+  echo "bij het kaartje kwam geen jaartal of fragment uit Spotify; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+sleep 2
+schiet "apk-scannen"
+logcat_naar "$UIT/logcat-scannen.txt"
 
 echo "--- de schermafdrukken zijn geen lege vlakken ---"
 for beeld in "$UIT"/apk-*.png; do

@@ -55,6 +55,7 @@ FILES=(
   "data/nummers-hits.json"
   "data/nummers-limburg.json"
   "data/index.json"
+  "data/hitster.json"
 )
 RUNTIME=(
   "server.js"
@@ -74,6 +75,7 @@ DATA=(
   "data/nummers-hits.json"
   "data/nummers-limburg.json"
   "data/index.json"
+  "data/hitster.json"
 )
 KIT_SCRIPTS=(
   "deploy/proxmox/provision-sjpeelavond.sh"

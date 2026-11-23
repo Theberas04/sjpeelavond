@@ -45,14 +45,34 @@ Je mag nooit meer dan vijf fiches hebben.
 
 Onder het tabblad **Muziek** staat alles wat in de app zit: zoek op artiest of titel, kies een dek en blader door de lijst. Met het driehoekje speel je het fragment los af — handig om te laten horen wat er in een dek zit.
 
-## 5. Als er iets niet werkt
+## 5. Je eigen doos op tafel: kaartjes scannen
+
+Heb je een fysiek muziekspel in huis — **Hitster** — dan hoef je de app van de fabrikant en een Spotify-abonnement niet te gebruiken. Sjpeelavond kan de doos op tafel bedienen:
+
+1. Open het tabblad **Kaart scannen**.
+2. Druk op **Scan een kaartje** en houd de QR-code van het kaartje voor de camera. Dit kan alleen in de Android-app; in de browser kun je de code overtikken.
+3. De app zoekt het nummer op en **speelt het fragment meteen**. Titel, artiest en jaartal blijven verborgen — net als bij het omdraaien van de kaart.
+4. Draai de kaart om zoals je gewend bent. Wil je het antwoord ook in de app zien, druk dan op **Onthul**.
+5. Druk op **Volgende kaartje scannen** voor de volgende speler.
+
+Onderaan staat welke kaartjes je deze ronde al gehad hebt, met het jaartal zodra je ze onthuld hebt — handig als er discussie is over een tijdlijn.
+
+**Welke dozen werken?** Alle edities van Hitster: de kaartjestabel met 176 edities zit in de app, dus ook een Duitse, Franse of Spaanse doos werkt. Je hebt internet nodig, want het fragment komt van buiten.
+
+**Raoj 's en Hittepetit.** De kaartjes van die twee spellen kan de app wel herkennen, maar nog niet naspelen: die spelletjes gebruiken hun eigen app en hun eigen fragmenten. Speel die met de knop **Spelen** op de startpagina, dan gebruikt de app dezelfde muziek uit de eigen database.
+
+## 6. Als er iets niet werkt
 
 - **Geen geluid.** Druk nog eens op de ronde afspeelknop. Browsers staan geluid pas toe nadat je één keer op de pagina hebt gedrukt; de eerste kaart speelt daarom soms pas na een tweede tik.
 - **"Deze dekstapel is leeg."** Je hebt alle kaarten van dit dek gehad. Kies een ander dek of begin een nieuw spel.
 - **"Geen fragment beschikbaar voor dit nummer."** Van dit nummer is het fragment tijdelijk niet leverbaar. De app probeert het daarna via een tweede bron; lukt dat ook niet, kies dan **Overslaan**.
 - **Je telefoon viel in slaap of je vernieuwde de pagina.** Het spel gaat verder waar het was; de app bewaart de stand op het apparaat zelf.
 - **Uitleg van een spel kwijt.** Tabblad **Uitleg** heeft alle spelregels, en tijdens een spel zit er een knop **Spelregels** rechtsboven.
+- **"Deze code hoort niet bij een van de spellen."** De QR-code is niet van Hitster (of het kaartje is beschadigd). Typ de code over, of pak een ander kaartje.
+- **"Kaartje ... staat niet in de tabel van editie ..."** Dit kaartnummer hoort niet bij die editie. Kijk op de doos welke editie je hebt; de tabel in de app is bijgewerkt tot de laatste uitgave.
+- **"Spotify gaf dit nummer niet meer terug."** Dit nummer staat niet meer online bij Spotify. Sla het kaartje over; de rest van de doos werkt gewoon.
+- **Geen camerabeeld.** Geef de app toestemming voor de camera (Instellingen → Apps → Sjpeelavond → Machtigingen) of typ de code van het kaartje over.
 
-## 6. Spelers
+## 7. Spelers
 
 Sjpeelavond is bedoeld voor 2 tot 10 spelers of teams. Speel je in teams, vul dan de teamnaam in. Eén apparaat is genoeg; zet het neer zodat iedereen het fragment kan horen.

@@ -150,6 +150,42 @@ geen CORS-kop mee, dus vraagt de app-schil het op en geeft het antwoord aan de p
 Wat de app **niet** heeft: eigen nummers toevoegen (dat hoort bij de serverversie met database) en het
 beheer. Spelen, de drie spellen, de dekken, de fragmenten en de hoesjes werken allemaal.
 
+## Je eigen doos op tafel: kaartjes scannen
+
+Met de app kun je ook de **fysieke** spellen spelen: je scant de QR-code op een kaartje van Hitster en
+de app speelt het nummer. Titel, artiest en jaartal blijven verborgen tot je op *Onthul* drukt, net
+als bij het omdraaien van de kaart. Er is geen Spotify-abonnement en geen app van de fabrikant voor
+nodig.
+
+Hoe dat werkt, en waarom het zonder geheimen kan:
+
+* Een Hitster-kaartje wijst naar `www.hitstergame.com/<taal>/<editie>/<kaartnummer>`, en de uitgever
+  publiceert zelf de tabel die elk kaartnummer aan een Spotify-nummer koppelt
+  (`hitster.jumboplay.com`). `scripts/haal-hitster.mjs` haalt die op en bewaart alleen wat nodig is:
+  176 edities, tienduizenden kaartjes, 1,6 MB in `data/hitster.json`.
+* Bij het scannen haalt de app de openbare embedpagina van dat nummer op: titel, artiest, jaartal, het
+  hoesje en het 30-secondenfragment. Eén verzoek per kaartje in plaats van tienduizenden tijdens de
+  bouw, en de fragmentadressen blijven geldig (die verlopen na ongeveer een uur).
+* Het lezen van de code staat in `public/js/kaart.js` en wordt door de app én de server gebruikt,
+  zodat er één implementatie is. `test/kaart.test.js` dekt het lezen, het opzoeken en alle
+  foutmeldingen; `QrLezerTest` bouwt een echte QR-code en eist dat de lezer de tekst er weer uithaalt.
+* De camera zit in `Scanner.java` (met ZXing als enige extra bibliotheek). In de emulatorrooktest
+  gaat de code via het opstartcommando naar binnen — de camera zelf is het enige stuk dat alleen op
+  een echt toestel te controleren is.
+
+De kaartjes van **Raoj 's** en **Hittepetit** worden herkend maar nog niet nagespeeld: die spellen
+gebruiken hun eigen app en hun eigen fragmenten. Speel die met de knop *Spelen*, dan gebruikt de app
+dezelfde muziek uit de eigen database.
+
+Zo ziet dat eruit — eerst alleen het fragment, dan pas het antwoord:
+
+![Een gescand kaartje: alleen het fragment](docs/img/apk-scannen-verborgen.png)
+![Na onthullen: titel, artiest en jaartal](docs/img/apk-scannen-onthuld.png)
+
+Beide beelden komen uit `scripts/proef-zonder-server.mjs`, dat de bundel op een eigen poort zet, de
+schil nadoet en dan `window.SJPEEL_SCAN` aanroept met een echte kaartcode — de embedpagina van Spotify
+wordt daarbij echt opgehaald.
+
 ![De app zonder server, een beurt Tijdlijn](docs/img/apk-zonder-server.png)
 
 Die afbeelding komt uit `scripts/proef-zonder-server.mjs`: de bundel wordt op een eigen poort gezet,
@@ -184,11 +220,13 @@ public/index.html            de hele pagina: opmaak en schermen
 public/js/spel.js            alle spellogica, los van de pagina en dus testbaar
 public/js/app.js             de bediening: schermen, knoppen, geluid
 public/js/lokaal.js          dezelfde spellogica in de pagina, voor de Android-app zonder server
+public/js/kaart.js           het lezen van een gescand kaartje (Hitster) en het opzoeken van het liedje
 data/nummers-hits.json       de hits (id 1 en verder)
 data/nummers-limburg.json    het Limburgse repertoire (id 100000 en verder)
+data/hitster.json            de kaartjestabel van Hitster: editie en kaartnummer naar Spotify-nummer
 data/bron/                   de ruwe oogst waaruit de dataset gebouwd wordt
 scripts/                     de oogst-, verrijkings- en opnamescripts
-android/                     het Android-project: één WebView met de app erin
+android/                     het Android-project: één WebView met de app erin, plus de camera
 test/                        de testsuite (server, spellogica en de lokale versie)
 deploy/proxmox/              de installatiekit met one-liner
 docs/                        handleiding, schermafbeeldingen, demo-opname en de app-beelden

@@ -49,9 +49,21 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
 }
 
 dependencies {
     // Alleen voor WebViewAssetLoader: de app-schil verder zonder toeters en bellen.
     implementation("androidx.webkit:webkit:1.12.1")
+
+    // ZXing leest de QR-code van een kaartje. Eén bibliotheek, geen dienst eromheen:
+    // het beeld gaat er rechtstreeks in (zie QrLezer.java).
+    implementation("com.google.zxing:core:3.5.3")
+
+    // De proef op QrLezer bouwt zelf een QR-code en eist dat de lezer de tekst er weer
+    // uithaalt; dat kan zonder toestel en zonder camera.
+    testImplementation("junit:junit:4.13.2")
 }

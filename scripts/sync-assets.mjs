@@ -21,7 +21,7 @@ const DATA = path.join(ROOT, 'data');
 const DOEL = path.join(ROOT, 'android/app/src/main/assets');
 const ALLEEN_CONTROLEREN = process.argv.includes('--check');
 
-const DATABESTANDEN = ['index.json', 'nummers-hits.json', 'nummers-limburg.json'];
+const DATABESTANDEN = ['index.json', 'nummers-hits.json', 'nummers-limburg.json', 'hitster.json'];
 
 function bouw() {
   rmSync(DOEL, { recursive: true, force: true });
@@ -58,9 +58,11 @@ function controleer() {
     'js/app.js',
     'js/spel.js',
     'js/lokaal.js',
+    'js/kaart.js',
     'data/index.json',
     'data/nummers-hits.json',
     'data/nummers-limburg.json',
+    'data/hitster.json',
   ];
   for (const bestand of verplicht) {
     if (!existsSync(path.join(DOEL, bestand))) fouten.push(`${bestand} ontbreekt in de bundel`);

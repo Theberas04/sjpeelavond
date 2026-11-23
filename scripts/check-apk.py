@@ -19,9 +19,11 @@ VERPLICHT = [
     "assets/js/app.js",
     "assets/js/spel.js",
     "assets/js/lokaal.js",
+    "assets/js/kaart.js",
     "assets/data/index.json",
     "assets/data/nummers-hits.json",
     "assets/data/nummers-limburg.json",
+    "assets/data/hitster.json",
     "classes.dex",
     "AndroidManifest.xml",
     "resources.arsc",
@@ -31,9 +33,14 @@ KLASSEN = [
     b"Lnl/werdens/sjpeelavond/MainActivity;",
     b"Lnl/werdens/sjpeelavond/Buiten;",
     b"Lnl/werdens/sjpeelavond/Schermen;",
+    b"Lnl/werdens/sjpeelavond/Scanner;",
+    b"Lnl/werdens/sjpeelavond/QrLezer;",
 ]
 
 MIN_NUMMERS = 100
+# De kaartjestabel van Hitster: 176 edities, tienduizenden kaartjes. Een bundel die
+# half is meegekomen valt hier om.
+MIN_KAARTEN = 5000
 
 
 def main() -> int:
@@ -68,6 +75,15 @@ def main() -> int:
                 fouten.append(f"{bestand} heeft maar {aantal} nummers")
             else:
                 print(f"  {bestand}: {aantal} nummers")
+
+        if "assets/data/hitster.json" in namen:
+            tabel = json.loads(pakket.read("assets/data/hitster.json").decode("utf-8"))
+            edities = tabel.get("kaarten") or {}
+            kaarten = sum(len(nummers) for nummers in edities.values())
+            if kaarten < MIN_KAARTEN:
+                fouten.append(f"de kaartjestabel heeft maar {kaarten} kaartjes in {len(edities)} edities")
+            else:
+                print(f"  assets/data/hitster.json: {kaarten} kaartjes in {len(edities)} edities")
 
         dex = b""
         for naam in sorted(n for n in namen if n.startswith("classes") and n.endswith(".dex")):
