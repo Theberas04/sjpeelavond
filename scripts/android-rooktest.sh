@@ -181,8 +181,8 @@ adb shell pm grant "$PKG" android.permission.CAMERA >/dev/null 2>&1 || true
 adb shell am force-stop "$PKG" >/dev/null 2>&1 || true
 adb logcat -c || true
 adb shell am start -W -n "$PKG/.MainActivity" --ez camera true >/dev/null
-if ! wacht_op_marker "SJPEELAVOND_SCANNER camera open" 60; then
-  echo "de camera ging niet open; logcat:" >&2
+if ! wacht_op_marker "SJPEELAVOND_SCANNER beeld aan het vlak" 60; then
+  echo "het camerabeeld kwam niet op het scherm; logcat:" >&2
   adb logcat -d -s Sjpeelavond:I >&2 || true
   exit 1
 fi

@@ -49,6 +49,12 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
     /** De maat van het camerabeeld; hier bewaard zodat er per beeld geen navraag nodig is. */
     private int beeldBreedte;
     private int beeldHoogte;
+    /**
+     * Is het cameravlak er al? Bij het openen van dit scherm is dat nog niet zo: onResume
+     * loopt vóór surfaceCreated. Wie het beeld dan alvast aanzet, zet het aan zonder vlak —
+     * en dan blijft het scherm zwart, ook als de camera zelf gewoon open is.
+     */
+    private boolean oppervlakKlaar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,10 +162,33 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
         }
         beeldBreedte = maat == null ? 0 : maat.width;
         beeldHoogte = maat == null ? 0 : maat.height;
+        if (oppervlakKlaar) {
+            hangBeeldAan();
+        } else {
+            // Nog geen vlak: de camera staat klaar, het beeld volgt zodra het vlak er is
+            // (surfaceCreated of surfaceChanged roept hangBeeldAan aan).
+            Log.i(TAG, "SJPEELAVOND_SCANNER camera open, wacht op het beeldvlak");
+        }
+    }
+
+    /**
+     * Het camerabeeld aan het vlak hangen en aanzetten. Mag vaker gebeuren: het vlak kan
+     * opnieuw gemaakt worden (bijvoorbeeld na het toestemmingsvenster of bij het draaien),
+     * en zonder deze stap bleef het scherm zwart terwijl de camera allang open was.
+     */
+    private void hangBeeldAan() {
+        if (camera == null || !oppervlakKlaar || isFinishing()) return;
+        try {
+            camera.stopPreview();
+        } catch (Exception fout) {
+            // Liep nog niet; geen probleem.
+        }
         try {
             camera.setPreviewDisplay(oppervlak.getHolder());
         } catch (Exception fout) {
-            Log.i(TAG, "SJPEELAVOND_SCANNER geen beeld: " + fout.getMessage());
+            Log.i(TAG, "SJPEELAVOND_SCANNER geen beeldvlak: " + fout.getMessage());
+            meld("De camera kon het beeld niet op het scherm zetten.");
+            return;
         }
         try {
             camera.setPreviewCallback(this);
@@ -169,7 +198,7 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
             meld("De camera kon niet starten op dit toestel.");
             return;
         }
-        Log.i(TAG, "SJPEELAVOND_SCANNER camera open " + (maat == null ? "" : maat.width + "x" + maat.height));
+        Log.i(TAG, "SJPEELAVOND_SCANNER beeld aan het vlak " + beeldBreedte + "x" + beeldHoogte);
     }
 
     /** De maat die het dichtst bij 1280 breed zit; te klein leest geen code. */
@@ -196,16 +225,21 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
 
     @Override
     public void surfaceCreated(SurfaceHolder houder) {
-        openCamera();
+        oppervlakKlaar = true;
+        if (camera == null) openCamera();
+        else hangBeeldAan();
     }
 
     @Override
     public void surfaceChanged(SurfaceHolder houder, int formaat, int breedte, int hoogte) {
-        openCamera();
+        oppervlakKlaar = true;
+        if (camera == null) openCamera();
+        else hangBeeldAan();
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder houder) {
+        oppervlakKlaar = false;
         sluitCamera();
     }
 
@@ -240,7 +274,11 @@ public class Scanner extends Activity implements SurfaceHolder.Callback, Camera.
     @Override
     protected void onResume() {
         super.onResume();
-        if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) openCamera();
+        // Alleen openen als het vlak er al is; anders blijft het beeld zwart (zie
+        // oppervlakKlaar). Is het vlak er nog niet, dan doet surfaceCreated het.
+        if (oppervlakKlaar && checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+            openCamera();
+        }
     }
 
     @Override
