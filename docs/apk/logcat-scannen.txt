@@ -1,0 +1,6 @@
+--------- beginning of main
+11-23 14:53:25.596  2303  2303 I Sjpeelavond: SJPEELAVOND_SCAN code=https://www.hitstergame.com/nl/aaaa0001/00308
+11-23 14:53:25.616  2303  2457 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-scannen
+11-23 14:53:25.652  2303  2457 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-scannen
+11-23 14:53:26.177  2303  2457 I Sjpeelavond: SJPEELAVOND_SCAN kaartje=00308 jaar=2009 fragment=ja
+11-23 14:53:28.369  2303  2303 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=363|scherm=view-scannen"
