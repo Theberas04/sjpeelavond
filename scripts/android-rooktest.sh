@@ -137,6 +137,29 @@ sleep 2
 schiet "apk-scannen"
 logcat_naar "$UIT/logcat-scannen.txt"
 
+# En het kaartje van Raoj 's. Dat gaat anders dan bij Hitster: de pagina vraagt het
+# fragment op bij de web-app van het spel zelf, over een WebSocket. Lukt dat in de
+# WebView, dan komt er een fragmentadres van hun eigen CDN uit en is dit spel speelbaar.
+# Zonder titel of jaartal — die staan bij Raoj 's op het kaartje.
+echo "--- een kaartje van Raoj 's scannen ---"
+adb logcat -c || true
+adb shell am start -W -n "$PKG/.MainActivity" \
+  -e scherm scannen \
+  -e proefkaart "https://app.raojs.nl/?id=NPRP" >/dev/null
+if ! wacht_op_marker "SJPEELAVOND_SCAN kaartje=NPRP" 60; then
+  echo "het Raoj 's-kaartje werd niet opgezocht; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+if ! wacht_op_marker "SJPEELAVOND_SCAN kaartje=NPRP .*fragment=ja" 45; then
+  echo "de web-app van Raoj 's gaf geen fragment terug; logcat:" >&2
+  adb logcat -d -s Sjpeelavond:I >&2 || true
+  exit 1
+fi
+sleep 2
+schiet "apk-scannen-raojs"
+logcat_naar "$UIT/logcat-scannen-raojs.txt"
+
 echo "--- de schermafdrukken zijn geen lege vlakken ---"
 for beeld in "$UIT"/apk-*.png; do
   python3 scripts/check-screenshot.py "$beeld" >/dev/null

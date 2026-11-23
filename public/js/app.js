@@ -1213,6 +1213,19 @@ function renderScan() {
 
 function scanOnthullingHtml(kaart) {
   const lied = kaart.lied;
+  const naam = kaart.editie?.naam || kaart.editieId;
+  if (!lied.titel) {
+    // Raoj 's geeft alleen het fragment; de titel, artiest en het jaartal staan op het
+    // kaartje zelf, dus daar verwijzen we naar in plaats van iets te verzinnen.
+    return `
+  <div class="onthulling">
+    <div style="flex:1;min-width:200px">
+      <h3>Kaartje ${esc(kaart.kaart)}</h3>
+      <p class="klein" style="margin:0">Draai het kaartje om: titel, artiest en jaartal staan erop. ${esc(naam)} geeft ze niet vrij.</p>
+      <p class="kleiner">kaartje ${esc(kaart.kaart)} · ${esc(naam)}</p>
+    </div>
+  </div>`;
+  }
   return `
   <div class="onthulling">
     ${lied.hoes ? `<img class="hoes" src="${esc(lied.hoes)}" alt="">` : ''}
@@ -1220,7 +1233,7 @@ function scanOnthullingHtml(kaart) {
       <div class="jaar">${esc(lied.jaar ?? '?')}</div>
       <h3>${esc(lied.titel)}</h3>
       <p class="klein" style="margin:0">${esc(lied.artiest)}</p>
-      <p class="kleiner">kaartje ${esc(kaart.kaart)} · ${esc(kaart.editie?.naam || kaart.editieId)}</p>
+      <p class="kleiner">kaartje ${esc(kaart.kaart)} · ${esc(naam)}</p>
     </div>
   </div>`;
 }

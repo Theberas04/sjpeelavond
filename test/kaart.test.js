@@ -8,7 +8,41 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { kandidaten, leesEmbed, leesKaart, losOp, zoekLied } from '../public/js/kaart.js';
+import { haalRaojsFragment, kandidaten, leesEmbed, leesKaart, losOp, zoekLied } from '../public/js/kaart.js';
+
+/**
+ * Een nagemaakte WebSocket: hij speelt het gesprek van de web-app van Raoj 's na, zodat
+ * deze proef geen internet nodig heeft. Wat de app stuurt, houdt hij bij in `gesprek`.
+ */
+function nagemaakteRaojsSocket(uitkomst = 'preview/93984', { fout = null } = {}) {
+  const gesprek = [];
+  const maakSocket = (adres) => {
+    const sok = {
+      adres,
+      gesloten: false,
+      send(tekst) {
+        const m = JSON.parse(tekst);
+        gesprek.push(m);
+        if (m.msg === 'connect') {
+          queueMicrotask(() => sok.onmessage({ data: JSON.stringify({ msg: 'connected', session: 'proef' }) }));
+        } else if (m.msg === 'method') {
+          queueMicrotask(() =>
+            sok.onmessage({
+              data: JSON.stringify(fout ? { msg: 'result', id: m.id, error: fout } : { msg: 'result', id: m.id, result: uitkomst }),
+            }),
+          );
+        }
+      },
+      close() {
+        sok.gesloten = true;
+      },
+    };
+    // De verbinding komt even later tot stand, net als bij een echte WebSocket.
+    queueMicrotask(() => sok.onopen?.());
+    return sok;
+  };
+  return { maakSocket, gesprek };
+}
 
 const TABEL = {
   edities: {
@@ -171,5 +205,42 @@ test('een kaartje dat niet te lezen is geeft een duidelijke melding', async () =
   await assert.rejects(
     () => losOp('https://www.hitstergame.com/nl/aaaa0001/00308', { tabel: TABEL, haalTekst: async () => '<html>leeg</html>' }),
     /niet meer online/,
+  );
+});
+
+test('een Raoj \'s-kaartje levert het fragment van hun eigen web-app op', async () => {
+  const { maakSocket, gesprek } = nagemaakteRaojsSocket('preview/93984');
+  const uit = await losOp('https://app.raojs.nl/?id=NPRP', { maakSocket });
+
+  assert.equal(uit.spel, 'raojs');
+  assert.equal(uit.kaart, 'NPRP');
+  assert.equal(uit.editie.naam, "Raoj 's");
+  assert.equal(uit.lied.fragment, 'https://caught-cdn.s3.eu-west-1.amazonaws.com/raojs/preview/93984.mp3');
+  assert.equal(uit.lied.titel, null, 'Raoj \'s geeft geen titel; die staat op het kaartje');
+  assert.equal(uit.lied.antwoordOpKaartje, true);
+
+  // Wat de app tegen hun web-app zegt: eerst verbinden, dan getSongId met het kaartnummer.
+  assert.equal(gesprek[0].msg, 'connect');
+  assert.equal(gesprek[1].method, 'getSongId');
+  assert.equal(gesprek[1].params[0], 'NPRP');
+  assert.equal(gesprek[1].params[1], 'raojs');
+});
+
+test('de spelvariant van Raoj \'s kiest welk fragment je hoort', async () => {
+  const { maakSocket, gesprek } = nagemaakteRaojsSocket('custom/93984');
+  const fragment = await haalRaojsFragment('NPRP', { variant: 'zings', maakSocket });
+  assert.equal(fragment, 'https://caught-cdn.s3.eu-west-1.amazonaws.com/raojs/custom/93984.mp3');
+  assert.equal(gesprek[1].params[1], 'zings');
+});
+
+test('een kaartje dat Raoj \'s niet kent geeft een duidelijke melding', async () => {
+  const { maakSocket } = nagemaakteRaojsSocket(null, { fout: { error: 404, reason: 'Not found' } });
+  await assert.rejects(() => losOp('https://app.raojs.nl/?id=ZZZZ', { maakSocket }), /kent kaartje ZZZZ niet/);
+
+  // En als de web-app niet antwoordt, mag de app niet blijven hangen.
+  const stil = { maakSocket: () => ({ send() {}, close() {} }) };
+  await assert.rejects(
+    () => haalRaojsFragment('NPRP', { maakSocket: stil.maakSocket, tijd: 30 }),
+    /antwoordde niet op tijd/,
   );
 });

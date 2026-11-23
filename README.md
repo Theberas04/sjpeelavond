@@ -173,9 +173,28 @@ Hoe dat werkt, en waarom het zonder geheimen kan:
   gaat de code via het opstartcommando naar binnen — de camera zelf is het enige stuk dat alleen op
   een echt toestel te controleren is.
 
-De kaartjes van **Raoj 's** en **Hittepetit** worden herkend maar nog niet nagespeeld: die spellen
-gebruiken hun eigen app en hun eigen fragmenten. Speel die met de knop *Spelen*, dan gebruikt de app
-dezelfde muziek uit de eigen database.
+### Raoj 's
+
+Dat spel werkt ook. Een kaartje van Raoj 's wijst naar hun eigen web-app
+(`app.raojs.nl?id=NPRP`) en die vertelt welk fragment erbij hoort: de app vraagt dat bij ze op over
+een WebSocket — de methode `getSongId` van hun web-app is openbaar, zonder account — en krijgt een
+pad terug als `preview/93984`, goed voor
+`https://caught-cdn.s3.eu-west-1.amazonaws.com/raojs/preview/93984.mp3`. Dat fragment speelt de app
+dan af. Titel, artiest en jaartal geeft Raoj 's niet vrij: die staan op het kaartje zelf, dus dat
+draai je gewoon om.
+
+De vier spelvarianten zitten er ook in (`raojs` → `preview`, `zings` → `custom`, `stops` → `intro`);
+het liednummer blijft hetzelfde, alleen het fragment verschilt.
+
+### Hittepetit
+
+Daarvan herkent de app het kaartje wel — een Hittepetit-kaartje wijst naar
+`hittepetit.radiononnevot.nl/q/HP0077`, met kaartnummers van HP0001 tot HP0222 — maar de fragmenten
+zitten in de app van Radio Nónnevot zelf en die koppeling is nergens openbaar. De app zegt dus welk
+kaartje je in handen hebt en verder nog niets. Speel dit spel voorlopig met de knop *Spelen* op de
+startpagina; daar komt dezelfde muziek uit de eigen database.
+
+Het hele onderzoek staat in [docs/onderzoek-kaartscanners.md](docs/onderzoek-kaartscanners.md).
 
 Zo ziet dat eruit — eerst alleen het fragment, dan pas het antwoord:
 

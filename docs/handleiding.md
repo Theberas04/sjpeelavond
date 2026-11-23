@@ -59,7 +59,9 @@ Onderaan staat welke kaartjes je deze ronde al gehad hebt, met het jaartal zodra
 
 **Welke dozen werken?** Alle edities van Hitster: de kaartjestabel met 176 edities zit in de app, dus ook een Duitse, Franse of Spaanse doos werkt. Je hebt internet nodig, want het fragment komt van buiten.
 
-**Raoj 's en Hittepetit.** De kaartjes van die twee spellen kan de app wel herkennen, maar nog niet naspelen: die spelletjes gebruiken hun eigen app en hun eigen fragmenten. Speel die met de knop **Spelen** op de startpagina, dan gebruikt de app dezelfde muziek uit de eigen database.
+**Raoj 's.** Dit spel werkt ook met je eigen doos. Je scant de QR-code op een kaartje en de app vraagt bij de web-app van Raoj 's welk fragment erbij hoort; dat speelt hij af. Titel, artiest en jaartal geeft Raoj 's niet vrij — die staan op het kaartje, dus dat draai je om zoals altijd. Let op: je hebt internet nodig en de web-app van Raoj 's moet bereikbaar zijn.
+
+**Hittepetit.** De app herkent het kaartje wel (hij zegt welk nummer je in handen hebt), maar kan het nog niet naspelen: de fragmenten zitten in de app van Radio Nónnevot zelf en die koppeling is niet openbaar. Speel dit spel met de knop **Spelen** op de startpagina, dan gebruikt de app dezelfde muziek uit de eigen database.
 
 ## 6. Als er iets niet werkt
 

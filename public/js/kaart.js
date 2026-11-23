@@ -37,6 +37,17 @@ const HITTEPETIT_ADRES = /^https?:\/\/(?:www\.)?hittepetit\.radiononnevot\.nl\/q
 const RAOJS_ADRES = /^https?:\/\/(?:www\.)?app\.raojs\.nl\/?\?(?:[^#]*&)?id=([^&#]+)/i;
 
 /**
+ * Raoj 's: de web-app van het spel vertelt zelf welk fragment bij een kaartje hoort.
+ * Dat gaat over een WebSocket (het DDP-protocol van Meteor) en de methode `getSongId`
+ * is openbaar — geen account nodig. Je krijgt een pad als `preview/93984` terug en het
+ * fragment staat op hun CDN. Nagegaan met een echt kaartje (id NPRP → preview/93984).
+ */
+export const RAOJS_DDP = 'wss://app.raojs.nl/websocket';
+export const RAOJS_CDN = 'https://caught-cdn.s3.eu-west-1.amazonaws.com/raojs/';
+/** De spelvarianten van Raoj 's; de gewone variant heet bij hen `raojs`. */
+export const RAOJS_VARIANTEN = { raojs: 'preview', zings: 'custom', stops: 'intro' };
+
+/**
  * Leest wat er in een QR-code stond.
  *
  * Geeft altijd iets terug: bij een onbekende code blijft `spel` op 'onbekend' staan,
@@ -182,20 +193,92 @@ export function leesEmbed(html) {
 }
 
 /**
+ * Het fragment van een Raoj 's-kaartje opvragen bij hun eigen web-app.
+ *
+ * `maakSocket` is er om dit zonder netwerk te kunnen natrekken in een test; zonder die
+ * optie wordt een gewone WebSocket gebruikt (die bestaat in de browser, in de WebView
+ * van de app en in Node).
+ */
+export function haalRaojsFragment(kaart, { variant = 'raojs', maakSocket, tijd = 12000 } = {}) {
+  const bouw = maakSocket || ((adres) => new WebSocket(adres));
+  return new Promise((klaar, mis) => {
+    let sok;
+    let bel = null;
+    const sluit = () => {
+      clearTimeout(bel);
+      try {
+        sok?.close();
+      } catch {
+        /* niets aan te doen */
+      }
+    };
+    const stopMet = (fout) => {
+      sluit();
+      mis(fout);
+    };
+    try {
+      sok = bouw(RAOJS_DDP);
+    } catch {
+      stopMet(new Error('Geen verbinding met de web-app van Raoj \'s.'));
+      return;
+    }
+    bel = setTimeout(() => stopMet(new Error('De web-app van Raoj \'s antwoordde niet op tijd.')), tijd);
+    sok.onerror = () => stopMet(new Error('Geen verbinding met de web-app van Raoj \'s.'));
+    sok.onopen = () => sok.send(JSON.stringify({ msg: 'connect', version: '1', support: ['1'] }));
+    sok.onmessage = (bericht) => {
+      let m;
+      try {
+        m = JSON.parse(bericht.data);
+      } catch {
+        return;
+      }
+      if (m.msg === 'connected') {
+        sok.send(
+          JSON.stringify({
+            msg: 'method',
+            method: 'getSongId',
+            params: [kaart, variant, { deviceinfo: { platform: 'app' } }],
+            id: '1',
+          }),
+        );
+        return;
+      }
+      if (m.msg !== 'result' || m.id !== '1') return;
+      if (m.error || typeof m.result !== 'string' || !m.result) {
+        stopMet(new Error(`Raoj 's kent kaartje ${kaart} niet.`));
+        return;
+      }
+      sluit();
+      klaar(RAOJS_CDN + m.result + '.mp3');
+    };
+  });
+}
+
+/**
  * Van gescande code naar liedje.
  *
  * `haalTekst` haalt een adres op: in de app doet de schil dat (zie Buiten.java), in de
  * browser gewoon fetch. Zo werkt deze functie in beide en is hij met een test te
  * controleren zonder netwerk.
  */
-export async function losOp(tekst, { tabel, haalTekst }) {
+export async function losOp(tekst, { tabel, haalTekst, maakSocket, variant } = {}) {
   const lees = leesKaart(tekst);
-  const nummer = lees.kaart ? ` (kaartje ${lees.kaart})` : '';
   if (lees.spel === 'raojs') {
-    throw new Error(`Dit is een kaartje van Raoj 's${nummer}. De koppeling van hun kaartnummers aan liedjes is niet openbaar, dus naspelen kan nog niet.`);
+    if (!lees.kaart) throw new Error('Dit kaartje van Raoj \'s heeft geen nummer in de code staan.');
+    const fragment = await haalRaojsFragment(lees.kaart, { variant, maakSocket });
+    return {
+      lees,
+      spel: 'raojs',
+      kaart: lees.kaart,
+      editie: { naam: "Raoj 's" },
+      editieId: 'raojs',
+      // Raoj 's geeft alleen het fragment; titel, artiest en jaartal staan op het kaartje.
+      lied: { titel: null, artiest: null, jaar: null, fragment, hoes: null, speelbaar: true, antwoordOpKaartje: true },
+    };
   }
   if (lees.spel === 'hittepetit') {
-    throw new Error(`Dit is een kaartje van Hittepetit${nummer}. De koppeling van hun kaartnummers aan liedjes is niet openbaar, dus naspelen kan nog niet.`);
+    const nummer = lees.kaart ? ` (kaartje ${lees.kaart})` : '';
+    throw new Error(`Dit is een kaartje van Hittepetit${nummer}. Hun app speelt de fragmenten en die koppeling is niet openbaar, dus naspelen kan nog niet.`);
   }
   if (lees.spel !== 'hitster') throw new Error('Deze code hoort niet bij een van de spellen.');
 
