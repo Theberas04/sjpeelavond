@@ -123,6 +123,15 @@ function renderStart() {
   ]
     .map((t) => `<span class="chip blauw">${esc(t)}</span>`)
     .join('');
+
+  // De pagina meldt zelf dat het startscherm klaar is. De schil kan dat niet weten: de
+  // database komt uit de bundel en het tekenen gebeurt daarna, dus een momentopname bij
+  // het laden van de pagina is te vroeg (die zag nul spelkaarten).
+  if (typeof window.Sjpeelavond?.log === 'function') {
+    window.Sjpeelavond.log(
+      `SJPEELAVOND_START kaarten=${document.querySelectorAll('#spelkaarten .spelkaart').length} tabbladen=${document.querySelectorAll('#tabs button').length}`,
+    );
+  }
 }
 
 /* ── instellen ─────────────────────────────────────────────────────────── */

@@ -70,21 +70,9 @@ public class MainActivity extends Activity {
             public void onPageFinished(WebView view, String url) {
                 // Waar de rooktest op wacht: titel, aantal spelkaarten, welk scherm open
                 // staat en of het bord inhoud heeft (een leeg bord zou anders goedkeuren).
-                view.evaluateJavascript(
-                        "['titel='+document.title,"
-                                + "'spelkaarten='+document.querySelectorAll('#spelkaarten .spelkaart').length,"
-                                + "'tabbladen='+document.querySelectorAll('#tabs button').length,"
-                                + "'bordtekst='+(((document.querySelector('#bord')||{}).innerText)||'').length,"
-                                + "'scherm='+Array.prototype.filter.call(document.querySelectorAll('#app > section'),"
-                                + "function(s){return !s.hidden}).map(function(s){return s.id}).join(',')].join('|')",
-                        waarde -> Log.i(TAG, "DOM " + waarde));
-                // Een kaartcode die met het opstartcommando is meegegeven (alleen in een
-                // debugversie): zo kan de rooktest het scannen narekenen zonder camera.
-                if (proefKaart != null) {
-                    String code = proefKaart;
-                    proefKaart = null;
-                    geefCodeDoor(code);
-                }
+                // Niet meteen: de pagina haalt eerst de muziekdatabase uit de bundel en
+                // tekent daarna, dus een momentopname bij het laden ziet nog niets.
+                view.postDelayed(() -> domMomentopname(view), 2500);
             }
 
             @Override
@@ -168,6 +156,28 @@ public class MainActivity extends Activity {
         }
         Log.i(TAG, "SJPEELAVOND_SCAN code=" + code);
         webView.evaluateJavascript(JS_WACHT + "30, " + alsJsTekst(code) + ")", null);
+    }
+
+    /**
+     * Een momentopname van de pagina in het logboek zetten: waar de rooktest op wacht.
+     * Draait een paar tellen na het laden, want daarvoor is de pagina nog niet klaar.
+     */
+    private void domMomentopname(WebView view) {
+        view.evaluateJavascript(
+                "['titel='+document.title,"
+                        + "'spelkaarten='+document.querySelectorAll('#spelkaarten .spelkaart').length,"
+                        + "'tabbladen='+document.querySelectorAll('#tabs button').length,"
+                        + "'bordtekst='+(((document.querySelector('#bord')||{}).innerText)||'').length,"
+                        + "'scherm='+Array.prototype.filter.call(document.querySelectorAll('#app > section'),"
+                        + "function(s){return !s.hidden}).map(function(s){return s.id}).join(',')].join('|')",
+                waarde -> Log.i(TAG, "DOM " + waarde));
+        // Een kaartcode die met het opstartcommando is meegegeven (alleen in een
+        // debugversie): zo kan de rooktest het scannen narekenen zonder camera.
+        if (proefKaart != null) {
+            String code = proefKaart;
+            proefKaart = null;
+            geefCodeDoor(code);
+        }
     }
 
     /** Een tekst als JavaScript-tekst, met dezelfde ontsnapping als JSON. */

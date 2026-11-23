@@ -91,7 +91,10 @@ wacht_op_marker "SJPEELAVOND_KLAAR nummers=[0-9]+" 60 || { echo "de muziekdataba
 # En dat de schil zich als lokale versie meldt: dit is de app zonder server.
 wacht_op_marker "SJPEELAVOND_SCHIL lokaal=ja" 20 || { echo "de schil meldde zich niet als lokaal" >&2; adb logcat -d -s Sjpeelavond:I >&2; exit 1; }
 wacht_op_marker "scherm=view-start" 30 || { echo "het startscherm tekende niet" >&2; adb logcat -d -s Sjpeelavond:I >&2; exit 1; }
-wacht_op_marker "spelkaarten=3" 20 || { echo "de startpagina toont niet drie spellen" >&2; adb logcat -d -s Sjpeelavond:I >&2; exit 1; }
+# De pagina meldt zelf dat het startscherm klaar is. Op de momentopname van de schil
+# kun je hier niet wachten: die kan vallen voordat de database uit de bundel geladen is.
+wacht_op_marker "SJPEELAVOND_START kaarten=3" 30 || { echo "de startpagina toont niet drie spellen" >&2; adb logcat -d -s Sjpeelavond:I >&2; exit 1; }
+wacht_op_marker "SJPEELAVOND_START .*tabbladen=5" 20 || { echo "de tabbladen kloppen niet" >&2; adb logcat -d -s Sjpeelavond:I >&2; exit 1; }
 sleep 2
 schiet "apk-start"
 logcat_naar "$UIT/logcat-start.txt"
