@@ -26,6 +26,17 @@ const EDITIE_KAART = /^([a-z]{4}\d{4})[/-](\d{2,6})$/i;
 const ALLEEN_KAART = /^(\d{2,6})$/;
 
 /**
+ * De kaartjes van de twee Limburgse spellen. Van Hittepetit is de vorm van de QR-code
+ * nagegaan op foto's van echte kaartjes: https://hittepetit.radiononnevot.nl/q/HP0132
+ * (kaartnummers HP0001 tot HP0222). Van Raoj 's bouwt hun web-app de code als
+ * https://app.raojs.nl?id=<nummer>. Wat er in beide gevallen nog niet is, is de
+ * koppeling van kaartnummer naar liedje: die is niet openbaar (zie
+ * docs/onderzoek-kaartscanners.md), dus herkennen kan wel en naspelen nog niet.
+ */
+const HITTEPETIT_ADRES = /^https?:\/\/(?:www\.)?hittepetit\.radiononnevot\.nl\/q\/(hp\d{3,5})\/?$/i;
+const RAOJS_ADRES = /^https?:\/\/(?:www\.)?app\.raojs\.nl\/?\?(?:[^#]*&)?id=([^&#]+)/i;
+
+/**
  * Leest wat er in een QR-code stond.
  *
  * Geeft altijd iets terug: bij een onbekende code blijft `spel` op 'onbekend' staan,
@@ -55,11 +66,16 @@ export function leesKaart(tekst) {
   const alleen = ALLEEN_KAART.exec(schoon);
   if (alleen) return { spel: 'hitster', taal: null, editie: null, kaart: alleen[1], ruw };
 
-  // De andere twee spellen: wel herkennen, nog niet kunnen naspelen.
+  // De andere twee spellen: wel herkennen (met het kaartnummer erbij), nog niet naspelen.
+  const hittepetit = HITTEPETIT_ADRES.exec(schoon);
+  if (hittepetit) return { spel: 'hittepetit', kaart: hittepetit[1].toUpperCase(), ruw };
+  const raojs = RAOJS_ADRES.exec(schoon);
+  if (raojs) return { spel: 'raojs', kaart: decodeURIComponent(raojs[1]), ruw };
+
   const laag = schoon.toLowerCase();
-  if (laag.includes('raojs')) return { spel: 'raojs', ruw };
+  if (laag.includes('raojs')) return { spel: 'raojs', kaart: null, ruw };
   if (laag.includes('hittepetit') || laag.includes('marotte') || laag.includes('nonnevot') || laag.includes('nónnevot')) {
-    return { spel: 'hittepetit', ruw };
+    return { spel: 'hittepetit', kaart: null, ruw };
   }
   return { spel: 'onbekend', ruw };
 }
@@ -174,8 +190,13 @@ export function leesEmbed(html) {
  */
 export async function losOp(tekst, { tabel, haalTekst }) {
   const lees = leesKaart(tekst);
-  if (lees.spel === 'raojs') throw new Error('Dit is een kaartje van Raoj \'s. Die kan de app nog niet lezen.');
-  if (lees.spel === 'hittepetit') throw new Error('Dit is een kaartje van Hittepetit. Die kan de app nog niet lezen.');
+  const nummer = lees.kaart ? ` (kaartje ${lees.kaart})` : '';
+  if (lees.spel === 'raojs') {
+    throw new Error(`Dit is een kaartje van Raoj 's${nummer}. De koppeling van hun kaartnummers aan liedjes is niet openbaar, dus naspelen kan nog niet.`);
+  }
+  if (lees.spel === 'hittepetit') {
+    throw new Error(`Dit is een kaartje van Hittepetit${nummer}. De koppeling van hun kaartnummers aan liedjes is niet openbaar, dus naspelen kan nog niet.`);
+  }
   if (lees.spel !== 'hitster') throw new Error('Deze code hoort niet bij een van de spellen.');
 
   const gevonden = zoekLied(lees, tabel);

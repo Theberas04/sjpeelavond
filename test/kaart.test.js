@@ -80,6 +80,20 @@ test('de andere twee spellen worden herkend maar niet nagespeeld', () => {
   assert.equal(leesKaart(null).spel, 'onbekend');
 });
 
+test('de echte kaartjes van Raoj \'s en Hittepetit worden met hun nummer gelezen', () => {
+  // De vorm van de Hittepetit-code is nagegaan op foto's van echte kaartjes.
+  const hittepetit = leesKaart('https://hittepetit.radiononnevot.nl/q/HP0132');
+  assert.equal(hittepetit.spel, 'hittepetit');
+  assert.equal(hittepetit.kaart, 'HP0132');
+
+  // Zo bouwt de web-app van Raoj 's zijn codes (zie docs/onderzoek-kaartscanners.md).
+  const raojs = leesKaart('https://app.raojs.nl?id=L2025_001');
+  assert.equal(raojs.spel, 'raojs');
+  assert.equal(raojs.kaart, 'L2025_001');
+  const raojsMetExtra = leesKaart('https://app.raojs.nl/?game=lvk&id=12');
+  assert.equal(raojsMetExtra.kaart, '12');
+});
+
 test('een kaartnummer wordt met en zonder voorloopnullen gevonden', () => {
   assert.ok(kandidaten('308').includes('00308'));
   assert.ok(kandidaten('00308').includes('308'));
