@@ -9,22 +9,22 @@
   }
  },
  "limburg": {
-  "ruw": 970,
-  "opgenomen": 926,
+  "ruw": 748,
+  "opgenomen": 717,
   "overgeslagen": 0,
   "zonderJaartal": 0,
-  "vastelaovend": 503,
+  "vastelaovend": 499,
   "lvkJa": 93,
-  "lvkNee": 420,
-  "lvkOnbekend": 413,
+  "lvkNee": 215,
+  "lvkOnbekend": 409,
   "lvkLijst": 628
  },
  "dekken": [
   "Grote hits: 825",
   "Nederlandstalig: 93",
-  "Limburgs: 926",
-  "Vastelaovend: 503",
+  "Limburgs: 717",
+  "Vastelaovend: 499",
   "Zittesj: 94",
-  "LVK: 513"
+  "LVK: 308"
  ]
 }

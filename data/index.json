@@ -7,8 +7,8 @@
  ],
  "totalen": {
   "hits": 825,
-  "limburg": 926,
-  "samen": 1751
+  "limburg": 717,
+  "samen": 1542
  },
  "dekken": [
   {
@@ -27,13 +27,13 @@
    "id": "limburg",
    "naam": "Limburgs",
    "beschrijving": "Limburgs repertoire: dialectpop, rock en vastelaovesklassiekers.",
-   "aantal": 926
+   "aantal": 717
   },
   {
    "id": "vastelaovend",
    "naam": "Vastelaovend",
    "beschrijving": "Vastelaovesmuziek uit heel Limburg.",
-   "aantal": 503
+   "aantal": 499
   },
   {
    "id": "zittesj",
@@ -45,7 +45,7 @@
    "id": "lvk",
    "naam": "LVK",
    "beschrijving": "Liedjes waarvan zeker is of ze een LVK-inzending waren.",
-   "aantal": 513
+   "aantal": 308
   }
  ]
 }

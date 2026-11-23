@@ -5,7 +5,7 @@
  * Invoer (data/bron/):
  *   top40.json          nummer 1-hits uit de Nederlandse Top 40 (nl.wikipedia.org)
  *   hits-verrijkt.json  diezelfde hits met Deezer-id en hoes
- *   limburg-ruw.json    Limburgs/vastelaovesrepertoire met Deezer-id en hoes
+ *   limburg-schoon.json  Limburgs/vastelaovesrepertoire met Deezer-id en hoes (gezeefd)
  *   limburg-jaar.json   jaartallen van dat repertoire (MusicBrainz/Deezer)
  *   lvk.json            LVK-inzendingen per jaar (optioneel)
  *
@@ -148,7 +148,7 @@ for (const nummer of hitsVerrijkt.nummers) {
 
 /* ── Limburgs repertoire ───────────────────────────────────────────────── */
 
-const limburgRuw = await lees('limburg-ruw.json');
+const limburgRuw = await lees('limburg-schoon.json');
 const limburgJaar = (await lees('limburg-jaar.json'))?.jaren || {};
 const lvk = await lees('lvk.json');
 const lvkTitels = new Set((lvk?.nummers || []).map((n) => norm(n.titel)).filter(Boolean));

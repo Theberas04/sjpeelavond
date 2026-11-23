@@ -20,9 +20,14 @@ genoeg — geen Spotify-abonnement, geen losse kaartjes, geen app die je eerst m
 | **Raoj 's** | Vier varianten op Limburgs repertoire: *Raoj 's* (tijdlijn), *Zîng 's* (meezingen), *Stop 's* (herkennen na de eerste klanken, met buzzers) en *LVJao of LVNein* (was dit een LVK-inzending?). |
 | **Hittepetit** | Tijdlijnspel op Zittesj en Limburgs vastelaovesrepertoire, met **nónnevotte** in plaats van fiches. |
 
-Alle muziek komt uit de eigen dataset: **1.751 nummers**, waarvan **926 Limburgse
-nummers** (503 vastelaovesnummers en 513 liedjes waarvan bekend is of ze een
+Alle muziek komt uit de eigen dataset: **1.542 nummers**, waarvan **717 Limburgse
+nummers** (499 vastelaovesnummers en 308 liedjes waarvan bekend is of ze een
 LVK-inzending waren). De hitlijsten lopen van **1965 tot nu**.
+
+Zoeken op trefwoorden bij Deezer levert ook ruis op: 'LVK' geeft de bandjes LVKE en LVKS!,
+en een artiestennaam die op een Limburgse naam lijkt matcht soms een wereldster. Daarom gaat
+de oogst door `scripts/zeef-limburg.mjs`, met één expliciete zeeflijst van artiesten die er
+niet in horen; wat daar niet op staat is met de hand nagelopen.
 
 ## Schermafbeeldingen
 
@@ -110,6 +115,7 @@ Alles is opnieuw te genereren; de tussenstappen worden bewaard in `data/bron/`:
 node scripts/haal-top40.mjs        # nummer 1-hits van nl.wikipedia.org
 node scripts/verrijk-hits.mjs      # daar per nummer het Deezer-nummer, hoes en fragment bij zoeken
 node scripts/haal-limburg.mjs      # Limburgs/vastelaovesrepertoire via Deezer
+node scripts/zeef-limburg.mjs      # ruis van gelijkende trefwoorden eruit filteren
 node scripts/haal-lvk.mjs          # LVK-inzendingen per jaargang
 node scripts/verrijk-jaar.mjs      # jaartallen (LVK-lijst, MusicBrainz, Deezer)
 node scripts/bouw-dataset.mjs      # alles samenvoegen tot data/nummers-*.json
