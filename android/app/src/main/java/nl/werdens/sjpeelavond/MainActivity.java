@@ -113,6 +113,16 @@ public class MainActivity extends Activity {
         if (intent != null && !adres.equals(BASIS)) {
             webView.loadUrl(adres);
         }
+        // Een kaartcode die met het opstartcommando is meegegeven (alleen in een debugversie).
+        // Dit hoort hier en niet bij het laden van de pagina: een diepe link verandert alleen
+        // het hekje in het adres, dus dan laadt de pagina niet opnieuw en komt onPageFinished
+        // niet langs. De pagina zelf wacht (zie JS_WACHT) tot ze zover is.
+        proefKaart = proefKaartUit(intent);
+        if (proefKaart != null) {
+            String code = proefKaart;
+            proefKaart = null;
+            geefCodeDoor(code);
+        }
     }
 
     /**
