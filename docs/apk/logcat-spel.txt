@@ -1,4 +1,4 @@
 --------- beginning of main
-11-23 14:52:27.681  2303  2457 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-instellen
-11-23 14:52:27.687  2303  2457 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-spel
-11-23 14:52:30.175  2303  2303 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=273|scherm=view-spel"
+11-23 15:11:46.797  2446  2591 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-instellen
+11-23 15:11:46.802  2446  2591 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-spel
+11-23 15:11:49.293  2446  2446 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=246|scherm=view-spel"
