@@ -1,5 +1,5 @@
 --------- beginning of main
-11-23 15:13:08.863  2446  2446 I Sjpeelavond: SJPEELAVOND_SCAN code=https://hittepetit.radiononnevot.nl/q/HP0077
-11-23 15:13:08.900  2446  2591 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-scannen
-11-23 15:13:09.048  2446  2591 I Sjpeelavond: SJPEELAVOND_SCAN kaartje=HP0077 jaar=null fragment=ja
-11-23 15:13:11.722  2446  2446 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=341|scherm=view-scannen"
+11-23 15:37:41.109  2594  2594 I Sjpeelavond: SJPEELAVOND_SCAN code=https://hittepetit.radiononnevot.nl/q/HP0077
+11-23 15:37:41.129  2594  2755 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-scannen
+11-23 15:37:41.343  2594  2755 I Sjpeelavond: SJPEELAVOND_SCAN kaartje=HP0077 jaar=null fragment=ja
+11-23 15:37:43.924  2594  2594 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=342|scherm=view-scannen"

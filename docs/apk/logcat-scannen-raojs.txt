@@ -1,5 +1,5 @@
 --------- beginning of main
-11-23 15:12:57.623  2446  2446 I Sjpeelavond: SJPEELAVOND_SCAN code=https://app.raojs.nl/?id=NPRP
-11-23 15:12:57.631  2446  2591 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-scannen
-11-23 15:12:59.502  2446  2591 I Sjpeelavond: SJPEELAVOND_SCAN kaartje=NPRP jaar=null fragment=ja
-11-23 15:13:00.440  2446  2446 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=341|scherm=view-scannen"
+11-23 15:37:32.517  2594  2594 I Sjpeelavond: SJPEELAVOND_SCAN code=https://app.raojs.nl/?id=NPRP
+11-23 15:37:32.553  2594  2755 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-scannen
+11-23 15:37:34.583  2594  2755 I Sjpeelavond: SJPEELAVOND_SCAN kaartje=NPRP jaar=null fragment=ja
+11-23 15:37:35.131  2594  2594 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=342|scherm=view-scannen"

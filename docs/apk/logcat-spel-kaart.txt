@@ -1,5 +1,5 @@
 --------- beginning of main
-11-23 15:11:58.660  2446  2591 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-instellen
-11-23 15:11:58.684  2446  2591 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-spel
-11-23 15:11:59.202  2446  2591 I Sjpeelavond: SJPEELAVOND_FRAGMENT deezer I Love Rock'n Roll
-11-23 15:12:01.152  2446  2446 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=395|scherm=view-spel"
+11-23 15:36:49.459  2594  2755 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-instellen
+11-23 15:36:49.473  2594  2755 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-spel
+11-23 15:36:49.822  2594  2755 I Sjpeelavond: SJPEELAVOND_FRAGMENT deezer Le lac majeur
+11-23 15:36:52.262  2594  2594 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=402|scherm=view-spel"

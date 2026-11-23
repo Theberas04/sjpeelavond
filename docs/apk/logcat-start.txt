@@ -1,7 +1,7 @@
 --------- beginning of main
-11-23 15:11:23.951  2446  2446 I Sjpeelavond: Sjpeelavond klaar versie=1.4.0
-11-23 15:11:25.427  2446  2591 I Sjpeelavond: SJPEELAVOND_SCHIL lokaal=ja
-11-23 15:11:25.606  2446  2591 I Sjpeelavond: SJPEELAVOND_KLAAR nummers=1542 dekken=6
-11-23 15:11:25.705  2446  2591 I Sjpeelavond: SJPEELAVOND_START kaarten=3 tabbladen=5
-11-23 15:11:25.754  2446  2591 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-start
-11-23 15:11:30.169  2446  2446 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=0|scherm=view-start"
+11-23 15:36:23.673  2594  2594 I Sjpeelavond: Sjpeelavond klaar versie=1.5.0
+11-23 15:36:25.142  2594  2755 I Sjpeelavond: SJPEELAVOND_SCHIL lokaal=ja
+11-23 15:36:25.312  2594  2755 I Sjpeelavond: SJPEELAVOND_KLAAR nummers=1542 dekken=6
+11-23 15:36:25.433  2594  2755 I Sjpeelavond: SJPEELAVOND_START kaarten=3 tabbladen=5
+11-23 15:36:25.463  2594  2755 I Sjpeelavond: SJPEELAVOND_SCERM scherm=view-start
+11-23 15:36:27.999  2594  2594 I Sjpeelavond: DOM "titel=Sjpeelavond — muziekspellen voor je feestavond|spelkaarten=3|tabbladen=5|bordtekst=0|scherm=view-start"
